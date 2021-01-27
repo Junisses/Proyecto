@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html lang="es">
+{% load static %}
+{% block contenido%}
 <head>
 <title>CidefChile - Repuesto</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="Cidef Project">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
-<link href="plugins/fontawesome-free-5.0.1/css/fontawesome-all.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="styles/portfolio_styles.css">
-<link rel="stylesheet" type="text/css" href="styles/portfolio_responsive.css">
-<link rel="stylesheet" href="estilos.css">
+<link rel="stylesheet" type="text/css" href="{% static '/css/styles/bootstrap4/bootstrap.min.css' %}">
+<link href="{%static '/css/plugins/fontawesome-free-5.0.1/css/fontawesome-all.css' %}" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="{% static '/css/styles/portfolio_styles.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'styles/portfolio_responsive.css' %}">
+<link rel="stylesheet" href="{% static '/css/estilos.css' %}">
 </head>
 
 <body>
@@ -321,7 +322,7 @@
 
 	<div class="home">
 		<div class="home_background_container prlx_parent">
-			<div class="home_background prlx" style="background-image:url(images/arriendo.jpeg)"></div>
+			<div class="home_background prlx" style="background-image:url(https://github.com/Junisses/PlantillaProyCIDEF/blob/main/PetShop/gestorProducto/static/img/arriendo.jpeg?raw=true)"></div>
 		</div>
 		
 		<div class="home_title">
@@ -365,7 +366,7 @@
 						<!-- Portfolio Item -->
 						<div class="card branding">
 							<div class="card_image">
-								<img class="card-img-top" src="images/auto.jpg" alt="image by https://unsplash.com/@heysupersimi">
+								<img class="card-img-top" src="https://cdn.autobild.es/sites/navi.axelspringer.es/public/styles/1200/public/media/image/2019/08/prueba-dongfeng-dfsk-glory-580_4.jpg?itok=UTW8mcSO" alt="image by https://unsplash.com/@heysupersimi">
 							</div>
 							
 							<div class="card-body">
@@ -380,7 +381,7 @@
 						<!-- Portfolio Item -->
 						<div class="card 3d_generated">
 							<div class="card_image">
-								<img class="card-img-top" src="images/portfolio_2.jpg" alt="image by https://unsplash.com/@anthonydelanoix">
+								<img class="card-img-top" src="https://www.elcarrocolombiano.com/wp-content/uploads/2019/08/20190803-FOTON-TUNLAND-4X4-2020-COLOMBIA-PRECIO-CARACTERISTICAS-01-750x460.jpg" alt="image by https://unsplash.com/@anthonydelanoix">
 							</div>
 							
 							<div class="card-body">
@@ -394,7 +395,7 @@
 						<!-- Portfolio Item -->
 						<div class="card motion_graphic">
 							<div class="card_image">
-								<img class="card-img-top" src="images/portfolio_3.jpg" alt="image by https://unsplash.com/@heysupersimi">
+								<img class="card-img-top" src="https://www.racing5.cl/wp-content/uploads/2016/05/4shvnva0kkl57zqisl2i.jpg" alt="image by https://unsplash.com/@heysupersimi">
 							</div>
 							
 							<div class="card-body">
@@ -408,7 +409,7 @@
 						<!-- Portfolio Item -->
 						<div class="card graphic_design">
 							<div class="card_image">
-								<img class="card-img-top" src="images/portfolio_4.jpg" alt="image by https://unsplash.com/@anthonydelanoix">
+								<img class="card-img-top" src="https://i0.wp.com/clipset.com/wp-content/uploads/2013/11/kawasaki-three-wheeler.jpg?ssl=1" alt="image by https://unsplash.com/@anthonydelanoix">
 							</div>
 							
 							<div class="card-body">
@@ -422,7 +423,7 @@
 						<!-- Portfolio Item -->
 						<div class="card web_design">
 							<div class="card_image">
-								<img class="card-img-top" src="images/portfolio_5.jpg" alt="image by https://unsplash.com/@heysupersimi">
+								<img class="card-img-top" src="https://i.blogs.es/fcea41/dfsk-ix5/1366_2000.jpg" alt="image by https://unsplash.com/@heysupersimi">
 							</div>
 							
 							<div class="card-body">
@@ -550,19 +551,18 @@
 
 </div>
 <script src="https://kit.fontawesome.com/2c36e9b7b1.js"></script>
-<script src="main.js"></script>
-<script src="js/jquery-3.2.1.min.js"></script>
-<script src="styles/bootstrap4/popper.js"></script>
-<script src="styles/bootstrap4/bootstrap.min.js"></script>
-<script src="plugins/greensock/TweenMax.min.js"></script>
-<script src="plugins/greensock/TimelineMax.min.js"></script>
-<script src="plugins/scrollmagic/ScrollMagic.min.js"></script>
-<script src="plugins/greensock/animation.gsap.min.js"></script>
-<script src="plugins/greensock/ScrollToPlugin.min.js"></script>
-<script src="plugins/Isotope/isotope.pkgd.min.js"></script>
-<script src="plugins/scrollTo/jquery.scrollTo.min.js"></script>
-<script src="plugins/easing/easing.js"></script>
-<script src="js/portfolio_custom.js"></script>
+<script src="{% static '/js/main.js' %}"></script>
+<script src="{% static '/js/jquery-3.2.1.min.js' %}"></script>
+<script src="{% static '/js/styles/bootstrap4/popper.js' %}"></script>
+<script src="{% static '/js/styles/bootstrap4/bootstrap.min.js' %}"></script>
+<script src="{% static '/js/plugins/greensock/TweenMax.min.js' %}"></script>
+<script src="{% static '/js/plugins/greensock/TimelineMax.min.js' %}"></script>
+<script src="{% static '/js/plugins/scrollmagic/ScrollMagic.min.js' %}"></script>
+<script src="{% static '/js/plugins/greensock/animation.gsap.min.js' %}"></script>
+<script src="{% static '/js/plugins/greensock/ScrollToPlugin.min.js' %}"></script>
+<script src="{% static '/js/plugins/Isotope/isotope.pkgd.min.js' %}"></script>
+<script src="{% static '/js/plugins/scrollTo/jquery.scrollTo.min.js' %}"></script>
+<script src="{% static '/js/plugins/easing/easing.js' %}"></script>
+<script src="{% static 'js/portfolio_custom.js' %}"></script>
 </body>
-
-</html>
+{% endblock %}

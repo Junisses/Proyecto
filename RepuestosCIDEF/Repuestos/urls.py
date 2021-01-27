@@ -9,3 +9,9 @@ from . import views
 urlpatterns = [
     path('',views.inicio, name='inicio'),
 ]
+urlpatterns = [
+    path('tienda',views.tienda, name='tienda'),
+]
+urlpatterns = [
+    path('repuestos',views.repuestos, name='respuestos'),
+]
