@@ -1,0 +1,82 @@
+{% extends "index.html"%}
+{% load static %}
+{% block contenido%}
+<head>
+	<link rel="stylesheet" href="{% static 'css/baseinicio.css' %}">
+</head>
+<section><!-- Carrusel -->
+		<br>
+		
+    <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="6000">
+        <ol class="carousel-indicators">
+            <li data-target="#carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel" data-slide-to="1"></li>
+            <li data-target="#carousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+            <!-- imagen 1 -->            
+			<div class="carousel-item active">
+                <a href="">
+                     <picture>
+                      <img src={% static '/img/fotos/AUTO1.png' %} alt="responsive image" class="d-block img-fluid">
+                      </picture>
+                </a> 
+            </div>
+            <!-- imagen 2-->
+            <div class="carousel-item">
+                <a href="">
+                     <picture>
+                      <img src={% static '/img/fotos/AUTO2.png' %}  alt="responsive image" class="d-block img-fluid"> 
+                    </picture>
+                </a>
+            </div>
+            <!-- imagen 3 -->
+            <div class="carousel-item">
+                <a href="">
+                     <picture>
+                      <img src={% static '/img/fotos/AUTO3.png' %} alt="responsive image" class="d-block img-fluid">
+                    </picture>
+                </a>
+            </div>
+        </div>
+        <!-- Flechas -->
+        <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <!-- /.carousel -->
+</section>			
+
+<div class="cards-list">
+  
+	<div class="card 1" style="background-color: #EDEDED; border-color: #EDEDED;">
+	  <div class="card_image"> 
+			<a href="https://cidef.cl/marca/dongfeng/">
+				<img src="https://img.favcars.com/dongfeng/yumsun/images_dongfeng_yumsun_2009_1_b.jpg" width="200" height="50"  />
+			</a>
+	   </div>
+	  <div class="card_title title-white">
+		<p>DongFeng</p>
+	  </div>
+	<br> <br>
+	</div>
+
+	  <div class="card 2" style="background-color: #EDEDED; border-color: #EDEDED;">
+	  <div class="card_image">
+		<a href="https://cidef.cl/marca/foton/">
+			<img src="https://www.revistaturbo.com/sites/default/files/camionefoton.jpg" width="200" height="50" />
+		</a>
+	   </div>
+	  <div class="card_title title-white">
+		<p>Foton</p>
+	  </div>
+	</div>
+	  </div>
+</div>
+<br> <br><br> 
+{% endblock %}

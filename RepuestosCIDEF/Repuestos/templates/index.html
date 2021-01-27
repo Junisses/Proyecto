@@ -1,0 +1,129 @@
+{% load static %}
+<html>
+	<head>
+
+		<meta charset = "utf-8">
+		<title>Pagina Cidef</title>
+
+		<link rel="icon" type="image/png" href={% static 'img/fotos/icono.png' %}>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+		<script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+		<script src="https://kit.fontawesome.com/a2c5e64981.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">	
+		<link rel="stylesheet" href="{% static 'css/baseinicio.css' %}">
+
+	</head>
+	
+	<body style="background-color: #EDEDED;">
+		<section><!-- Menú -->
+			<div class="container-fluid">
+				<nav style="z-index: 1111" class="navbar main-menu navbar-expand-md fixed-top p-0 navbar-light bg-light">
+					<a class="navbar-brand p-0" href="https://cidef.cl">
+						<img src="https://cidef.cl/wp-content/themes/wp-bootstrap-starter/img/logo.svg">
+					</a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation"> 
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse justify-content-between" id="navbarsExampleDefault">
+
+					<div id="navbarsExampleDefault" class="collapse navbar-collapse justify-content-between">
+						<ul id="menu-main" class="navbar-nav ml-auto mr-5 pl-3 pl-lg-0">
+							<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-7" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home active menu-item-7 nav-item">
+								<a title="Inicio" href="https://cidef.cl/" class="nav-link" aria-current="page">Inicio</a>
+							</li>
+							<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-170" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-170 nav-item">
+								<a title="Marcas" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-170">Marcas</a>
+									<ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-170" role="menu">
+										<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-172" class="menu-item menu-item-type-post_type menu-item-object-marca menu-item-172 nav-item">
+											<a title="Dongfeng" href="https://cidef.cl/marca/dongfeng/" class="dropdown-item">Dongfeng</a>
+										</li>
+										<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-171" class="menu-item menu-item-type-post_type menu-item-object-marca menu-item-171 nav-item">
+											<a title="Foton" href="https://cidef.cl/marca/foton/" class="dropdown-item">Foton</a>
+										</li>
+									</ul>
+							</li>
+							<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-71" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-71 nav-item">
+								<a title="Sucursales" href="https://cidef.cl/sucursales/" class="nav-link">Sucursales</a>
+							</li>
+							<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-72" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-72 nav-item">
+								<a title="Repuestos" href="https://cidef.cl/respuestos/" class="nav-link">Repuestos</a>
+							</li>
+							<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-69" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-69 nav-item">
+								<a title="Servicio Técnico" href="https://cidef.cl/servicio-tecnico/" class="nav-link">Servicio Técnico</a>
+							</li>
+							<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-70" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-70 nav-item">
+								<a title="Contacto" href="https://cidef.cl/contacto/" class="nav-link">Contacto</a>
+							</li>
+						</ul>
+					</div>                
+					</div>
+				</nav>
+				
+
+				{% block contenido%}
+				{% endblock %}
+				<br>
+				{% block listado%}
+				{% endblock %}
+			</div>
+		</section>
+
+		<section><!-- Pie de pagina -->		
+			<footer style="background-color: #535252;">
+				<div class="container py-5"> 
+					<img class="mb-5" src="https://cidef.cl/wp-content/themes/wp-bootstrap-starter/img/logo.svg">
+						<div class="row" id="color">
+							<div class="col-12 col-lg-4">
+								<p>
+									<b>Casa Matriz</b>
+									<br> Dirección: Amunategui 178, Santiago, Chile						
+									<br> Teléfono : <a style="color: white;" href="tel:225406145">225406145</a>
+									<br> Correo: <a style="color: white;" href="mailto:info@cidef.cl">info@cidef.cl</a>
+								</p>
+								<p>
+									<a class="mr-3" href="https://www.facebook.com/cidefchile">
+										<img src="https://cidef.cl/wp-content/uploads/2020/12/f-w-1.png">
+									</a>
+									<a class="mr-3" href="https://www.youtube.com/user/CidefChileTV">
+										<img src="https://cidef.cl/wp-content/uploads/2020/12/yt-w-1.png">
+									</a>
+									<a class="mr-3" href="https://wa.me/message/ZBNUMOITLEOGI1">
+										<img src="https://cidef.cl/wp-content/uploads/2021/01/web-whatsapp--e1610726791647.png">
+									</a>
+								</p>
+							</div>
+							<div class="col-12 col-lg-8">
+								<div class="row">
+									<div class="col-12 col-lg-4">
+										<h6>Categoría<br>de vehículo</h6>
+										<ul class="nav flex-column m-0 p-0">
+											<li class="nav-item"> <a class="nav-link" href="https://cidef.cl/#carrusel_autos_home">Vehículos</a> </li>
+											<li class="nav-item"> <a class="nav-link" href="https://cidef.cl/#carrusel_autos_home">Vehículos comerciales</a> </li>
+											<li class="nav-item"> <a class="nav-link" target="_blank" href="https://chile.kawasaki-la.com/la-es">Motos</a> </li>
+										</ul>
+									</div>
+									<div class="col-12 col-lg-4">
+										<h6>Nuestras<br>Marcas</h6>
+										<ul class="nav flex-column m-0 p-0">
+											<li class="nav-item"> <a class="nav-link" href="https://cidef.cl/foton">Foton</a> </li>
+											<li class="nav-item"> <a class="nav-link" href="https://cidef.cl/dongfeng">Dongfeng</a> </li>
+											<li class="nav-item"> <a target="_blank" class="nav-link" href=" https://chile.kawasaki-la.com/la-es">Kawasaki</a> </li>
+										</ul>
+									</div>
+									<div class="col-12 col-lg-4">
+										<h6><br>Repuesto</h6>
+										<ul class="nav flex-column m-0 p-0">
+											<li class="nav-item"> <a class="nav-link" href="https://cidef.cl/respuestos">Solicita tu Respuesto</a> </li>
+										</ul>							
+									</div>
+								</div>
+							</div>
+						</div>
+				</div>
+			</footer>
+		</section>
+	</body>
+</html>

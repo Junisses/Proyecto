@@ -1,0 +1,126 @@
+h6{
+	color: white;
+}
+
+ul>li>a {
+	color: #8B8B8B;
+	text-decoration: none;
+}
+.carrito {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 2%;
+    border:2px solid #fff;
+	text-decoration: none;
+}
+.carousel {
+  background:#FFF8E7;
+}
+.carousel-item .img-fluid {
+  width:100%;
+}
+.carousel-item a {
+  display: block;
+  width:100%;
+}
+h2 {
+	color: red;
+	}
+	
+.boton_personalizado {
+	display: right-side;
+	width: 32px;
+	height: 32px;
+    border-radius: 90%;
+	border: none;
+	background-color: white;
+	margin: 1px;
+}
+
+.fondo {
+	background-color: #111112;
+	clear: both;
+}
+
+h5 {
+	color: #BA0000;
+	font-weight: 100;
+	font-family: fantasy;
+}
+.collapse{
+	color: white;
+}
+.suc {
+	color:white;
+	text-decoration: none;
+}
+
+p {
+	color:white;
+}
+
+
+.cards-list {
+  z-index: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: transparent;
+}
+
+.card {
+  margin: 20px auto;
+  width: 400px;
+  height: 350px;
+  cursor: pointer;
+  transition: 0.2s;
+  background-color: #EDEDED;
+  border-color: #EDEDED;
+}
+
+.card .card_image {
+  width: 400px;
+  height: 400px;
+  border-radius: 40px;
+  border-color: none;
+}
+
+.card .card_image img {
+  width: 400px;
+  height: 400px;
+  border-radius: 40px;
+  object-fit: cover;
+  border-color: none;
+}
+
+.card .card_title {
+  text-align: center;
+  border-radius: 0px 0px 40px 40px;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: -80px;
+  height: 40px;
+}
+
+.card:hover {
+  transform: scale(0.9, 0.9);
+  border-color: none;
+}
+
+.title-white {
+  color: white;
+}
+
+.title-black {
+  color: black;
+}
+
+@media all and (max-width: 500px) {
+  .card-list {
+    /* On small screens, we are no longer using row direction but column */
+    flex-direction: column;
+  }
+}
