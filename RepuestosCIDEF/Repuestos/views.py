@@ -7,3 +7,5 @@ def tienda(request):
     return render(request,'tienda.html', {})
 def repuestos(request):
     return render(request,'repuestos.html', {})
+def prueba(request):
+    return render(request,'prueba.html', {})
