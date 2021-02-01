@@ -84,7 +84,7 @@ p a
 	display: inline;
 	position: relative;
 	color: inherit;
-	border-bottom: solid 1px #ffa07f;
+	border-bottom: solid 1px #ffffff;
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
 	-ms-transition: all 200ms ease;
@@ -101,12 +101,12 @@ a, a:hover, a:visited, a:active, a:link
 p a:active
 {
 	position: relative;
-	color: #FF6347;
+	color: #fafafa;
 }
 p a:hover
 {
 	color: #FFFFFF;
-	background: #ffa07f;
+	background: transparent;
 }
 p a:hover::after
 {
@@ -124,53 +124,44 @@ h1, h2, h3, h4, h5, h6
 	-webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
 	text-shadow: rgba(0,0,0,.01) 0 0 1px;
 }
-h1::selection, 
-h2::selection, 
-h3::selection, 
-h4::selection, 
-h5::selection, 
-h6::selection
-{
-	
-}
 ::-webkit-input-placeholder
 {
 	font-size: 14px !important;
 	font-style: italic !important;
 	font-weight: 400 !important;
-	color: #e9574c !important;
+	color: transparent !important;
 }
 :-moz-placeholder /* older Firefox*/
 {
 	font-size: 14px !important;
 	font-style: italic !important;
 	font-weight: 400 !important;
-	color: #e9574c !important;
+	color:transparent !important;
 }
 ::-moz-placeholder /* Firefox 19+ */ 
 {
 	font-size: 14px !important;
 	font-style: italic !important;
 	font-weight: 400 !important;
-	color: #e9574c !important;
+	color: transparent !important;
 } 
 :-ms-input-placeholder
 { 
 	font-size: 14px !important;
 	font-style: italic !important;
 	font-weight: 400 !important;
-	color: #e9574c !important;
+	color:transparent !important;
 }
 ::input-placeholder
 {
 	font-size: 14px !important;
 	font-style: italic !important;
 	font-weight: 400 !important;
-	color: #e9574c !important;
+	color:transparent !important;
 }
 .form-control
 {
-	color: #db5246;
+	color: transparent;
 }
 section
 {
@@ -346,7 +337,7 @@ section
 .logo a span
 {
 	font-weight: 800;
-	color: #ff6b09;
+	color:transparent;
 	text-transform: uppercase;
 }
 
@@ -411,7 +402,7 @@ section
 }
 .hamburger_container:hover i
 {
-	color: #ff6b09;
+	color: transparent;
 }
 
 /*********************************
@@ -459,7 +450,7 @@ section
 }
 .next_section_scroll:hover i
 {
-	color: #ff6b09;
+	color:transparent;
 }
 
 /*********************************
@@ -505,7 +496,7 @@ section
 }
 .menu_close:hover i
 {
-	color: #ff6b09;
+	color:transparent;
 }
 .menu ul
 {
@@ -530,7 +521,7 @@ section
 	width: 5px;
 	height: 5px;
 	border-radius: 50%;
-	background: #ff6b09;
+	background:transparent;
 	content: '';
 }
 .menu ul li.active a
@@ -548,7 +539,7 @@ section
 }
 .menu ul li a:hover
 {
-	color: #ff6b09;
+	color:transparent;
 }
 
 /*********************************
