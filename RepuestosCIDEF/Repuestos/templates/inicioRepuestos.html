@@ -1,0 +1,23 @@
+{% extends "index.html"%}
+{% load static %}
+{% block contenido%}
+	<br><br><br><br><br><br><br><br>
+<div class="row">
+	<div class="offset-1">
+		<div style="display:flex;">	
+			<div>
+				<a href="/">
+					<img src="{% static 'img/fotos/NivelBasico.png' %}" width="500px" />
+				</a>
+			</div>
+			<br>
+				<div>
+				<a href="/Repuestos">
+					<img src="{% static 'img/fotos/NivelExperto.png' %}" width="500px" />
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+<br><br><br><br><br><br><br><br>
+{% endblock %}

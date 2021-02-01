@@ -9,3 +9,5 @@ def repuestos(request):
     return render(request,'repuestos.html', {})
 def prueba(request):
     return render(request,'prueba.html', {})
+def inicioRepuestos(request):
+    return render(request,'inicioRepuestos.html', {})
