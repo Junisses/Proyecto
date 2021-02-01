@@ -11,3 +11,5 @@ def prueba(request):
     return render(request,'prueba.html', {})
 def inicioRepuestos(request):
     return render(request,'inicioRepuestos.html', {})
+def repuestosAvanzados(request):
+    return render(request,'repuestosAvanzados.html', {})
