@@ -11,5 +11,7 @@ def prueba(request):
     return render(request,'prueba.html', {})
 def inicioRepuestos(request):
     return render(request,'inicioRepuestos.html', {})
-def repuestosAvanzados(request):
-    return render(request,'repuestosAvanzados.html', {})
+def repuestosDongFeng(request):
+    return render(request,'repuestosDongFeng.html', {})
+def contactoRepuestos(request):
+    return render(request,'contactoRepuestos.html', {})
