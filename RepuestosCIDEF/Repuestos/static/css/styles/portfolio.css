@@ -43,8 +43,8 @@ COLOR PALETTE
 	margin: 0;
 	padding: 0;
 	-webkit-font-smoothing: antialiased;
-	-webkit-text-shadow: rgb(255, 254, 254) 0 0 1px;
-	text-shadow: rgb(0, 0, 0) 0 0 1px;
+	-webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
+	text-shadow: rgba(0,0,0,.01) 0 0 1px;
 }
 body
 {
@@ -76,8 +76,8 @@ p
 	font-weight: 400;
 	color: #ffffff;
 	-webkit-font-smoothing: antialiased;
-	-webkit-text-shadow: rgb(5, 5, 5) 0 0 1px;
-	text-shadow: rgb(0, 0, 0) 0 0 1px;
+	-webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
+	text-shadow: rgba(0,0,0,.01) 0 0 1px;
 }
 
 h1{font-size: 48px;}
@@ -87,7 +87,7 @@ h4{font-size: 14px;}
 h5{font-size: 11px;}
 h1, h2, h3, h4, h5, h6
 {
-	color: #fffdfd;
+	color: #ffffff;
 	-webkit-font-smoothing: antialiased;
 	-webkit-text-shadow: rgb(255, 247, 247) 0 0 1px;
 	text-shadow: rgb(255, 255, 255) 0 0 1px;
@@ -97,39 +97,39 @@ h1, h2, h3, h4, h5, h6
 	font-size: 14px !important;
 	font-style: italic !important;
 	font-weight: 400 !important;
-	color: black !important;
+	color:rgba(102, 93, 93, 0.864) !important;
 }
 :-moz-placeholder /* older Firefox*/
 {
 	font-size: 14px !important;
 	font-style: italic !important;
 	font-weight: 400 !important;
-	color:black !important;
+	color:rgba(102, 93, 93, 0.864) !important;
 }
 ::-moz-placeholder /* Firefox 19+ */ 
 {
 	font-size: 14px !important;
 	font-style: italic !important;
 	font-weight: 400 !important;
-	color: black !important;
+	color:rgba(102, 93, 93, 0.864) !important;
 } 
 :-ms-input-placeholder
 { 
 	font-size: 14px !important;
 	font-style: italic !important;
 	font-weight: 400 !important;
-	color:black !important;
+	color:rgba(102, 93, 93, 0.864) !important;
 }
 ::input-placeholder
 {
 	font-size: 14px !important;
 	font-style: italic !important;
 	font-weight: 400 !important;
-	color:rgb(0, 0, 0) !important;
+	color:rgba(102, 93, 93, 0.864) !important;
 }
 .form-control
 {
-	color: rgb(4, 3, 3);
+	color: rgb(85, 81, 81);
 }
 section
 {
@@ -218,7 +218,7 @@ section
 	width: 174px;
 	text-align: center;
 	border: solid 2px #f8fc04d8;
-	background: red;
+	background: transparent;
 }
 .button a
 {
@@ -276,13 +276,13 @@ section
 	left: 0;
 	width: 100%;
 	height: 128px;
-	background: rgb(255, 255, 255);
+	background: rgb(255, 254, 255);
 	z-index: 10;
 }
 .header.scrolled
 {
 	height: 80px;
-	background: rgb(255, 253, 253);
+	background: rgb(250, 249, 252);
 }
 
 /*********************************
@@ -298,14 +298,14 @@ section
 {
 	font-size: 36px;
 	font-weight: 500;
-	color: #ffffff;
+	color: #fefefe;
 	letter-spacing: 0.1em;
 	line-height: 128px;
 }
 .logo a span
 {
 	font-weight: 800;
-	color:rgb(255, 253, 253);
+	color:transparent;
 	text-transform: uppercase;
 }
 
@@ -342,7 +342,7 @@ section
 	font-size: 15px;
 	font-weight: 400;
 	line-height: 40.51px;
-	color: #fdfdfd;
+	color: #ffffff;
 }
 .main_nav ul li.active a
 {
@@ -366,11 +366,11 @@ section
 {
 	font-size: 24px;
 	padding: 10px;
-	color: #fdf9f9;
+	color: #FFFFFF;
 }
 .hamburger_container:hover i
 {
-	color: rgb(252, 251, 251);
+	color: transparent;
 }
 
 /*********************************
@@ -393,7 +393,7 @@ section
 {
 	font-size: 30px;
 	font-weight: 500;
-	color: #fffefe;
+	color: #FFFFFF;
 	margin-bottom: 15px;
 }
 
@@ -410,7 +410,7 @@ section
 .next_section i
 {
 	display: block;
-	color: #fffbfb;
+	color: #FFFFFF;
 }
 .next_section i:first-child
 {
@@ -498,7 +498,7 @@ section
 }
 .menu ul li a
 {
-	color: rgb(255, 255, 255);
+	color: #000;
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
 	-ms-transition: all 200ms ease;
@@ -531,7 +531,7 @@ section
 	font-size: 15px;
 	font-weight: 600;
 	text-transform: uppercase;
-	color: #fafafa;
+	color: #000000;
 }
 .portfolio_items
 {
@@ -565,7 +565,7 @@ section
 	width: 100%;
 	height: 100%;
 	content: '';
-	background: rgb(250, 250, 250);
+	background: rgba(69, 43, 120, 0);
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
 	-ms-transition: all 200ms ease;
@@ -601,7 +601,7 @@ section
 {
 	font-size: 24px;
 	font-weight: 400;
-	color: #fdf9f9;
+	color: #2e2e2e;
 	margin-bottom: 16px;
 }
 .card:hover .card-title
@@ -632,7 +632,7 @@ section
 {
 	padding-top: 99px;
 	padding-bottom: 82px;
-	border-top: solid 1px #ffffff;
+	border-top: solid 1px #dcdcdc;
 }
 .footer_logo
 {
@@ -673,13 +673,13 @@ section
 }
 .footer_social ul li a:hover i
 {
-	color: #f2f2f2;
+	color: #fcfbff;
 }
 .footer_cr
 {
 	font-size: 16px;
 	font-weight: 500;
-	color: #fffdfd;
+	color: #cacaca;
 	margin-top: 65px;
 }
 .footer_cr_2
@@ -702,7 +702,7 @@ section
 {
 	font-size: 18px;
 	font-weight: 500;
-	color: #fdfbfb;
+	color: #fefdff;
 	margin-bottom: 9px;
 }
 .footer_col ul li
@@ -722,5 +722,5 @@ section
 }
 .footer_col ul li a:hover
 {
-	color: #ffffff;
+	color: #28262d;
 }
