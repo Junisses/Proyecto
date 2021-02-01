@@ -1,0 +1,282 @@
+{% extends "index.html"%}
+{% load static %}
+{% block contenido%}
+<head>
+<title>CidefChile - Repuesto</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Cidef Project">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="{% static '/css/styles/bootstrap4/bootstrap.min.css' %}">
+<link href="{%static '/css/plugins/fontawesome-free-5.0.1/css/fontawesome-all.css' %}" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="{% static '/css/styles/portfolio_styles.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'styles/portfolio_responsive.css' %}">
+<link rel="stylesheet" href="{% static '/css/estilos.css' %}">
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark fixed-top mt-5 bg-gris cc_cursor">
+		<a class="navbar-brand cc_pointer" href="#"><img width="210" src="https://cidef.cl/wp-content/uploads/2020/10/Donfeng-logo-1.png"></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+		<div class="collapse navbar-collapse cc_cursor" id="navbarNav">
+			<ul class="navbar-nav">
+				<li class="nav-item active"> <a class="nav-link cc_pointer" href="#nuestra_marca">Nuestra Marca <span class="sr-only">(current)</span></a> </li>
+				<li class="nav-item"> <a class="nav-link" href="#actualidad">Actualidad</a> </li>
+				<li class="nav-item dropdown" style="position: initial;"> <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Modelos</a>
+
+					<div class="dropdown-menu w-100" aria-labelledby="dropdown01">
+						<div class="modelos">
+							<div class="container">
+								<div class="row">
+																			<div class="col-6 col-lg-2">
+										<div class="autos my-3">
+											<a href="https://cidef.cl/modelo/joyear-x3/" class="hvr-grow"><img class="img-fluid" src="https://cidef.cl/wp-content/uploads/2020/11/joyear_X3_Dongfeng.jpeg"></a>
+											<p class="my-0"><b>JOYEAR X3</b></p>
+											<p class="text-danger my-0 precio">$ 7.190.000 </p>
+											<small class="text-muted">Incluye bono de financiamiento</small>
+										</div>
+									</div>
+																			<div class="col-6 col-lg-2">
+										<div class="autos my-3">
+											<a href="https://cidef.cl/modelo/ax4/" class="hvr-grow"><img class="img-fluid" src="https://cidef.cl/wp-content/uploads/2020/10/AX4_Dongfeng-1.png"></a>
+											<p class="my-0"><b>AX4</b></p>
+											<p class="text-danger my-0 precio">$ 7.990.000  + IVA</p>
+											<small class="text-muted">Incluye bono de financiamiento</small>
+										</div>
+									</div>
+																			<div class="col-6 col-lg-2">
+										<div class="autos my-3">
+											<a href="https://cidef.cl/modelo/s50-2/" class="hvr-grow"><img class="img-fluid" src="https://cidef.cl/wp-content/uploads/2020/11/S50_Dongfeng.png"></a>
+											<p class="my-0"><b>S50</b></p>
+											<p class="text-danger my-0 precio">$ 8.090.000 </p>
+											<small class="text-muted">Incluye bono de financiamiento</small>
+										</div>
+									</div>
+																			<div class="col-6 col-lg-2">
+										<div class="autos my-3">
+											<a href="https://cidef.cl/modelo/s500/" class="hvr-grow"><img class="img-fluid" src="https://cidef.cl/wp-content/uploads/2020/11/S500_Dongfeng.png"></a>
+											<p class="my-0"><b>S500</b></p>
+											<p class="text-danger my-0 precio">$ 8.690.000 </p>
+											<small class="text-muted">Incluye bono de financiamiento</small>
+										</div>
+									</div>
+																			<div class="col-6 col-lg-2">
+										<div class="autos my-3">
+											<a href="https://cidef.cl/modelo/sx6/" class="hvr-grow"><img class="img-fluid" src="https://cidef.cl/wp-content/uploads/2020/10/SX6_Dongfeng.png"></a>
+											<p class="my-0"><b>SX6</b></p>
+											<p class="text-danger my-0 precio">$ 9.890.000 </p>
+											<small class="text-muted">Incluye bono de financiamiento</small>
+										</div>
+									</div>
+																			<div class="col-6 col-lg-2">
+										<div class="autos my-3">
+											<a href="https://cidef.cl/modelo/sx5/" class="hvr-grow"><img class="img-fluid" src="https://cidef.cl/wp-content/uploads/2020/11/SX5_Dongfeng.png"></a>
+											<p class="my-0"><b>SX5</b></p>
+											<p class="text-danger my-0 precio">$ 9.890.000 </p>
+											<small class="text-muted">Incluye bono de financiamiento</small>
+										</div>
+									</div>
+																			<div class="col-6 col-lg-2">
+										<div class="autos my-3">
+											<a href="https://cidef.cl/modelo/df6-diesel/" class="hvr-grow"><img class="img-fluid" src="https://cidef.cl/wp-content/uploads/2020/11/DF6-Dongfeng.png"></a>
+											<p class="my-0"><b>DF6 Diesel</b></p>
+											<p class="text-danger my-0 precio">$ 12.490.000  + IVA</p>
+											<small class="text-muted">Incluye bono de financiamiento</small>
+										</div>
+									</div>
+																		</div>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</nav>
+<div class="super_container">
+	
+	<!-- Header -->
+
+	<header class="header d-flex flex-row justify-content-end align-items-center trans_200">
+		
+		
+		<!-- Hamburger -->
+		<div class="hamburger_container bez_1">
+			<i class="fas fa-bars trans_200"></i>
+		</div>
+		
+	</header>
+
+	<!-- Menu -->
+
+	<div class="menu_container">
+		<div class="menu menu_mm text-right">
+			<div class="menu_close"><i class="far fa-times-circle trans_200"></i></div>
+			<ul class="menu_mm">
+				<li class="menu_mm"><a href="index.html">Home</a></li>
+				<li class="menu_mm"><a href="about.html">About Us</a></li>
+				<li class="menu_mm"><a href="services.html">Services</a></li>
+				<li class="menu_mm active"><a href="portfolio.html">Portfolio</a></li>
+				<li class="menu_mm"><a href="blog.html">Blog</a></li>
+				<li class="menu_mm"><a href="contact.html">Contact</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- Home -->
+
+	<div class="home">
+		<div class="home_background_container prlx_parent" style="height: 300px;">
+			<div class="home_background prlx" 
+				style="background-image:url(https://www.wallpapertip.com/wmimgs/3-34405_wallpaper-galaxy-space-red-shine-universe-red-and.jpg);">
+			</div>
+		</div>
+		
+		<div class="home_title">
+			<h2> Repuestos </h2>
+		</div>
+	
+	</div>
+
+	<!-- Portfolio -->
+
+	<div class="portfolio" style="padding-top: 0%;">
+		
+		<div class="container">
+			<div class="row">
+				
+				<div class="portfolio_category">
+					
+						<ul>
+							  <form  class="portfolio_category" action="/action_page.php">
+								<label  title="Motor" for="Motor">Modelo:</label>
+								<select name="cars" id="cars">
+								  <option value="volvo">Dongfeng Feshen S30</option>
+								  <option value="volvo">Dongfeng Feshen H30</option>
+								  <option value="volvo">Dongfeng Feshen AX30</option>
+								  <option value="volvo">Dongfeng Feshen AX4</option>
+								  <option value="volvo">Dongfeng Feshen AX7</option>
+								  <option value="volvo">Dongfeng Feshen AX5</option>
+								  <option value="volvo">Dongfeng Feshen A30</option>
+								  <option value="volvo">Dongfeng Feshen A60</option>
+								  <option value="volvo">Dongfeng Feshen New AX7</option>
+								</select>
+							  </form>
+							  <form class="portfolio_category" action="/action_page.php">
+								<label  title="Categoria" for="categoria">categoria:</label>
+								<select name="Categoria" id="categoria">
+								  <option value="motor">Motor</option>
+								  <option value="volvo">S.motor</option>
+								  <option value="volvo">Embrague</option>
+								  <option value="volvo">Direccion</option>
+								  <option value="volvo">Carroseria</option>
+								  <option value="volvo">Interior y Exterior</option>
+								  <option value="volvo">Airbag</option>
+								  <option value="otro">Otros</option>
+								</select>
+							  </form>
+							  <form class="portfolio_category" action="/action_page.php">
+								<label  title="Embrague" for="embrague">Partes:</label>
+								<select name="Embrague" id="embrague">
+								  <option value="volvo">Motor</option>
+								  <option value="volvo">bomba de agua</option>
+								  <option value="volvo">Empaquetadura</option>
+								  <option value="volvo">Perno de cabeza hexagonal</option>
+								</select>
+							  </form>
+						</ul>
+					
+				</div>
+
+			</div>
+
+			<div class="row">
+				<div class="col">
+					
+					<div class="portfolio_items product-grid">
+
+						<!-- Portfolio Item -->
+						<div class="card branding">
+							<div class="card_image">
+								<img class="card-img-top" src="https://cdn.autobild.es/sites/navi.axelspringer.es/public/styles/1200/public/media/image/2019/08/prueba-dongfeng-dfsk-glory-580_4.jpg?itok=UTW8mcSO" alt="image by https://unsplash.com/@heysupersimi">
+							</div>
+							
+							<div class="card-body">
+								<div class="card-header">categoria</div>
+								<div class="card-title">DFSK 580 146 CV Luxury</div>
+								<div class="card-text">El DFSK Glory 580 representa la incursión en el segmento de SUV medianos por parte de la multinacional china Dongfeng Motor Corporation, accionista del grupo PSA.
+									El SUV DFSK 580 es la incursión de la marca en el mercado generalista, con un crossover familiar de tracción delantera, con capacidad para siete pasajeros, de apariencia moderna y sofisticada, y a uno de los precios más asequibles del mercado.</div>
+								<div class="card-link"><a href="portfolio_item.html">Comprar</a></div>
+							</div>
+						</div>
+
+						<!-- Portfolio Item -->
+						<div class="card 3d_generated">
+							<div class="card_image">
+								<img class="card-img-top" src="https://www.elcarrocolombiano.com/wp-content/uploads/2019/08/20190803-FOTON-TUNLAND-4X4-2020-COLOMBIA-PRECIO-CARACTERISTICAS-01-750x460.jpg" alt="image by https://unsplash.com/@anthonydelanoix">
+							</div>
+							
+							<div class="card-body">
+								<div class="card-header">3d generated</div>
+								<div class="card-title">Identity branding for company</div>
+								<div class="card-text">Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mat tis effic iturut magna. Pellentesque sit amet tellus blandit. Etiam nec odio ves tibul.  Nec odio vestibulum est mattis.</div>
+								<div class="card-link"><a href="portfolio_item.html">read more</a></div>
+							</div>
+						</div>
+
+						<!-- Portfolio Item -->
+						<div class="card motion_graphic">
+							<div class="card_image">
+								<img class="card-img-top" src="https://www.racing5.cl/wp-content/uploads/2016/05/4shvnva0kkl57zqisl2i.jpg" alt="image by https://unsplash.com/@heysupersimi">
+							</div>
+							
+							<div class="card-body">
+								<div class="card-header">motion graphic</div>
+								<div class="card-title">3D Project for inhouse</div>
+								<div class="card-text">Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mat tis effic iturut magna. Pellentesque sit amet tellus blandit. Etiam nec odio ves tibul.  Nec odio vestibulum est mattis.</div>
+								<div class="card-link"><a href="portfolio_item.html">read more</a></div>
+							</div>
+						</div>
+
+						<!-- Portfolio Item -->
+						<div class="card graphic_design">
+							<div class="card_image">
+								<img class="card-img-top" src="https://i0.wp.com/clipset.com/wp-content/uploads/2013/11/kawasaki-three-wheeler.jpg?ssl=1" alt="image by https://unsplash.com/@anthonydelanoix">
+							</div>
+							
+							<div class="card-body">
+								<div class="card-header">graphic design</div>
+								<div class="card-title">Identity branding for company</div>
+								<div class="card-text">Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mat tis effic iturut magna. Pellentesque sit amet tellus blandit. Etiam nec odio ves tibul.  Nec odio vestibulum est mattis.</div>
+								<div class="card-link"><a href="portfolio_item.html">read more</a></div>
+							</div>
+						</div>
+
+						<!-- Portfolio Item -->
+						<div class="card web_design">
+							<div class="card_image">
+								<img class="card-img-top" src="https://i.blogs.es/fcea41/dfsk-ix5/1366_2000.jpg" alt="image by https://unsplash.com/@heysupersimi">
+							</div>
+							
+							<div class="card-body">
+								<div class="card-header">web design</div>
+								<div class="card-title">3D Project for inhouse</div>
+								<div class="card-text">Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mat tis effic iturut magna. Pellentesque sit amet tellus blandit. Etiam nec odio ves tibul.  Nec odio vestibulum est mattis.</div>
+								<div class="card-link"><a href="portfolio_item.html">read more</a></div>
+							</div>
+						</div>
+
+					</div>
+						
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+</div>
+<script src="https://kit.fontawesome.com/2c36e9b7b1.js"></script>
+<script src="{% static '/js/main.js' %}"></script>
+<script src="{% static '/js/jquery-3.2.1.min.js' %}"></script>
+
+</body>
+{% endblock %}
