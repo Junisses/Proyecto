@@ -94,17 +94,11 @@
 		</div>
 	</nav>
 <div class="super_container">
-	
-	<!-- Header -->
-
 	<header class="header d-flex flex-row justify-content-end align-items-center trans_200">
-		
-		
-		<!-- Hamburger -->
+
 		<div class="hamburger_container bez_1">
 			<i class="fas fa-bars trans_200"></i>
 		</div>
-		
 	</header>
 
 	<!-- Menu -->
@@ -197,19 +191,26 @@
 		   </span>
 		 </div>
 		 <div class="form-group col-md-6">
-		   <span class="wpcf7-form-control-wrap comuna"><select name="comuna" class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required form-control" id="comunas" aria-required="true" aria-invalid="false"><option value="sin-region">Seleccione comuna</option></select></span>
+		   <span class="wpcf7-form-control-wrap comuna"><select name="comuna" class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required form-control" id="comunas" aria-required="true" aria-invalid="false">
+				<option value="sin-region">Seleccione comuna</option>
+				</select>
+			</span>
 		 </div>
 	   </div>
 	   
 	   <p class="mt-4">Repuesto solicitado</p>
 	   <div class="form-row">
 		 <div class="form-group col-md-12">
-		   <span class="wpcf7-form-control-wrap comentarios"><textarea name="comentarios" cols="40" rows="3" maxlength="500" minlength="10" class="wpcf7-form-control wpcf7-textarea form-control" aria-invalid="false" placeholder="Comentarios"></textarea></span>
+		   <span class="wpcf7-form-control-wrap comentarios">
+			<textarea name="comentarios" cols="40" rows="3" maxlength="500" minlength="10" class="wpcf7-form-control wpcf7-textarea form-control" aria-invalid="false" placeholder="Comentarios"></textarea>
+		   </span>
 		   <small>*Máximo 500 caracteres</small>
 		 </div>
 	 
 		 <div class="form-group col-md-12">
-				<label>Adjuntar foto del Repuesto <span class="text-danger">(opcional)</span> </label>
+				<label>Adjuntar foto del Repuesto 
+					<span class="text-danger">(opcional)</span> 
+				</label>
 				 <div class="custom-file">
 					 <span class="wpcf7-form-control-wrap foto"><input type="file" name="foto" size="40" class="wpcf7-form-control wpcf7-file custom-file-input" id="customFile" accept=".jpg,.jpeg" aria-invalid="false"></span>
 					 <label class="custom-file-label text-left" for="customFile">Foto del Repuesto</label>
