@@ -2,90 +2,115 @@
 {% load static %}
 {% block contenido%}
 <head>
-<title>CidefChile - Repuesto</title>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="description" content="Cidef Project">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="{% static '/css/styles/bootstrap4/bootstrap.min.css' %}">
-<link href="{%static '/css/plugins/fontawesome-free-5.0.1/css/fontawesome-all.css' %}" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="{% static '/css/styles/portfolio.css' %}">
-<link rel="stylesheet" type="text/css" href="{% static 'styles/portfolio_responsive.css' %}">
-<link rel="stylesheet" href="{% static '/css/estilos.css' %}">
-<link rel="stylesheet" href="{% static '/css/formulario.css' %}">
+	<title>CidefChile - Repuesto</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="Cidef Project">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="{% static '/css/styles/bootstrap4/bootstrap.min.css' %}">
+	<link href="{%static '/css/plugins/fontawesome-free-5.0.1/css/fontawesome-all.css' %}" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="{% static '/css/styles/portfolio.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'styles/portfolio_responsive.css' %}">
+	<link rel="stylesheet" href="{% static '/css/estilos.css' %}">
+	<link rel="stylesheet" href="{% static '/css/formulario.css' %}">
 </head>
 
 <body>
 	<nav class="navbar navbar-expand-lg navbar-dark fixed-top mt-5 bg-gris cc_cursor">
-		<a class="navbar-brand cc_pointer" href="#"><img width="210" src="https://cidef.cl/wp-content/uploads/2020/10/Donfeng-logo-1.png"></a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+		<a class="navbar-brand cc_pointer" href="#">
+			<img width="210" src="https://cidef.cl/wp-content/uploads/2020/10/Donfeng-logo-1.png">
+		</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> 
+			<span class="navbar-toggler-icon"></span> 
+		</button>
 		<div class="collapse navbar-collapse cc_cursor" id="navbarNav">
 			<ul class="navbar-nav">
-				<li class="nav-item active"> <a class="nav-link cc_pointer" href="#nuestra_marca">Nuestra Marca <span class="sr-only">(current)</span></a> </li>
-				<li class="nav-item"> <a class="nav-link" href="#actualidad">Actualidad</a> </li>
-				<li class="nav-item dropdown" style="position: initial;"> <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Modelos</a>
-
+				<li class="nav-item active"> 
+					<a class="nav-link cc_pointer" href="#nuestra_marca">Nuestra Marca 
+						<span class="sr-only">(current)</span>
+					</a> 
+				</li>
+				<li class="nav-item"> 
+					<a class="nav-link" href="#actualidad">Actualidad</a>
+				</li>
+				<li class="nav-item dropdown" style="position: initial;"> 
+					<a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Modelos
+					</a>
 					<div class="dropdown-menu w-100" aria-labelledby="dropdown01">
 						<div class="modelos">
 							<div class="container">
 								<div class="row">
-																			<div class="col-6 col-lg-2">
+									<div class="col-6 col-lg-2">
 										<div class="autos my-3">
-											<a href="https://cidef.cl/modelo/joyear-x3/" class="hvr-grow"><img class="img-fluid" src="https://cidef.cl/wp-content/uploads/2020/11/joyear_X3_Dongfeng.jpeg"></a>
+											<a href="https://cidef.cl/modelo/joyear-x3/" class="hvr-grow">
+												<img class="img-fluid" src="https://cidef.cl/wp-content/uploads/2020/11/joyear_X3_Dongfeng.jpeg">
+											</a>
 											<p class="my-0"><b>JOYEAR X3</b></p>
 											<p class="text-danger my-0 precio">$ 7.190.000 </p>
 											<small class="text-muted">Incluye bono de financiamiento</small>
 										</div>
 									</div>
-																			<div class="col-6 col-lg-2">
+									<div class="col-6 col-lg-2">
 										<div class="autos my-3">
-											<a href="https://cidef.cl/modelo/ax4/" class="hvr-grow"><img class="img-fluid" src="https://cidef.cl/wp-content/uploads/2020/10/AX4_Dongfeng-1.png"></a>
+											<a href="https://cidef.cl/modelo/ax4/" class="hvr-grow">
+												<img class="img-fluid" src="https://cidef.cl/wp-content/uploads/2020/10/AX4_Dongfeng-1.png">
+											</a>
 											<p class="my-0"><b>AX4</b></p>
 											<p class="text-danger my-0 precio">$ 7.990.000  + IVA</p>
 											<small class="text-muted">Incluye bono de financiamiento</small>
 										</div>
 									</div>
-																			<div class="col-6 col-lg-2">
+									<div class="col-6 col-lg-2">
 										<div class="autos my-3">
-											<a href="https://cidef.cl/modelo/s50-2/" class="hvr-grow"><img class="img-fluid" src="https://cidef.cl/wp-content/uploads/2020/11/S50_Dongfeng.png"></a>
+											<a href="https://cidef.cl/modelo/s50-2/" class="hvr-grow">
+												<img class="img-fluid" src="https://cidef.cl/wp-content/uploads/2020/11/S50_Dongfeng.png">
+											</a>
 											<p class="my-0"><b>S50</b></p>
 											<p class="text-danger my-0 precio">$ 8.090.000 </p>
 											<small class="text-muted">Incluye bono de financiamiento</small>
 										</div>
 									</div>
-																			<div class="col-6 col-lg-2">
+									<div class="col-6 col-lg-2">
 										<div class="autos my-3">
-											<a href="https://cidef.cl/modelo/s500/" class="hvr-grow"><img class="img-fluid" src="https://cidef.cl/wp-content/uploads/2020/11/S500_Dongfeng.png"></a>
+											<a href="https://cidef.cl/modelo/s500/" class="hvr-grow">
+												<img class="img-fluid" src="https://cidef.cl/wp-content/uploads/2020/11/S500_Dongfeng.png">
+											</a>
 											<p class="my-0"><b>S500</b></p>
 											<p class="text-danger my-0 precio">$ 8.690.000 </p>
 											<small class="text-muted">Incluye bono de financiamiento</small>
 										</div>
 									</div>
-																			<div class="col-6 col-lg-2">
+									<div class="col-6 col-lg-2">
 										<div class="autos my-3">
-											<a href="https://cidef.cl/modelo/sx6/" class="hvr-grow"><img class="img-fluid" src="https://cidef.cl/wp-content/uploads/2020/10/SX6_Dongfeng.png"></a>
+											<a href="https://cidef.cl/modelo/sx6/" class="hvr-grow">
+												<img class="img-fluid" src="https://cidef.cl/wp-content/uploads/2020/10/SX6_Dongfeng.png">
+											</a>
 											<p class="my-0"><b>SX6</b></p>
 											<p class="text-danger my-0 precio">$ 9.890.000 </p>
 											<small class="text-muted">Incluye bono de financiamiento</small>
 										</div>
 									</div>
-																			<div class="col-6 col-lg-2">
+									<div class="col-6 col-lg-2">
 										<div class="autos my-3">
-											<a href="https://cidef.cl/modelo/sx5/" class="hvr-grow"><img class="img-fluid" src="https://cidef.cl/wp-content/uploads/2020/11/SX5_Dongfeng.png"></a>
+											<a href="https://cidef.cl/modelo/sx5/" class="hvr-grow">
+												<img class="img-fluid" src="https://cidef.cl/wp-content/uploads/2020/11/SX5_Dongfeng.png">
+											</a>
 											<p class="my-0"><b>SX5</b></p>
 											<p class="text-danger my-0 precio">$ 9.890.000 </p>
 											<small class="text-muted">Incluye bono de financiamiento</small>
 										</div>
 									</div>
-																			<div class="col-6 col-lg-2">
+									<div class="col-6 col-lg-2">
 										<div class="autos my-3">
-											<a href="https://cidef.cl/modelo/df6-diesel/" class="hvr-grow"><img class="img-fluid" src="https://cidef.cl/wp-content/uploads/2020/11/DF6-Dongfeng.png"></a>
+											<a href="https://cidef.cl/modelo/df6-diesel/" class="hvr-grow">
+												<img class="img-fluid" src="https://cidef.cl/wp-content/uploads/2020/11/DF6-Dongfeng.png">
+											</a>
 											<p class="my-0"><b>DF6 Diesel</b></p>
 											<p class="text-danger my-0 precio">$ 12.490.000  + IVA</p>
 											<small class="text-muted">Incluye bono de financiamiento</small>
 										</div>
 									</div>
-																		</div>
+								</div>
 							</div>
 						</div>
 					</div>
