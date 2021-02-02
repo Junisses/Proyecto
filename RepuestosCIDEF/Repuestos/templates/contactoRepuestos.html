@@ -120,27 +120,10 @@
 	</nav>
 <div class="super_container">
 	<header class="header d-flex flex-row justify-content-end align-items-center trans_200">
-
 		<div class="hamburger_container bez_1">
 			<i class="fas fa-bars trans_200"></i>
 		</div>
 	</header>
-
-	<!-- Menu -->
-
-	<div class="menu_container">
-		<div class="menu menu_mm text-right">
-			<div class="menu_close"><i class="far fa-times-circle trans_200"></i></div>
-			<ul class="menu_mm">
-				<li class="menu_mm"><a href="index.html">Home</a></li>
-				<li class="menu_mm"><a href="about.html">About Us</a></li>
-				<li class="menu_mm"><a href="services.html">Services</a></li>
-				<li class="menu_mm active"><a href="portfolio.html">Portfolio</a></li>
-				<li class="menu_mm"><a href="blog.html">Blog</a></li>
-				<li class="menu_mm"><a href="contact.html">Contact</a></li>
-			</ul>
-		</div>
-	</div>
 
 	<!-- Home -->
 
@@ -156,6 +139,8 @@
 		</div>
 	</div>
 <!--Formulario-->
+<div class="row justify-content-center">
+	<div class="col-10">
 	<div class="mt-4">
 		<p>Datos del cliente</p>
 	   <div class="form-row">
@@ -175,8 +160,7 @@
 		   <span class="wpcf7-form-control-wrap fono"><input type="tel" name="fono" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel form-control" aria-required="true" aria-invalid="false" placeholder="Teléfono"></span>
 		 </div>  
 	   </div>
-	   
-	   
+	
 	   <p class="mt-4">Datos del vehículo</p>
 	   <div class="form-row">
 		 <div class="form-group col-md-4">
@@ -189,7 +173,6 @@
 		   <span class="wpcf7-form-control-wrap chasis"><input type="text" name="chasis" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control" id="chasis" aria-required="true" aria-invalid="false" placeholder="N° chasis"></span>
 		 </div>    
 	   </div>
-	   
 	 
 	   <p class="mt-4">Localidad</p>
 	   <div class="form-row">
@@ -247,8 +230,9 @@
 	   <div class="d-flex justify-content-end">
 		   <button type="submit" class="btn btn-danger pull-right">ENVIAR</button>
 	   </div>
-	   
+	</div>   
     </div>
+</div>
 </div>
 <script src="https://kit.fontawesome.com/2c36e9b7b1.js"></script>
 <script src="{% static '/js/main.js' %}"></script>
