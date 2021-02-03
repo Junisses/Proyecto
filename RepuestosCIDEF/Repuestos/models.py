@@ -46,7 +46,7 @@ class Partes(models.Model):
         
         
         
-#Localidades
+#Regiones
 class Localidades(models.Model):
     nombre            = models.TextField(max_length=60)
 

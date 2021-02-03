@@ -16,6 +16,7 @@
 </head>
 
 <body>
+  <section name="Menú">
 	<nav class="navbar navbar-expand-lg navbar-dark fixed-top mt-5 bg-gris cc_cursor">
 		<a class="navbar-brand cc_pointer" href="#">
 			<img width="210" src="https://cidef.cl/wp-content/uploads/2020/10/Donfeng-logo-1.png">
@@ -118,15 +119,9 @@
 			</ul>
 		</div>
 	</nav>
+  </section>
 <div class="super_container">
-	<header class="header d-flex flex-row justify-content-end align-items-center trans_200">
-		<div class="hamburger_container bez_1">
-			<i class="fas fa-bars trans_200"></i>
-		</div>
-	</header>
-
-	<!-- Home -->
-
+	<!-- Titulo de página -->
 	<div class="home">
 		<div class="home_background_container prlx_parent" style="height: 300px;">
 			<div class="home_background prlx" 
@@ -138,102 +133,123 @@
 			<h2> Contacto Repuestos </h2>
 		</div>
 	</div>
+
 <!--Formulario-->
-<div class="row justify-content-center">
-	<div class="col-10">
-	<div class="mt-4">
-		<p>Datos del cliente</p>
-	   <div class="form-row">
-		 <div class="form-group col-md-4">
-		   <span class="wpcf7-form-control-wrap nombre"><input type="text" name="nombre" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control" aria-required="true" aria-invalid="false" placeholder="Nombre"></span>
-		 </div>
-		 <div class="form-group col-md-4">
-		   <span class="wpcf7-form-control-wrap apellidos"><input type="text" name="apellidos" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control" aria-required="true" aria-invalid="false" placeholder="Apellidos"></span>
-		 </div>    
-	   </div>
-	   
-	   <div class="form-row">
-		 <div class="form-group col-md-4">
-		   <span class="wpcf7-form-control-wrap email"><input type="email" name="email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email form-control" aria-required="true" aria-invalid="false" placeholder="Email"></span>
-		 </div>
-		 <div class="form-group col-md-4">
-		   <span class="wpcf7-form-control-wrap fono"><input type="tel" name="fono" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel form-control" aria-required="true" aria-invalid="false" placeholder="Teléfono"></span>
-		 </div>  
-	   </div>
-	
-	   <p class="mt-4">Datos del vehículo</p>
-	   <div class="form-row">
-		 <div class="form-group col-md-4">
-		   <span class="wpcf7-form-control-wrap marca"><input type="text" name="marca" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control" aria-required="true" aria-invalid="false" placeholder="Marca"></span>
-		 </div>
-		 <div class="form-group col-md-4">
-		   <span class="wpcf7-form-control-wrap modelo"><input type="text" name="modelo" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control" aria-required="true" aria-invalid="false" placeholder="Modelo"></span>
-		 </div>
-		 <div class="form-group col-md-4">
-		   <span class="wpcf7-form-control-wrap chasis"><input type="text" name="chasis" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control" id="chasis" aria-required="true" aria-invalid="false" placeholder="N° chasis"></span>
-		 </div>    
-	   </div>
-	 
-	   <p class="mt-4">Localidad</p>
-	   <div class="form-row">
-		 <div class="form-group col-md-6">
-		   <span class="wpcf7-form-control-wrap region">
-			   <select name="region" class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required form-control" id="regiones" aria-required="true" aria-invalid="false"><option value="sin-region">Seleccione región</option>
-				<option value="Región de Arica y Parinacota">Región de Arica y Parinacota</option>
-				<option value="Región de Tarapacá">Región de Tarapacá</option>
-				<option value="Región de Antofagasta">Región de Antofagasta</option>
-				<option value="Región de Atacama">Región de Atacama</option>
-				<option value="Región de Coquimbo">Región de Coquimbo</option>
-				<option value="Región de Valparaíso">Región de Valparaíso</option>
-				<option value="Región del Libertador Gral. Bernardo O’Higgins">Región del Libertador Gral. Bernardo O’Higgins</option>
-				<option value="Región del Maule">Región del Maule</option>
-				<option value="Región del Ñuble">Región del Ñuble</option>
-				<option value="Región del Biobío">Región del Biobío</option>
-				<option value="Región de la Araucanía">Región de la Araucanía</option>
-				<option value="Región de Los Ríos">Región de Los Ríos</option>
-				<option value="Región de Los Lagos">Región de Los Lagos</option>
-				<option value="Región Aisén del Gral. Carlos Ibáñez del Campo">Región Aisén del Gral. Carlos Ibáñez del Campo</option>
-				<option value="Región de Magallanes y de la AntárVca Chilena">Región de Magallanes y de la Antártida Chilena</option>
-				<option value="Región Metropolitana de Santiago">Región Metropolitana de Santiago</option>
-			   </select>
-		   </span>
-		 </div>
-		 <div class="form-group col-md-6">
-		   <span class="wpcf7-form-control-wrap comuna">
-				<select name="comuna" class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required form-control" id="comunas" aria-required="true" aria-invalid="false">
-					<option value="sin-region">Seleccione comuna</option>
-				</select>
-			</span>
-		 </div>
-	   </div>
-	   
-	   <p class="mt-4">Repuesto solicitado</p>
-	   <div class="form-row">
-		 <div class="form-group col-md-12">
-		   <span class="wpcf7-form-control-wrap comentarios">
-			<textarea name="comentarios" cols="40" rows="3" maxlength="500" minlength="10" class="wpcf7-form-control wpcf7-textarea form-control" aria-invalid="false" placeholder="Comentarios"></textarea>
-		   </span>
-		   <small>*Máximo 500 caracteres</small>
-		 </div>
-	 
-		 <div class="form-group col-md-12">
-				<label>Adjuntar foto del Repuesto 
-					<span class="text-danger">(opcional)</span> 
-				</label>
-				 <div class="custom-file">
-					 <span class="wpcf7-form-control-wrap foto"><input type="file" name="foto" size="40" class="wpcf7-form-control wpcf7-file custom-file-input" id="customFile" accept=".jpg,.jpeg" aria-invalid="false"></span>
-					 <label class="custom-file-label text-left" for="customFile">Foto del Repuesto</label>
-				 </div>
-			 </div>
-		   <small>*Peso máximo de 2Mb</small>
-		 </div>
+	<div class="row justify-content-center">
+		<div class="col-10">
+		<div class="mt-4">
+			<p>Datos del cliente</p>
+			<!-- Nombre y apellido -->
+			<div class="form-row">
+				<div class="form-group col-md-4">
+				   <span class="wpcf7-form-control-wrap nombre">
+						<input type="text" name="nombre" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control" aria-required="true" aria-invalid="false" placeholder="Nombre">
+				   </span>
+				</div>
+				<div class="form-group col-md-4">
+				   <span class="wpcf7-form-control-wrap apellidos">
+						<input type="text" name="apellidos" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control" aria-required="true" aria-invalid="false" placeholder="Apellidos">
+				   </span>
+				</div>    
+			</div>
+		    <!-- Mail y Telefono -->
+			<div class="form-row">
+				<div class="form-group col-md-4">
+					<span class="wpcf7-form-control-wrap email">
+						<input type="email" name="email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email form-control" aria-required="true" aria-invalid="false" placeholder="Email">
+					</span>
+				</div>
+				<div class="form-group col-md-4">
+				    <span class="wpcf7-form-control-wrap fono">
+						<input type="tel" name="fono" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel form-control" aria-required="true" aria-invalid="false" placeholder="Teléfono">
+					</span>
+				</div>  
+			</div>
 		
-	   <div class="d-flex justify-content-end">
-		   <button type="submit" class="btn btn-danger pull-right">ENVIAR</button>
-	   </div>
-	</div>   
-    </div>
-</div>
+			<p class="mt-4">Datos del vehículo</p>
+			<!-- Marca, modelo y chasis -->
+			<div class="form-row">
+				<div class="form-group col-md-4">
+					<span class="wpcf7-form-control-wrap marca">
+						<input type="text" name="marca" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control" aria-required="true" aria-invalid="false" placeholder="Marca">
+					</span>
+				</div>
+				<div class="form-group col-md-4">
+					<span class="wpcf7-form-control-wrap modelo">
+						<input type="text" name="modelo" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control" aria-required="true" aria-invalid="false" placeholder="Modelo">
+					</span>
+				</div>
+				<div class="form-group col-md-4">
+					<span class="wpcf7-form-control-wrap chasis">
+						<input type="text" name="chasis" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control" id="chasis" aria-required="true" aria-invalid="false" placeholder="N° chasis">
+					</span>
+				</div>    
+			</div>
+		 
+		   <p class="mt-4">Localidad</p>
+		   <!-- Regiones -->
+		   <div class="form-row">
+			 <div class="form-group col-md-6">
+			   <span class="wpcf7-form-control-wrap region">
+				   <select name="region" class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required form-control" id="regiones" aria-required="true" aria-invalid="false"><option value="sin-region">Seleccione región</option>
+						<option value="Región de Arica y Parinacota">Región de Arica y Parinacota</option>
+						<option value="Región de Tarapacá">Región de Tarapacá</option>
+						<option value="Región de Antofagasta">Región de Antofagasta</option>
+						<option value="Región de Atacama">Región de Atacama</option>
+						<option value="Región de Coquimbo">Región de Coquimbo</option>
+						<option value="Región de Valparaíso">Región de Valparaíso</option>
+						<option value="Región del Libertador Gral. Bernardo O’Higgins">Región del Libertador Gral. Bernardo O’Higgins</option>
+						<option value="Región del Maule">Región del Maule</option>
+						<option value="Región del Ñuble">Región del Ñuble</option>
+						<option value="Región del Biobío">Región del Biobío</option>
+						<option value="Región de la Araucanía">Región de la Araucanía</option>
+						<option value="Región de Los Ríos">Región de Los Ríos</option>
+						<option value="Región de Los Lagos">Región de Los Lagos</option>
+						<option value="Región Aisén del Gral. Carlos Ibáñez del Campo">Región Aisén del Gral. Carlos Ibáñez del Campo</option>
+						<option value="Región de Magallanes y de la AntárVca Chilena">Región de Magallanes y de la Antártida Chilena</option>
+						<option value="Región Metropolitana de Santiago">Región Metropolitana de Santiago</option>
+				   </select>
+			   </span>
+			 </div>
+			 <!-- Comuna -->
+			 <div class="form-group col-md-6">
+			   <span class="wpcf7-form-control-wrap comuna">
+					<select name="comuna" class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required form-control" id="comunas" aria-required="true" aria-invalid="false">
+						<option value="sin-region">Seleccione comuna</option>
+					</select>
+				</span>
+			 </div>
+		   </div>
+		   
+		   <p class="mt-4">Repuesto solicitado</p>
+			<div class="form-row">
+				<div class="form-group col-md-12">
+					<span class="wpcf7-form-control-wrap comentarios">
+						<textarea name="comentarios" cols="40" rows="3" maxlength="500" minlength="10" class="wpcf7-form-control wpcf7-textarea form-control" aria-invalid="false" placeholder="Comentarios"></textarea>
+					</span>
+					<small>*Máximo 500 caracteres</small>
+				</div>
+		 
+			 <div class="form-group col-md-12">
+					<label>Adjuntar foto del Repuesto 
+						<span class="text-danger">(opcional)</span> 
+					</label>
+					<div class="custom-file">
+						<span class="wpcf7-form-control-wrap foto">
+							<input type="file" name="foto" size="40" class="wpcf7-form-control wpcf7-file custom-file-input" id="customFile" accept=".jpg,.jpeg" aria-invalid="false">
+						</span>
+						<label class="custom-file-label text-left" for="customFile">Foto del Repuesto</label>
+					</div>
+				 </div>
+			   <small>*Peso máximo de 2Mb</small>
+			</div>
+			
+			<div class="d-flex justify-content-end">
+				<button type="submit" class="btn btn-danger pull-right">ENVIAR</button>
+			</div>
+		</div>   
+		</div>
+	</div>
 </div>
 <script src="https://kit.fontawesome.com/2c36e9b7b1.js"></script>
 <script src="{% static '/js/main.js' %}"></script>
