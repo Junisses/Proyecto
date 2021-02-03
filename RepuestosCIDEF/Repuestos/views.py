@@ -15,3 +15,5 @@ def repuestosDongFeng(request):
     return render(request,'repuestosDongFeng.html', {})
 def contactoRepuestos(request):
     return render(request,'contactoRepuestos.html', {})
+def repuestosFoton(request):
+    return render(request,'repuestosFoton.html', {})
