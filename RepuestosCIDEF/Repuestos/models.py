@@ -1,6 +1,6 @@
 from django.db import models
 
-# Create your models here.
+#Repuestos
 class MarcaAuto(models.Model):
     nombre        = models.TextField(max_length=50)
 
@@ -40,6 +40,22 @@ class Partes(models.Model):
     descripcion       = models.TextField(max_length = 200)
     stock             = models.IntegerField()
     precioVenta       = models.IntegerField()
+
+    def __str__(self):
+        return self.nombre
+        
+        
+        
+#Localidades
+class Localidades(models.Model):
+    nombre            = models.TextField(max_length=60)
+
+    def __str__(self):
+        return self.nombre
+        
+class Comuna(models.Model):
+    localidad         = models.ForeignKey(Localidades, blank=True, null=True, on_delete=models.SET_NULL)
+    nombre            = models.TextField(max_length=60)
 
     def __str__(self):
         return self.nombre
