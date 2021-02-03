@@ -22,6 +22,7 @@
 			</div>
 		</div>
 	</form>
+	
 	<script>
 	$(function() {
 		$('select[name="localidad"]').on('change', function () {
@@ -40,19 +41,19 @@
 				},
 				dataType: 'json',
 			}).done(function (data) {
-				id (!data.hasOwnProperty('error')) {
-					$.each(data, function (key, value) {
+				if (!data.hasOwnProperty('error')) {
+					.each(data, function (key, value) {
 						options+='<option value="'+value.id+'">'+value.name+'</option>';
 					return false;
-				}
 				message_error(data.error);
-			}).fail(function (jqXHR, textStatus, errorThrown) {
+			}
+			).fail(function (jqXHR, textStatus, errorThrown) {
 				alert(textStatus + ': ' + errorThrown);
 			}).always(function (data) {
 				select_comunas.html(options);
 		});
-	  })
-	}}));
+	  }})
+	})});
 	</script>
 
 {% endblock %}

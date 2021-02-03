@@ -40,7 +40,7 @@ class TestView(TemplateView):
             if action == 'search_comuna_id':
                 data = []
                 for i in Comuna.objects.filter(localidad__id=request.POST['id']):
-                    data.append({'id': i.id, 'name': i.name})
+                    data.append({'id': i.id, 'nombre': i.nombre})
             else:
                 data['error'] = 'Ha ocurrido un error'
         except Exception as e:
