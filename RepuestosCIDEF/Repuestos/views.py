@@ -52,3 +52,6 @@ class TestView(TemplateView):
         context['title'] = 'Select Anidados | Django'
         context['form'] = TestForm()
         return context
+
+def repuestosFoton(request):
+    return render(request,'repuestosFoton.html', {})

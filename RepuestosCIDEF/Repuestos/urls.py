@@ -15,4 +15,5 @@ urlpatterns = [
     path('repuestosDongFeng',views.repuestosDongFeng,name='repuestosDongFeng'),
     #test
     path('test/', views.TestView.as_view(), name='test'),
+
 ]
