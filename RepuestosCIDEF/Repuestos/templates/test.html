@@ -23,7 +23,7 @@
 		</div>
 	</form>
 	
-	<script>
+	<script type="application/javascript">
 	$(function() {
 		$('select[name="localidad"]').on('change', function () {
 			var id = $(this).val();
@@ -42,7 +42,7 @@
 				dataType: 'json',
 			}).done(function (data) {
 				if (!data.hasOwnProperty('error')) {
-					.each(data, function (key, value) {
+					$.each(data, function (key, value) {
 						options+='<option value="'+value.id+'">'+value.name+'</option>';
 					return false;
 				message_error(data.error);
