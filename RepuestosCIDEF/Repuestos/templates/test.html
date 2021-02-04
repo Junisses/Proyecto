@@ -24,37 +24,37 @@
 		</div>
 	</form>
 	
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 	<script>
 	$(function() {
-		$('select[nombre="localidad"]').on('change', function () {
+		$('select[name="localidad"]').on('change', function () {
 			var id = $(this).val();
-			var select_comunas = $('select[nombre="comuna"]');
-			var options = '<option value="">--------</option>';
+			var select_comunas = $('select[name="comuna"]');
+			/*var options = '<option value="">--------</option>';
 			if (id == ''){
 				select_comunas.html(options);
-				return false;
+				return false;*/
 			$.ajax({
 				url: window.location.pathname,
 				type: 'POST',
 				data: {
 					'action': 'search_comuna_id',
-					'id': id
+					'id': id,
 				},
 				dataType: 'json',
 			}).done(function (data) {
+				console.log(data);
 				if (!data.hasOwnProperty('error')) {
-					$.each(data, function (key, value) {
-						options+='<option value="'+value.id+'">'+value.nombre+'</option>';
+					console.log(data);
+					/*$.each(data, function (key, value) {
+						options+='<option value="'+value.id+'">'+value.nombre+'</option>';*/
 					return false;
-			}
+			}}
 			).fail(function (jqXHR, textStatus, errorThrown) {
 				alert(textStatus + ': ' + errorThrown);
 			}).always(function (data) {
-				select_comunas.html(options);
 		});
-	  }})
-	}})});
+	  })}
+	);
 	</script>
 
 {% endblock %}
