@@ -39,17 +39,17 @@ class TestView(TemplateView):
             action = request.POST['action']
             if action == 'search_comuna_id':
                 data = []
-                for i in Comuna.objects.filter(localidad__id=request.POST['id']):
+                for i in Comuna.objects.filter(localidad_id=request.POST['id']):
                     data.append({'id': i.id, 'nombre': i.nombre})
             else:
-                data['error'] = 'Ha ocurrido un error'
+                data['error'] = ('Ha ocurrido un error')
         except Exception as e:
             data['error'] = str(e)
         return JsonResponse(data, safe=False)
     
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['title'] = 'Select Anidados | Django'
+        context['title'] = 'Select Anidados'
         context['form'] = TestForm()
         return context
 

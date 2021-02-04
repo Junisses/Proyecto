@@ -48,14 +48,17 @@ class Partes(models.Model):
         
 #Regiones
 class Localidades(models.Model):
+    id                = models.AutoField(primary_key = True)
     nombre            = models.TextField(max_length=60)
 
     def __str__(self):
-        return self.nombre
+        return '{0}'.format(self.nombre)
         
 class Comuna(models.Model):
     localidad         = models.ForeignKey(Localidades, blank=True, null=True, on_delete=models.SET_NULL)
+    id                = models.AutoField(primary_key = True)
     nombre            = models.TextField(max_length=60)
 
     def __str__(self):
-        return self.nombre
+        return '{0}'.format(self.nombre)
+        

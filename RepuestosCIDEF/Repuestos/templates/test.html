@@ -2,6 +2,7 @@
 {% load static %}
 {% load widget_tweaks %}
 {% block contenido%}
+
 	<form method="post" action="." enctype="multipart/form-data">
 		<div class="card card-primary">
 			<div class="card-header">
@@ -23,15 +24,16 @@
 		</div>
 	</form>
 	
-	<script type="application/javascript">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script>
 	$(function() {
-		$('select[name="localidad"]').on('change', function () {
+		$('select[nombre="localidad"]').on('change', function () {
 			var id = $(this).val();
-			var select_comunas = $('select[name="comunas"]');
+			var select_comunas = $('select[nombre="comunas"]');
 			var options = '<option value="">----------------------------------</option>';
-			/*if (id == ''){
+			if (id == ''){
 				select_comunas.html(options);
-				return false;*/
+				return false;
 			$.ajax({
 				url: window.location.pathname,
 				type: 'POST',
@@ -43,9 +45,8 @@
 			}).done(function (data) {
 				if (!data.hasOwnProperty('error')) {
 					$.each(data, function (key, value) {
-						options+='<option value="'+value.id+'">'+value.name+'</option>';
+						options+='<option value="'+value.id+'">'+value.nombre+'</option>';
 					return false;
-				message_error(data.error);
 			}
 			).fail(function (jqXHR, textStatus, errorThrown) {
 				alert(textStatus + ': ' + errorThrown);
@@ -53,7 +54,7 @@
 				select_comunas.html(options);
 		});
 	  }})
-	})});
+	}})});
 	</script>
 
 {% endblock %}

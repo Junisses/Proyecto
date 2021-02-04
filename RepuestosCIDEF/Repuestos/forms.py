@@ -2,10 +2,14 @@ from django.forms import *
 from .models import Localidades, Comuna
 
 class TestForm(Form):
-    localidad = ModelChoiceField(queryset=Localidades.objects.all(), widget=Select(attrs={
+    localidad = ModelChoiceField(
+        queryset = Localidades.objects.all(), 
+        widget   = Select(attrs={
         'class': 'form-control'
     }))
     
-    comunas = ModelChoiceField(queryset=Comuna.objects.none(), widget=Select(attrs={
+    comunas = ModelChoiceField(
+        queryset  = Comuna.objects.none(), 
+        widget    = Select(attrs={
         'class': 'form-control'
     }))
