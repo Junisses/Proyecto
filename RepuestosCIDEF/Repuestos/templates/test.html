@@ -29,8 +29,8 @@
 	$(function() {
 		$('select[nombre="localidad"]').on('change', function () {
 			var id = $(this).val();
-			var select_comunas = $('select[nombre="comunas"]');
-			var options = '<option value="">----------------------------------</option>';
+			var select_comunas = $('select[nombre="comuna"]');
+			var options = '<option value="">--------</option>';
 			if (id == ''){
 				select_comunas.html(options);
 				return false;

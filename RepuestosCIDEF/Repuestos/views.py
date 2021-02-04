@@ -2,7 +2,6 @@ from django.shortcuts import render
 
 from .forms import TestForm
 from django.views.generic import TemplateView
-from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse
 from django.utils.decorators import method_decorator
 from django.views.decorators.csrf import csrf_exempt
@@ -29,7 +28,6 @@ class TestView(TemplateView):
     template_name = 'test.html'
     
     @method_decorator(csrf_exempt)
-    @method_decorator(login_required)
     def dispatch(self, request, *args, **kwargs):
         return super().dispatch(request, *args, **kwargs)
     
@@ -39,7 +37,7 @@ class TestView(TemplateView):
             action = request.POST['action']
             if action == 'search_comuna_id':
                 data = []
-                for i in Comuna.objects.filter(localidad_id=request.POST['id']):
+                for i in Comuna.objects.filter(localidad__id=request.POST['id']):
                     data.append({'id': i.id, 'nombre': i.nombre})
             else:
                 data['error'] = ('Ha ocurrido un error')
