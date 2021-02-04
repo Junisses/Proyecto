@@ -23,16 +23,15 @@
 			</div>
 		</div>
 	</form>
-	
+
 	<script>
+	
+
 	$(function() {
 		$('select[name="localidad"]').on('change', function () {
 			var id = $(this).val();
-			var select_comunas = $('select[name="comuna"]');
-			/*var options = '<option value="">--------</option>';
-			if (id == ''){
-				select_comunas.html(options);
-				return false;*/
+			var select_comunas = $('select[name="comunas"]');
+			var options = '<option value="">------</option>';
 			$.ajax({
 				url: window.location.pathname,
 				type: 'POST',
@@ -44,17 +43,16 @@
 			}).done(function (data) {
 				console.log(data);
 				if (!data.hasOwnProperty('error')) {
-					console.log(data);
-					/*$.each(data, function (key, value) {
-						options+='<option value="'+value.id+'">'+value.nombre+'</option>';*/
+					$.each(data, function (key, value) {
+						options+='<option value="'+value.id+'">'+value.name+'</option>';
+						console.log(options);
 					return false;
-			}}
-			).fail(function (jqXHR, textStatus, errorThrown) {
-				alert(textStatus + ': ' + errorThrown);
+			
 			}).always(function (data) {
+				select_comunas.html(options);
 		});
-	  })}
-	);
+	  }});
+	})});
 	</script>
 
 {% endblock %}
