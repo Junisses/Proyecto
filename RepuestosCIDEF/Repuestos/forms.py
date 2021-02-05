@@ -2,7 +2,7 @@ from django.forms import *
 from .models import Localidades, Comuna
 
 class TestForm(Form):
-    localidad = ModelChoiceField(
+    localidades = ModelChoiceField(
         queryset = Localidades.objects.all(), 
         widget   = Select(attrs={
         'class': 'form-control'
