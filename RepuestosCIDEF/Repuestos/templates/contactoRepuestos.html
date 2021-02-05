@@ -1,12 +1,8 @@
 {% extends "index.html"%}
 {% load static %}
+{% load widget_tweaks %}
 {% block contenido%}
 <head>
-	<title>CidefChile - Repuesto</title>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="description" content="Cidef Project">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="{% static '/css/styles/bootstrap4/bootstrap.min.css' %}">
 	<link href="{%static '/css/plugins/fontawesome-free-5.0.1/css/fontawesome-all.css' %}" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" type="text/css" href="{% static '/css/styles/portfolio.css' %}">
@@ -16,6 +12,7 @@
 </head>
 
 <body>
+<form method="post" action="." enctype="multipart/form-data">
 <div class="super_container">
 	<!-- Titulo de página -->
 	<div class="home">
@@ -36,6 +33,7 @@
 		</div>
 	</div>
 <!--Formulario-->
+
 	<div class="row justify-content-center">
 		<div class="col-10">
 		<div class="mt-4">
@@ -87,42 +85,49 @@
 					</span>
 				</div>    
 			</div>
-		 
-		   <p class="mt-4">Localidad</p>
-		   <!-- Regiones -->
-		   <div class="form-row">
-			 <div class="form-group col-md-6" style="margin: auto;">
-			   <span class="wpcf7-form-control-wrap region">
-				   <select name="region" class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required form-control" id="regiones" aria-required="true" aria-invalid="false"><option value="sin-region">Seleccione región</option>
-						<option value="Región de Arica y Parinacota">Región de Arica y Parinacota</option>
-						<option value="Región de Tarapacá">Región de Tarapacá</option>
-						<option value="Región de Antofagasta">Región de Antofagasta</option>
-						<option value="Región de Atacama">Región de Atacama</option>
-						<option value="Región de Coquimbo">Región de Coquimbo</option>
-						<option value="Región de Valparaíso">Región de Valparaíso</option>
-						<option value="Región del Libertador Gral. Bernardo O’Higgins">Región del Libertador Gral. Bernardo O’Higgins</option>
-						<option value="Región del Maule">Región del Maule</option>
-						<option value="Región del Ñuble">Región del Ñuble</option>
-						<option value="Región del Biobío">Región del Biobío</option>
-						<option value="Región de la Araucanía">Región de la Araucanía</option>
-						<option value="Región de Los Ríos">Región de Los Ríos</option>
-						<option value="Región de Los Lagos">Región de Los Lagos</option>
-						<option value="Región Aisén del Gral. Carlos Ibáñez del Campo">Región Aisén del Gral. Carlos Ibáñez del Campo</option>
-						<option value="Región de Magallanes y de la AntárVca Chilena">Región de Magallanes y de la Antártida Chilena</option>
-						<option value="Región Metropolitana de Santiago">Región Metropolitana de Santiago</option>
-				   </select>
-			   </span>
-			 </div>
-			 <!-- Comuna -->
-			 <div class="form-group col-md-6" style="margin: auto;">
-			   <span class="wpcf7-form-control-wrap comuna">
-					<select name="comuna" class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required form-control" id="comunas" aria-required="true" aria-invalid="false">
-						<option value="sin-region">Seleccione comuna</option>
-					</select>
-				</span>
-			 </div>
-		   </div>
-		   
+
+			<br>
+				<div class="form-group">
+					<label>Localidad: </label>
+					{{ form.localidades }}
+				</div>
+				<div class="form-group">
+					<label>Comuna: </label>
+					{{ form.comunas }}
+				</div>
+			
+	</form>
+	<script>
+	
+
+	$(function () {
+			$('select[name="localidades"]').on('change', function () {
+				var id = $(this).val();
+				var select_comunas = $('select[name="comunas"]');
+				var options = '<option value="">---------</option>';
+				$.ajax({
+					url: window.location.pathname,
+					type: 'POST',
+					data: {
+						'action': 'search_comuna_id',
+						'id': id
+					},
+					dataType: 'json',
+				}).done(function (data) {
+					if (!data.hasOwnProperty('error')) {
+						$.each(data, function (key,value) {
+							options += '<option value ="'+value.id+'">'+value.name+'</option>';
+						});
+						return false;
+					}
+					}).fail(function(jqXHR, textStatus, errorThrown) {
+						alert(textStatus + ': ' + errorThrown);
+					}).always(function(data) {
+						select_comunas.html(options);
+					});
+			});
+		});
+	</script>
 		   <p class="mt-4">Repuesto solicitado</p>
 			<div class="form-row">
 				<div class="form-group col-md-12" style="margin: auto;">
@@ -152,10 +157,10 @@
 		</div>   
 		</div>
 	</div>
-</div>
 <script src="https://kit.fontawesome.com/2c36e9b7b1.js"></script>
 <script src="{% static '/js/main.js' %}"></script>
-<script src="{% static '/js/jquery-3.2.1.min.js' %}"></script>
+<script src="{% static '/js/jquery-3.2.1.min.js' %}"></script>	
+	
 
 </body>
 {% endblock %}

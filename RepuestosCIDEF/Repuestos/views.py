@@ -24,12 +24,9 @@ def inicioRepuestos(request):
     return render(request,'inicioRepuestos.html', {})
 def repuestosDongFeng(request):
     return render(request,'repuestosDongFeng.html', {})
-def contactoRepuestos(request):
-    return render(request,'contactoRepuestos.html', {})
-    
-    
+
 class TestView(TemplateView):
-    template_name = 'test.html'
+    template_name = 'contactoRepuestos.html'
     
     @method_decorator(csrf_exempt)
     def dispatch(self, request, *args, **kwargs):

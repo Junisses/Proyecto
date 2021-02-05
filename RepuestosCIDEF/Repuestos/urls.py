@@ -9,7 +9,7 @@ from django.core import *
 urlpatterns = [
     path('',views.prueba, name='prueba'),
     path('tienda',views.tienda, name='tienda'),
-    path('contactoRepuestos',views.contactoRepuestos, name='contactoRepuestos'),
+    path('contactoRepuestos',views.TestView.as_view(), name='contactoRepuestos'),
     path('Repuestos',views.inicio, name='inicio'),
     path('inicioRepuestos',views.inicioRepuestos, name='inicioRepuestos'),
     path('repuestosDongFeng',views.repuestosDongFeng,name='repuestosDongFeng'),
