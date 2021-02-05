@@ -105,6 +105,10 @@
 				var id = $(this).val();
 				var select_comunas = $('select[name="comunas"]');
 				var options = '<option value="">---------</option>';
+				if(id == '') {
+					select_comunas.html(options);
+					return false;
+					}
 				$.ajax({
 					url: window.location.pathname,
 					type: 'POST',
