@@ -10,11 +10,12 @@ urlpatterns = [
     path('',views.prueba, name='prueba'),
     path('tienda',views.tienda, name='tienda'),
     path('contactoRepuestos',views.TestView.as_view(), name='contactoRepuestos'),
-    path('Repuestos',views.inicio, name='inicio'),
+    path('Repuestos',views.FiltroView.as_view(), name='inicio'),
     path('inicioRepuestos',views.inicioRepuestos, name='inicioRepuestos'),
     path('repuestosDongFeng',views.repuestosDongFeng,name='repuestosDongFeng'),
     path('repuestosFoton',views.repuestosFoton,name='repuestosFoton'),
     path('correo',views.correo,name='correo'),
+    path('probar',views.probar,name='probar'),
     #test
     path('test/', views.TestView.as_view(), name='test'),
 

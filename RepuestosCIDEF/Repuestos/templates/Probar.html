@@ -1,0 +1,22 @@
+	{% block contenido %}
+		{% for mostrar in item %}
+		{% if forloop.first %}<div class="row">{% endif %}
+		<div class="prod">
+			<div class ="row justify-content-center">
+				<div>	
+					<div class="table-responsive">
+									<h3 style="color:brown">{{ mostrar.nombreRepuesto }}</h3>
+									<h4>${{ mostrar.precioVenta }}</h4>
+									<button id="producto" class="btn btn-warning">Agregar al Carrito</button>
+									<p id="espacio">{{ mostrar.descripcion }}</p>
+					</div>	
+				</div>	
+			</div>	
+		</div>
+			{% if forloop.counter|divisibleby:34 %}</div><div class="row">{% endif %}
+			{% if forloop.last %}</div>{% endif %}											
+		{% endfor %}
+
+
+		<br> <br><br> 
+	{% endblock %}

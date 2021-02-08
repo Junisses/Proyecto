@@ -41,6 +41,140 @@
     <!-- /.carousel -->
 </section>			
 
+
+
+<form method="post" action="/probar" enctype="multipart/form-data">
+	<br>
+	{% csrf_token %}
+	<div class="row justify-content-center">
+		<div class="col-3">
+				<div class="form-group"> 
+					<input type="hidden" name="marca">
+						<label>Marca del vehículo: </label>
+						{{ form.marcas }}
+				</div>
+		</div>
+		<div class="col-3">
+				<div class="form-group">
+					<input type="hidden" name="modelo">
+						<label>Modelo: </label>
+						{{ form.modelos }}
+				</div>
+		</div>
+		<div class="col-3">
+				<div class="form-group">
+					<input type="hidden" name="categoria">
+						<label>Categoria: </label>
+						{{ form.categoria }}
+				</div>
+		</div>
+		<div class="col-3">
+				<div class="form-group">
+					<input type="hidden" name="repuesto">
+						<label>Repuesto: </label>
+						{{ form.repuestos }}
+				</div>
+		</div>
+		<button>
+		
+	</div>
+</form>
+	
+	<script>
+	$(function () {
+			$('select[name="marcas"]').on('change', function () {
+				var id = $(this).val();
+				var select_modelos = $('select[name="modelos"]');
+				var options = '<option value="">---------</option>';
+				if(id == '') {
+					select_modelos.html(options);
+					return false;
+					}
+				$.ajax({
+					url: window.location.pathname,
+					type: 'POST',
+					data: {
+						'action': 'search_modelo_id',
+						'id': id
+					},
+					dataType: 'json',
+				}).done(function (data) {
+					if (!data.hasOwnProperty('error')) {
+						$.each(data, function (key,value) {
+							options += '<option value ="'+value.id+'">'+value.name+'</option>';
+						});
+						return false;
+					}
+					}).fail(function(jqXHR, textStatus, errorThrown) {
+						alert(textStatus + ': ' + errorThrown);
+					}).always(function(data) {
+						select_modelos.html(options);
+					});
+			});
+			$('select[name="categoria"]').on('change', function () {
+				var id = $(this).val();
+				var select_repuestos = $('select[name="repuestos"]');
+				var options = '<option value="">---------</option>';
+				if(id == '') {
+					select_repuestos.html(options);
+					return false;
+					}
+				$.ajax({
+					url: window.location.pathname,
+					type: 'POST',
+					data: {
+						'action': 'search_repuesto_id',
+						'id': id
+					},
+					dataType: 'json',
+				}).done(function (data) {
+					if (!data.hasOwnProperty('error')) {
+						$.each(data, function (key,value) {
+							options += '<option value ="'+value.id+'">'+value.name+'</option>';
+						});
+						return false;
+					}
+					}).fail(function(jqXHR, textStatus, errorThrown) {
+						alert(textStatus + ': ' + errorThrown);
+					}).always(function(data) {
+						select_repuestos.html(options);
+					});
+			});
+		});
+	</script>
+
+<!-- Opcion de select dependiente con html y jquery
+<div>
+   <select id="primary">
+	  <option value="">Selecciona una marca</option>
+      <option value="color">DongFeng</option>
+      <option value="country">Foton</option>
+   </select> 
+   <select id="secondary">	
+		<option value="color">Seleccione un modelo</option>
+   </select>
+</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script>
+	var options = {
+			color : ["ZNA4","ZNA6","ZNA1"],
+			country : ["MIDI simple","MIDI doble","Camion"]
+	}
+
+	$(function(){
+		var fillSecondary = function(){
+			var selected = $('#primary').val();
+			$('#secondary').empty();
+			options[selected].forEach(function(element,index){
+				$('#secondary').append('<option value="'+element+'">'+element+'</option>');
+			});
+		}
+		$('#primary').change(fillSecondary);
+		fillSecondary();
+	});
+</script>
+
+
 <div id="carta-lista" class="cards-list">
   
 	<div id="carta" class="card 1" style="background-color: #EDEDED; border-color: #EDEDED;">
@@ -66,6 +200,5 @@
 	  </div>
 	</div>
 	  </div>
-</div>
-<br> <br><br> 
+</div>-->
 {% endblock %}
