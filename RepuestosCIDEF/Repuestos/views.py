@@ -1,14 +1,15 @@
 from django.shortcuts import render
-
-
 from .forms import TestForm
 from django.views.generic import TemplateView
 from django.http import JsonResponse
-from django.core import *
+from django.core.mail import send_mail, BadHeaderError
+from django.http import HttpResponse, HttpResponseRedirect
 from django.utils.decorators import method_decorator
 from django.views.decorators.csrf import  csrf_exempt
 from Repuestos.models import Localidades
 from Repuestos.models import Comuna
+from django.core.mail import send_mail
+from django.conf import settings
 
 
 # Create your views here.
@@ -24,7 +25,6 @@ def inicioRepuestos(request):
     return render(request,'inicioRepuestos.html', {})
 def repuestosDongFeng(request):
     return render(request,'repuestosDongFeng.html', {})
-
 class TestView(TemplateView):
     template_name = 'contactoRepuestos.html'
     
@@ -54,3 +54,20 @@ class TestView(TemplateView):
 
 def repuestosFoton(request):
     return render(request,'repuestosFoton.html', {})
+
+def correo(request):
+    if request.method== 'POST':
+
+        subject=request.POST["Asunto"]
+
+        message=request.POST["mensaje"]+ " " + request.POST["email"] 
+
+        from_email=settings.EMAIL_HOST_USER
+
+        recipient_list=["javier.orellana2001@gmail.com"]
+
+        send_mail(subject, message, from_email, recipient_list)
+
+        return render(request,"gracias.html")
+
+    return render (request,"correo.html")
