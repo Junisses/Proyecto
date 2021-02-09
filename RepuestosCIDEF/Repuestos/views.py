@@ -109,8 +109,8 @@ def correo(request):
 
         subject=request.POST["Asunto"]
 
-        message=request.POST["mensaje"]+ " " + request.POST["email"] 
-
+        message=request.POST["mensaje"]+ '\n' + "Correo : " + request.POST["email"]+'\n'+ "Region : " + request.POST["pais"] +'\n'+ "Comuna : " + request.POST["provincia"]
+ 
         from_email=settings.EMAIL_HOST_USER
 
         recipient_list=["javier.orellana2001@gmail.com"]
