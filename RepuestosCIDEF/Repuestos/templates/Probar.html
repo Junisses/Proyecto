@@ -25,17 +25,18 @@
 
 
   <form name="f1"> 
-    <select name=pais onchange="cambia_provincia()"> 
-    <option value="0" selected>Seleccione Región 
-    <option value="1">España 
-    <option value="2">Argentina 
-    <option value="3">Colombia 
-    <option value="4">Francia 
-    </select>
-    
-    <select name=provincia> 
-    <option value="Seleccione Comuna">Seleccione Comuna 
-    </select> 
+	  <div class="col-3">
+		<select class="wpcf7-form-control form-control"  name=pais onchange="cambia_provincia()"> 
+			<option value="0" selected>Seleccione Región 
+			<option value="1">España 
+			<option value="2">Argentina 
+			<option value="3">Colombia 
+			<option value="4">Francia 
+		</select>
+			<select class="wpcf7-form-control form-control" name=provincia> 
+				<option value="Seleccione Comuna">Seleccione Comuna 
+			</select> 
+	   </div>
   </form>
 
 
