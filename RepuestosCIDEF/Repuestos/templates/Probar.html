@@ -2,55 +2,24 @@
 	{% block contenido %}
 	
 <br>	
-<div class = "row">
+{% for mostrar in item %}
+{% if forloop.first %}<div class="row">{% endif %}
+<div class="prod">
 	<div class ="row justify-content-center">
 		<div class="offset-4" style="background-color: white;">	
 			<div class="table-responsive">
 							<img src="">
-							<h3 style="color:brown">nombre</h3>
-							<h4>$5464</h4>
+							<h3 style="color:brown">{{ mostrar.nombreRepuesto }}</h3>
+							<h4>${{ mostrar.precioVenta }}</h4>
 							<button id="producto" class="btn btn-warning">Agregar al Carrito</button>
-							<p id="espacio">asdasdasdasd</p>
-			</div>	
-		</div>	
-	</div>	
-
-	<div class ="row justify-content-center">
-		<div class="offset-4" style="background-color: white;">	
-			<div class="table-responsive">
-							<img src="">
-							<h3 style="color:brown">nombre</h3>
-							<h4>$5464</h4>
-							<button id="producto" class="btn btn-warning">Agregar al Carrito</button>
-							<p id="espacio">asdasdasdasd</p>
-			</div>	
-		</div>	
-	</div>	
-
-	<div class ="row justify-content-center">
-		<div class="offset-4" style="background-color: white;">	
-			<div class="table-responsive">
-							<img src="">
-							<h3 style="color:brown">nombre</h3>
-							<h4>$5464</h4>
-							<button id="producto" class="btn btn-warning">Agregar al Carrito</button>
-							<p id="espacio">asdasdasdasd</p>
-			</div>	
-		</div>	
-	</div>	
-
-	<div class ="row justify-content-center">
-		<div class="offset-4" style="background-color: white;">	
-			<div class="table-responsive">
-							<img src="">
-							<h3 style="color:brown">nombre</h3>
-							<h4>$5464</h4>
-							<button id="producto" class="btn btn-warning">Agregar al Carrito</button>
-							<p id="espacio">asdasdasdasd</p>
+							<p id="espacio">{{ mostrar.descripcion }}</p>
 			</div>	
 		</div>	
 	</div>	
 </div>
+	{% if forloop.counter|divisibleby:34 %}</div><div class="row">{% endif %}
+	{% if forloop.last %}</div>{% endif %}											
+{% endfor %}
 
 		<br> 
 	{% endblock %}
