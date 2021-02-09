@@ -16,6 +16,7 @@ urlpatterns = [
     path('repuestosFoton',views.repuestosFoton,name='repuestosFoton'),
     path('correo',views.correo,name='correo'),
     path('probar',views.probar,name='probar'),
+     path('busqueda',views.buscar,name='buscar'),
     #test
     path('test/', views.TestView.as_view(), name='test'),
 

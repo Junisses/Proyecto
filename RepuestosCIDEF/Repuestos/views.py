@@ -52,7 +52,17 @@ def probar(request):
             item = Repuesto.objects.filter(categoria_id = buscar)
 
     return render(request,'Probar.html', {'item': item})
-     
+
+def buscar(request):
+    item = {}
+    
+    if request.method == "POST":
+        buscar = request.POST['txtBuscar']
+        
+        if 'txtBuscar' in request.POST:
+            item = Repuesto.objects.filter(nombreRepuesto__contains = buscar)
+           
+    return render(request,'buscar.html', {'item':item})
         
 def tienda(request):
     return render(request,'tienda.html', {})
