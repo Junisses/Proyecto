@@ -12,7 +12,7 @@
 </head>
 
 <body>
-<form method="post" action="." enctype="multipart/form-data">
+<form name="f1" method="POST"> {% csrf_token %}
 <div class="super_container">
 	<!-- Titulo de página -->
 	<div class="home">
@@ -37,6 +37,9 @@
 	<div class="row justify-content-center">
 		<div class="col-10">
 		<div class="mt-4">
+			<input type="text" name="Asunto" value="Consulta Repuestos" readonly>
+			<br>
+			<br>
 			<p>Datos del cliente</p>
 			<!-- Nombre y apellido -->
 			<div class="form-row">
@@ -83,60 +86,52 @@
 					<span class="wpcf7-form-control-wrap chasis">
 						<input type="text" name="chasis" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control" id="chasis" aria-required="true" aria-invalid="false" placeholder="N° chasis">
 					</span>
-				</div>    
+				</div> 
 			</div>
-
+			<div class="prod">
+				<div class ="row justify-content-center">
+					<div class="offset-4" style="background-color: white;">	
+						<div class="table-responsive">
+						</div>	
+					</div>	
+				</div>	
+			</div>
+			{% for mostrar in item %}
+{% if forloop.first %}<div class="row">{% endif %}
+<div class="prod">
+	<div class ="row justify-content-center">
+		<div class="offset-4" style="background-color: white;">	
+			<div class="table-responsive">
+							<img src="">
+							<h3 style="color:brown">{{ mostrar.nombreRepuesto }}</h3>
+							<h4>${{ mostrar.precioVenta }}</h4>
+							<p id="espacio">{{ mostrar.descripcion }}</p>
+			</div>	
+		</div>	
+	</div>	
+</div>
+	{% if forloop.counter|divisibleby:34 %}</div><div class="row">{% endif %}
+	{% if forloop.last %}</div>{% endif %}											
+{% endfor %}
 			<br>
-				<div class="form-group">
-					<label>Localidad: </label>
-					{{ form.localidades }}
-				</div>
-				<div class="form-group">
-					<label>Comuna: </label>
-					{{ form.comunas }}
-				</div>
-			
-	</form>
-	<script>
-	
-
-	$(function () {
-			$('select[name="localidades"]').on('change', function () {
-				var id = $(this).val();
-				var select_comunas = $('select[name="comunas"]');
-				var options = '<option value="">---------</option>';
-				if(id == '') {
-					select_comunas.html(options);
-					return false;
-					}
-				$.ajax({
-					url: window.location.pathname,
-					type: 'POST',
-					data: {
-						'action': 'search_comuna_id',
-						'id': id
-					},
-					dataType: 'json',
-				}).done(function (data) {
-					if (!data.hasOwnProperty('error')) {
-						$.each(data, function (key,value) {
-							options += '<option value ="'+value.id+'">'+value.name+'</option>';
-						});
-						return false;
-					}
-					}).fail(function(jqXHR, textStatus, errorThrown) {
-						alert(textStatus + ': ' + errorThrown);
-					}).always(function(data) {
-						select_comunas.html(options);
-					});
-			});
-		});
-	</script>
+		<select class="wpcf7-form-control form-control"  name=pais onchange="cambia_provincia()"> 
+			<option value="0" selected>Seleccione Región 
+			<option value="1">Metropolitana
+			<option value="2">La Araucania
+			<option value="3">Ñuble
+			<option value="4">Los lagos
+		</select>
+		<br>
+			<select class="wpcf7-form-control form-control" name=provincia> 
+				<option value="Seleccione Comuna">Seleccione Comuna 
+			</select> 
+	   </div>
+       <br>
 		   <p class="mt-4">Repuesto solicitado</p>
 			<div class="form-row">
 				<div class="form-group col-md-12" style="margin: auto;">
 					<span class="wpcf7-form-control-wrap comentarios">
-						<textarea name="comentarios" cols="40" rows="3" maxlength="500" minlength="10" class="wpcf7-form-control wpcf7-textarea form-control" aria-invalid="false" placeholder="Comentarios"></textarea>
+						<textarea name="mensaje" cols="40" rows="3" maxlength="500" minlength="10" class="wpcf7-form-control wpcf7-textarea form-control" aria-invalid="false" placeholder="Comentarios"></textarea>
 					</span>
 					<small>*Máximo 500 caracteres</small>
 				</div>
@@ -158,6 +153,51 @@
 			<div class="d-flex justify-content-end">
 				<button type="submit" class="btn btn-danger pull-right">ENVIAR</button>
 			</div>
+</form>
+<script>
+	var provincias_1=new Array("Seleccione Comuna","Estacion Central","Maipu","Cerrillos");
+	var provincias_2=new Array("Seleccione Comuna","Lumaco","Collipulli","Chol Chol");
+	var provincias_3=new Array("Seleccione Comuna","Yungai","Chillan","Pinto");
+	var provincias_4=new Array("Seleccione Comuna","Osorno","Ancud","Frutillar");
+  
+	var todasProvincias = [
+	  [],
+	  provincias_1,
+	  provincias_2,
+	  provincias_3,
+	  provincias_4,
+	];
+  
+	function cambia_provincia(){ 
+		 //tomo el valor del select del pais elegido 
+		 var pais 
+		 pais = document.f1.pais[document.f1.pais.selectedIndex].value 
+		 //miro a ver si el pais está definido 
+		 if (pais != 0) { 
+			//si estaba definido, entonces coloco las opciones de la provincia correspondiente. 
+			//selecciono el array de provincia adecuado 
+			mis_provincias=todasProvincias[pais]
+			//calculo el numero de provincias 
+			num_provincias = mis_provincias.length 
+			//marco el número de provincias en el select 
+			document.f1.provincia.length = num_provincias 
+			//para cada provincia del array, la introduzco en el select 
+			for(i=0;i<num_provincias;i++){ 
+			   document.f1.provincia.options[i].value=mis_provincias[i] 
+			   document.f1.provincia.options[i].text=mis_provincias[i] 
+			}	
+		 }else{ 
+			//si no había provincia seleccionada, elimino las provincias del select 
+			document.f1.provincia.length = 1 
+			//coloco un guión en la única opción que he dejado 
+			document.f1.provincia.options[0].value = "Seleccione Comuna" 
+			document.f1.provincia.options[0].text = "Seleccione Comuna" 
+		 } 
+		 //marco como seleccionada la opción primera de provincia 
+		 document.f1.provincia.options[0].selected = true 
+  }
+  
+	</script>
 		</div>   
 		</div>
 	</div>

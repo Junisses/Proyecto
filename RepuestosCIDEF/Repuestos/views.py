@@ -74,42 +74,15 @@ def inicioRepuestos(request):
     return render(request,'inicioRepuestos.html', {})
 def repuestosDongFeng(request):
     return render(request,'repuestosDongFeng.html', {})
-class TestView(TemplateView):
-    template_name = 'contactoRepuestos.html'
-    
-    @method_decorator(csrf_exempt)
-    def dispatch(self, request, *args, **kwargs):
-        return super().dispatch(request, *args, **kwargs)
-        
-    def post(self, request, *args, **kwargs):
-        data = {}
-        try:
-            action = request.POST['action']
-            if action == 'search_comuna_id':
-                data = []
-                for i in Comuna.objects.filter(localidad_id=request.POST['id']):
-                    data.append({'id': i.id, 'name': i.nombre})
-            else:
-                data['error'] = 'Ha ocurrido un error'
-        except Exception as e:
-            data['error'] = str(e)
-        return JsonResponse(data, safe=False)
-    
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['title'] = 'Select Anidado'
-        context['form'] = TestForm
-        return context
-
 def repuestosFoton(request):
     return render(request,'repuestosFoton.html', {})
 
-def correo(request):
+def contactoRepuestos(request):
     if request.method== 'POST':
 
         subject=request.POST["Asunto"]
 
-        message=request.POST["mensaje"]+ '\n' + "Correo : " + request.POST["email"]+'\n'+ "Region : " + request.POST["pais"] +'\n'+ "Comuna : " + request.POST["provincia"]
+        message=request.POST["mensaje"]+'\n'+ "---------------------------------------------------------------------"+'\n'+"Datos del cliente"+'\n'+ "Nombre : " + request.POST["nombre"]+ "||  Apellido : " + request.POST["apellidos"] +'\n'+ "Email : " + request.POST["email"]+'\n'+ "Telefono :" + request.POST["fono"]+'\n'+ "Region : " + request.POST["pais"] +'\n'+ "Comuna : " + request.POST["provincia"]+'\n'+ "-----------------"+'\n'+ "Datos del Vehiculo : "+'\n'+"Marca : " + request.POST["marca"] +"||   Modelo : " + request.POST["modelo"]+ "||   N° Chasis :" + request.POST["chasis"]
  
         from_email=settings.EMAIL_HOST_USER
 
@@ -119,4 +92,7 @@ def correo(request):
 
         return render(request,"gracias.html")
 
-    return render (request,"correo.html")
+    return render (request,'contactoRepuestos.html')
+
+def correo(request):
+    return render(request,"correo.html")

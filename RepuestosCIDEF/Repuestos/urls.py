@@ -9,7 +9,7 @@ from django.core import *
 urlpatterns = [
     path('',views.prueba, name='prueba'),
     path('tienda',views.tienda, name='tienda'),
-    path('contactoRepuestos',views.TestView.as_view(), name='contactoRepuestos'),
+    path('contactoRepuestos',views.contactoRepuestos, name='contactoRepuestos'),
     path('Repuestos',views.FiltroView.as_view(), name='inicio'),
     path('inicioRepuestos',views.inicioRepuestos, name='inicioRepuestos'),
     path('repuestosDongFeng',views.repuestosDongFeng,name='repuestosDongFeng'),
@@ -17,7 +17,4 @@ urlpatterns = [
     path('correo',views.correo,name='correo'),
     path('probar',views.probar,name='probar'),
      path('busqueda',views.buscar,name='buscar'),
-    #test
-    path('test/', views.TestView.as_view(), name='test'),
-
 ]
