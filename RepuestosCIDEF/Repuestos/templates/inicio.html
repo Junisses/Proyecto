@@ -131,6 +131,7 @@
 						select_repuestos.html(options);
 					});
 						var select_marcas = $('select[name="marcas"]');
+						var ver = '<option value="">---------</option>';
 						var select_modelos = $('select[name="modelos"]');
 						var opcion = '<option value="">---------</option>';
 						$.ajax({
@@ -151,7 +152,7 @@
 							}).fail(function(jqXHR, textStatus, errorThrown) {
 								alert(textStatus + ': ' + errorThrown);
 							}).always(function(data) {
-								select_marcas.html(opcion);
+								select_marcas.html(ver);
 								select_modelos.html(opcion);
 							});
 			});
