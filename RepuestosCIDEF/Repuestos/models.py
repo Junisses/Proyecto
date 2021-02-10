@@ -1,7 +1,5 @@
 from django.db import models
 
-#Repuestos
-
 class Categoria(models.Model):
     nombre        = models.TextField(max_length=50)
 
@@ -32,5 +30,3 @@ class Modelo(models.Model):
 
     def __str__(self):
         return self.nombre
-        
-        
