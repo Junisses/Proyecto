@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .forms import TestForm, FiltroForm
+from .forms import FiltroForm
 from django.views.generic import TemplateView
 from django.http import JsonResponse
 from django.core.mail import send_mail, BadHeaderError
@@ -23,14 +23,15 @@ class FiltroView(TemplateView):
         data = {}
         try:
             action = request.POST['action']
-            if action == 'search_modelo_id':
-                data = []
-                for i in Modelo.objects.filter(marca_id=request.POST['id']):
-                    data.append({'id': i.id, 'name': i.nombre})
-            elif action == 'search_repuesto_id':
+            if action == 'search_repuesto_id':
                 data = []
                 for i in Repuesto.objects.filter(categoria_id=request.POST['id']):
                     data.append({'id': i.id, 'name': i.nombreRepuesto})
+                if action == 'search_marca_id':
+                    data = []
+                    for a in MarcaAuto.objects.filter(parte_id=request.POST['id']):
+                        data.append({'id': a.id, 'name': a.nombre})
+
             else:
                 data['error'] = 'Ha ocurrido un error'
         except Exception as e:
