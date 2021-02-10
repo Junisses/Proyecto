@@ -22,7 +22,7 @@ class FiltroForm(Form):
     }))
         
     marcas       = ModelChoiceField(
-        queryset = MarcaAuto.objects.none(), 
+        queryset = MarcaAuto.objects.all(), 
         widget   = Select(attrs={
         'class'  : 'form-control'
     }))

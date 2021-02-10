@@ -63,8 +63,7 @@ def buscar(request):
         if 'txtBuscar' in request.POST:
             item = Repuesto.objects.filter(nombreRepuesto__contains = buscar)
            
-    return render(request,'buscar.html', {'item':item})
-        
+    return render(request,'buscar.html', {'item':item})      
 def tienda(request):
     return render(request,'tienda.html', {})
 def repuestos(request):
@@ -77,7 +76,6 @@ def repuestosDongFeng(request):
     return render(request,'repuestosDongFeng.html', {})
 def repuestosFoton(request):
     return render(request,'repuestosFoton.html', {})
-
 def contactoRepuestos(request):
     if request.method== 'POST':
 
@@ -94,6 +92,3 @@ def contactoRepuestos(request):
         return render(request,"contactoRepuestos.html")
 
     return render (request,'contactoRepuestos.html')
-
-def correo(request):
-    return render(request,"correo.html")

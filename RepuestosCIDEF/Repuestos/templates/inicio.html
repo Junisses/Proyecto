@@ -136,31 +136,29 @@
 						alert(textStatus + ': ' + errorThrown);
 					}).always(function(data) {
 						select_repuestos.html(options);
-							
-							var id = $('select_repuestos=[id="id"]');
-							var select_marcas = $('select[name="marcas"]');
-							var opcion = '<option value="">---------</option>';
-							$.ajax({
-								url: window.location.pathname,
-								type: 'POST',
-								data: {
-									'action': 'search_marca_id',
-									'id': id
-								},
-								dataType: 'json',
-							}).done(function (data) {
-								if (!data.hasOwnProperty('error')) {
-									$.each(data, function (key,value) {
-										opcion += '<option value ="'+value.id+'">'+value.name+'</option>';
-									});
-									return false;
-								}
-								}).fail(function(jqXHR, textStatus, errorThrown) {
-									alert(textStatus + ': ' + errorThrown);
-								}).always(function(data) {
-									select_marcas.html(opcion);
-								});
 					});
+					var select_marcas = $('select[name="marcas"]');
+					var opcion = '<option value="">---------</option>';
+					$.ajax({
+						url: window.location.pathname,
+						type: 'POST',
+						data: {
+							'action': 'search_marca_id',
+							'id': id
+						},
+						dataType: 'json',
+					}).done(function (data) {
+						if (!data.hasOwnProperty('error')) {
+							$.each(data, function (key,value) {
+								opcion += '<option value ="'+value.id+'">'+value.name+'</option>';
+							});
+							return false;
+						}
+						}).fail(function(jqXHR, textStatus, errorThrown) {
+							alert(textStatus + ': ' + errorThrown);
+						}).always(function(data) {
+							select_marcas.html(opcion);
+						});
 			});
 		});
 	</script>
