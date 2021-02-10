@@ -33,11 +33,10 @@
 		</div>
 	</div>
 <!--Formulario-->
-
+<input type="hidden" name="Asunto" value="Consulta Repuestos">
 	<div class="row justify-content-center">
 		<div class="col-10">
 		<div class="mt-4">
-			<input type="text" name="Asunto" value="Consulta Repuestos" readonly>
 			<br>
 			<br>
 			<p>Datos del cliente</p>
@@ -88,45 +87,20 @@
 					</span>
 				</div> 
 			</div>
-			<div class="prod">
-				<div class ="row justify-content-center">
-					<div class="offset-4" style="background-color: white;">	
-						<div class="table-responsive">
-						</div>	
-					</div>	
-				</div>	
-			</div>
-			{% for mostrar in item %}
-{% if forloop.first %}<div class="row">{% endif %}
-<div class="prod">
-	<div class ="row justify-content-center">
-		<div class="offset-4" style="background-color: white;">	
-			<div class="table-responsive">
-							<img src="">
-							<h3 style="color:brown">{{ mostrar.nombreRepuesto }}</h3>
-							<h4>${{ mostrar.precioVenta }}</h4>
-							<p id="espacio">{{ mostrar.descripcion }}</p>
-			</div>	
-		</div>	
-	</div>	
-</div>
-	{% if forloop.counter|divisibleby:34 %}</div><div class="row">{% endif %}
-	{% if forloop.last %}</div>{% endif %}											
-{% endfor %}
-			<br>
-		<select class="wpcf7-form-control form-control"  name=pais onchange="cambia_provincia()"> 
-			<option value="0" selected>Seleccione Región 
-			<option value="1">Metropolitana
-			<option value="2">La Araucania
-			<option value="3">Ñuble
-			<option value="4">Los lagos
-		</select>
-		<br>
-			<select class="wpcf7-form-control form-control" name=provincia> 
-				<option value="Seleccione Comuna">Seleccione Comuna 
-			</select> 
-	   </div>
-       <br>
+			
+		<p class="mt-4">Localidad:</p>	
+		<div class="row justify-content-center" style="margin: auto;">
+			<select class="col-6 wpcf7-form-control form-control"  name=pais onchange="cambia_provincia()"> 
+				<option value="0" selected>Seleccione Región 
+				<option value="1">Metropolitana
+				<option value="2">La Araucania
+				<option value="3">Ñuble
+				<option value="4">Los lagos
+			</select>
+				<select class="col-6 wpcf7-form-control form-control" name=provincia>
+					<option value="Seleccione Comuna">Seleccione Comuna 
+				</select> 
+	    </div>
 		   <p class="mt-4">Repuesto solicitado</p>
 			<div class="form-row">
 				<div class="form-group col-md-12" style="margin: auto;">

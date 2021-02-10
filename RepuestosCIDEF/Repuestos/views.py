@@ -90,7 +90,7 @@ def contactoRepuestos(request):
 
         send_mail(subject, message, from_email, recipient_list)
 
-        return render(request,"gracias.html")
+        return render(request,"contactoRepuestos.html")
 
     return render (request,'contactoRepuestos.html')
 
