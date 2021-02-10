@@ -27,7 +27,6 @@ class FiltroView(TemplateView):
                 data = []
                 for i in Repuesto.objects.filter(categoria_id=request.POST['id']):
                     data.append({'id': i.id, 'name': i.nombreRepuesto})
-
             else:
                 data['error'] = 'Ha ocurrido un error'
         except Exception as e:
