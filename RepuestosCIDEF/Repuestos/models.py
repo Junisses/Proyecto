@@ -15,7 +15,6 @@ class MarcaAuto(models.Model):
 
 class Repuesto(models.Model):
     categoria        = models.ForeignKey(Categoria, blank=True, null=True, on_delete=models.SET_NULL)
-    marca            = models.ForeignKey(MarcaAuto, blank=True, null=True, on_delete=models.SET_NULL)
     nombreRepuesto   = models.TextField(max_length=60)
     codigo           = models.DecimalField(max_digits=13, decimal_places=0)
     descripcion      = models.TextField(max_length = 200)
