@@ -15,12 +15,6 @@ class FiltroForm(Form):
         'class'   : 'form-control'
     }))
       
-    partes       = ModelChoiceField(
-        queryset = Partes.objects.none(), 
-        widget   = Select(attrs={
-        'class'  : 'form-control'
-    }))
-        
     marcas       = ModelChoiceField(
         queryset = MarcaAuto.objects.all(), 
         widget   = Select(attrs={

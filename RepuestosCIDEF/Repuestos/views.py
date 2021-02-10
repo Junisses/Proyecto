@@ -27,10 +27,6 @@ class FiltroView(TemplateView):
                 data = []
                 for i in Repuesto.objects.filter(categoria_id=request.POST['id']):
                     data.append({'id': i.id, 'name': i.nombreRepuesto})
-                if action == 'search_marca_id':
-                    data = []
-                    for a in MarcaAuto.objects.filter(parte_id=request.POST['id']):
-                        data.append({'id': a.id, 'name': a.nombre})
 
             else:
                 data['error'] = 'Ha ocurrido un error'

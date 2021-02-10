@@ -66,36 +66,29 @@
 <form method="post" action="/probar" enctype="multipart/form-data">
 	<br>
 	{% csrf_token %}
-	<div class="row justify-content-center">
-		<div class="col-2">
+	<div class="row justify-content-center ">
+		<div class="col-3">
 				<div class="form-group"> 
 					<input type="hidden" name="txtCategoria"  value="{{ item.categorias }}">
 						<label>Categoria</label>
 						{{ form.categorias }}
 				</div>
 		</div>
-		<div class="col-2">
+		<div class="col-3">
 				<div class="form-group">
 					<input type="hidden" name="txtRepuesto"  value="{{ item.repuesto }}">
 						<label>Repuesto: </label>
 						{{ form.repuestos }}
 				</div>
 		</div>
-		<div class="col-2">
-				<div class="form-group">
-					<input type="hidden" name="txtParte"  value="{{ item.parte }}">
-						<label>Pieza: </label>
-						{{ form.partes }}
-				</div>
-		</div>
-		<div class="col-2">
+		<div class="col-3">
 				<div class="form-group">
 					<input type="hidden" name="txtMarca"  value="{{ item.marca }}">
 						<label>Marca: </label>
 						{{ form.marcas }}
 				</div>
 		</div>
-		<div class="col-2">
+		<div class="col-3">
 				<div class="form-group">
 					<input type="hidden" name="txtModelo"  value="{{ item.modelo }}">
 						<label>Modelo: </label>
