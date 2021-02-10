@@ -3,33 +3,33 @@ from .models import *
 
 
 class FiltroForm(Form):
-    categorias = ModelChoiceField(
+    categorias    = ModelChoiceField(
         queryset  = Categoria.objects.all(), 
         widget    = Select(attrs={
-        'class': 'form-control'
+        'class'   : 'form-control'
     }))
     
-    repuestos = ModelChoiceField(
+    repuestos     = ModelChoiceField(
         queryset  = Repuesto.objects.none(), 
         widget    = Select(attrs={
-        'class': 'form-control'
+        'class'   : 'form-control'
     }))
       
-    partes = ModelChoiceField(
+    partes       = ModelChoiceField(
         queryset = Partes.objects.none(), 
         widget   = Select(attrs={
-        'class': 'form-control'
+        'class'  : 'form-control'
     }))
         
-    marcas = ModelChoiceField(
+    marcas       = ModelChoiceField(
         queryset = MarcaAuto.objects.none(), 
         widget   = Select(attrs={
-        'class': 'form-control'
+        'class'  : 'form-control'
     }))
     
-    modelos = ModelChoiceField(
+    modelos       = ModelChoiceField(
         queryset  = Modelo.objects.none(), 
         widget    = Select(attrs={
-        'class': 'form-control'
+        'class'   : 'form-control'
     }))
     
