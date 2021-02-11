@@ -60,7 +60,37 @@
 						</div>
 					</div>
 				</form>
+	<div class="row justify-content-center">
+		<h1 style=" font-style: oblique;text-decoration: underline overline;">Seleccione Marca</h1>
+	</div>
+	<div id="carta-lista" class="cards-list">
+		<div id="carta" class="card 1" style="background-color: #EDEDED; border-color: #EDEDED;">
+		  <div id="img_carta" class="card_image"> 
+				<a href="/repuestosDongFeng">
+					<img src="{% static '/img/fotos/DFM.png' %}" width="200" height="50"  />
+				</a>
+		   </div>
+		  <div class="card_title title-white">
+			<p>DongFeng</p>
+		  </div>
+		<br> <br>
+		</div>
 
+		  <div id="carta" class="card 2" style="background-color: #EDEDED; border-color: #EDEDED;">
+		  <div id="img_carta" class="card_image">
+			<a href="https://cidef.cl/marca/foton/">
+				<img src="{% static '/img/fotos/foton.png' %}" width="200" height="50" />
+			</a>
+		   </div>
+		  <div class="card_title title-white">
+			<p>Foton</p>
+		  </div>
+		</div>
+		  </div>
+	</div>
+	<br> <br><br> 				
+
+<!-- Filtro Complejo
 <form method="post" action="/probar" enctype="multipart/form-data" >
 	<br>
 	{% csrf_token %}
@@ -156,5 +186,5 @@
 			});
 		});
 	</script>
-	
+	-->
 {% endblock %}
