@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from django.core.mail import send_mail, BadHeaderError
 from Repuestos.models import *
-from django.core.mail import send_mail
 from django.conf import settings
 
 
@@ -29,19 +28,26 @@ def buscar(request):
         if 'txtBuscar' in request.POST:
             item = Repuesto.objects.filter(nombreRepuesto__contains = buscar)
            
-    return render(request,'buscar.html', {'item':item})      
+    return render(request,'buscar.html', {'item':item}) 
+    
 def tienda(request):
     return render(request,'tienda.html', {})
+    
 def repuestos(request):
     return render(request,'repuestos.html', {})
+    
 def prueba(request):
     return render(request,'prueba.html', {})
+    
 def inicioRepuestos(request):
     return render(request,'inicioRepuestos.html', {})
+    
 def repuestosDongFeng(request):
     return render(request,'repuestosDongFeng.html', {})
+    
 def repuestosFoton(request):
     return render(request,'repuestosFoton.html', {})
+    
 def contactoRepuestos(request):
     if request.method== 'POST':
 
