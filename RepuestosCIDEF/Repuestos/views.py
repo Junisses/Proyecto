@@ -1,42 +1,13 @@
 from django.shortcuts import render
-from .forms import FiltroForm
-from django.views.generic import TemplateView
-from django.http import JsonResponse
 from django.core.mail import send_mail, BadHeaderError
-from django.http import HttpResponse, HttpResponseRedirect
-from django.utils.decorators import method_decorator
-from django.views.decorators.csrf import  csrf_exempt
 from Repuestos.models import *
 from django.core.mail import send_mail
 from django.conf import settings
 
 
 # Create your views here.
-class FiltroView(TemplateView):
-    template_name = 'inicio.html'
-    
-    @method_decorator(csrf_exempt)
-    def dispatch(self, request, *args, **kwargs):
-        return super().dispatch(request, *args, **kwargs)
-        
-    def post(self, request, *args, **kwargs):
-        data = {}
-        try:
-            action = request.POST['action']
-            if action == 'search_repuesto_id':
-                data = []
-                for i in Repuesto.objects.filter(categoria_id=request.POST['id']):
-                    data.append({'id': i.id, 'name': i.nombreRepuesto})
-            else:
-                data['error'] = 'Ha ocurrido un error'
-        except Exception as e:
-            data['error'] = str(e)
-        return JsonResponse(data, safe=False)
-    
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['form'] = FiltroForm
-        return context
+def Repuestos(request):
+    return render(request,'inicio.html', {})
         
 def probar(request):
     item = {}
@@ -76,11 +47,11 @@ def contactoRepuestos(request):
 
         subject=request.POST["Asunto"]
 
-        message=request.POST["mensaje"]+'\n'+ "---------------------------------------------------------------------"+'\n'+"Datos del cliente"+'\n'+ "Nombre : " + request.POST["nombre"]+ "||  Apellido : " + request.POST["apellidos"] +'\n'+ "Email : " + request.POST["email"]+'\n'+ "Telefono :" + request.POST["fono"]+'\n'+ "Region : " + request.POST["pais"] +'\n'+ "Comuna : " + request.POST["provincia"]+'\n'+ "-----------------"+'\n'+ "Datos del Vehiculo : "+'\n'+"Marca : " + request.POST["marca"] +"||   Modelo : " + request.POST["modelo"]+ "||   N° Chasis :" + request.POST["chasis"]
+        message=request.POST["mensaje"]+'\n'+ "────────────────────────────────────"+'\n'+"Datos del cliente"+'\n'+ "Nombre : " + request.POST["nombre"]+ request.POST["apellidos"] +'\n'+ "Email : " + request.POST["email"]+'\n'+ "Telefono :" + request.POST["fono"]+'\n'+ "Region : " + request.POST["pais"] +'\n'+ "Comuna : " + request.POST["provincia"]+'\n'+ "────────────────────────────────────"+'\n'+ "Datos del Vehiculo"+'\n'+"Marca : " + request.POST["marca"] +'\n'+ "Modelo : " + request.POST["modelo"]+'\n'+ "N° Chasis :" + request.POST["chasis"]
  
         from_email=settings.EMAIL_HOST_USER
 
-        recipient_list=["javier.orellana2001@gmail.com"]
+        recipient_list=["junissesamanda.03@gmail.com"]
 
         send_mail(subject, message, from_email, recipient_list)
 
