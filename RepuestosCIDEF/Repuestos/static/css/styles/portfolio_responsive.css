@@ -66,11 +66,6 @@
 	{
 		font-size: 28px;
 	}
-	.search
-	{
-		width: auto;
-		margin-right: 40px;
-	}
 	.main_nav ul
 	{
 		margin-right: 68px;
@@ -300,10 +295,10 @@
 }
 
 /************
-13. 479px
+13. 470px
 ************/
 
-@media only screen and (max-width: 479px)
+@media only screen and (max-width: 470px)
 {
 	
 }
