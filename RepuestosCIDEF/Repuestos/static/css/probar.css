@@ -1,0 +1,67 @@
+
+
+#carta-lista {
+  z-index: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: transparent;
+}
+
+#carta{
+  margin: 20px auto;
+  width: 400px;
+  height: 350px;
+  cursor: pointer;
+  transition: 0.2s;
+  background-color: #EDEDED;
+  border-color: #EDEDED;
+}
+
+#carta #img_carta {
+  width: 400px;
+  height: 400px;
+  border-radius: 500px;
+  border-color: none;
+}
+
+#carta #img_carta img {
+  width: 400px;
+  padding-bottom: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 50px;
+  height: 400px;
+  border-radius: 500px;
+  object-fit: cover;
+  border-color: none;
+}
+
+#carta .card_title {
+  text-align: center;
+  border-radius: 0px 0px 500px 500px;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: -80px;
+  height: 40px;
+}
+
+#carta:hover {
+	filter: opacity(.5);
+}
+
+
+.title-white {
+  color: black;
+  background-color: #EDEDED;
+}
+
+@media all and (max-width: 500px) {
+  #carta-lista {
+    /* On small screens, we are no longer using row direction but column */
+    flex-direction: column;
+  }
+}
+

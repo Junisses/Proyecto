@@ -1,7 +1,9 @@
 {% extends "index.html" %}
 {% load static %}
 	{% block contenido %}
-	
+	<head>
+		<link rel="stylesheet" href="{% static '/css/probar.css' %}">
+	</head>
 <br>
 {% for mostrar in item %}
 {% if forloop.first %}<div class="row">{% endif %}
@@ -87,8 +89,32 @@
 
   </script>
 </body>
-
-
-
-		<br> 
+	<div id="carta-lista" class="cards-list">
+		<div id="carta" class="card 1" style="background-color: #EDEDED; border-color: #EDEDED;">
+		  <div id="img_carta" class="card_image"> 
+				<a href="/repuestosDongFeng">
+					<img src="{% static '/img/fotos/DFM.png' %}" width="200" height="50"  />
+				</a>
+		   </div>
+		  <div class="card_title title-white">
+			<p>DongFeng</p>
+		  </div>
+		<br> <br>
+		</div>
+		<div>
+<br><br>
+</div>
+		<div id="carta" class="card 2" style="background-color: #EDEDED; border-color: #EDEDED;">
+		  <div id="img_carta" class="card_image">
+			<a href="/repuestosFoton">
+				<img src="{% static '/img/fotos/foton.png' %}" width="200" height="50" />
+			</a>
+		   </div>
+		  <div class="card_title title-white">
+			<p>Foton</p>
+		  </div>
+		</div>
+	</div>
+	
+	<br> <br><br>
 {% endblock %}
