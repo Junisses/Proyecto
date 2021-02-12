@@ -519,10 +519,6 @@ section
 	padding-top: 10px;
 	padding-bottom: 10px;
 }
-.portfolio_categories
-{
-
-}
 .portfolio_category
 {
 	display: inline-block;
@@ -540,12 +536,12 @@ section
 .card
 {
 	flex-direction: row;
-	border: none;
-	margin-bottom: 79px;
+	border: non;
+	margin-bottom: 100px;
 }
 .card:last-child
 {
-	margin-bottom: 0px;
+	margin-bottom: 10px;
 }
 .card-img-top
 {
@@ -581,12 +577,12 @@ section
 	width: 50%;
 	padding-left: 30px;
 	padding-right: 0px;
-	padding-top: 0px;
+	padding-top: 25px;
 	margin-top: -6px;
 }
 .card-header
 {
-	font-size: 11px;
+	font-size: 16px;
 	font-weight: 400;
 	letter-spacing: 0.2em;
 	color: #838383;
@@ -614,7 +610,7 @@ section
 }
 .card-link
 {
-	margin-top: 24px;
+	margin-top: 20px;
 }
 .card-link a
 {
