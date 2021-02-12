@@ -4,7 +4,7 @@ from Repuestos.models import *
 from django.conf import settings
 
 
-# Create your views here.
+#Vistas
 def Repuestos(request):
     return render(request,'inicio.html', {})
         
@@ -12,8 +12,7 @@ def probar(request):
     item = {}
         
     if request.method == "POST":
-        buscar = request.POST['categoria']
-            
+        buscar = request.POST['categoria']    
         if 'categoria' in request.POST:
             item = Repuesto.objects.filter(categoria_id = buscar)
 

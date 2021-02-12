@@ -1,9 +1,6 @@
 {% extends "index.html" %}
 {% load static %}
 {% block contenido %}
-<head>
-	
-</head>
 <!-- Función Buscar -->
 			<br>
 				<form class="offset-2 col-8" method="post" action="{% url 'buscar' %}">
@@ -32,6 +29,7 @@
 	<h2> Resultado de búsqueda </h2>
 </div>
 <br>
+<!-- Mostrar productos buscados -->
 {% for mostrar in item %}
 	{% if forloop.first %}
 	<div class="row">{% endif %}
