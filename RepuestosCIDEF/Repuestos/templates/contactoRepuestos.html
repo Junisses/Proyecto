@@ -12,169 +12,170 @@
 </head>
 
 <body>
-<form name="f1" method="POST"> {% csrf_token %}
-<div class="super_container">
-	<!-- Titulo de página -->
-	<div class="home">
-		<div class="home_background_container prlx_parent" style="height: 300px;">
-			<div class="home_background prlx" 
-				style="background-image:url(https://media-exp1.licdn.com/dms/image/C511BAQFUv1ORw68pFg/company-background_10000/0/1568018786413?e=2159024400&v=beta&t=AVEB9CrYCtK4cDdlFNJbG7Ok8zuP1Hfru3ejCLimL70);">
-			</div>
-		</div>
-		
-		<div class="home_title">
-			<h2> Consultar Repuesto </h2>
-		</div>
-	</div>
-	<div class="row justify-content-center">
-		<div class="col-10" style="top:-50;">
-			<p style="color: #808080;">Llena el formulario con los datos solicitados y nos comunicaremos con usted.</p>
-			<p style="color: #808080;">O llama al 22 730 7280 (Central) o al 22 730 7629 – 22 730 7617 y nuestra mesa de atención te asesorara en tu compra.</p>
-		</div>
-	</div>
-<!--Formulario-->
-<input type="hidden" name="Asunto" value="Consulta Repuestos">
-	<div class="row justify-content-center">
-		<div class="col-10"style="top:-110;">
-		<div class="mt-4">
-			<br>
-			<br>
-			<p>Datos del cliente</p>
-			<!-- Nombre y apellido -->
-			<div class="form-row">
-				<div class="form-group col-md-4" style="margin: 10px;padding-left: 0px;">
-					
-				   <span class="wpcf7-form-control-wrap nombre">
-						<input type="text" name="nombre" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control" aria-required="true" aria-invalid="false" placeholder="Nombre">
-				   </span>
-				</div>
-				<div class="form-group col-md-4" style="margin: 10px;padding-left: 0px;">
-				   <span class="wpcf7-form-control-wrap apellidos">
-						<input type="text" name="apellidos" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control" aria-required="true" aria-invalid="false" placeholder="Apellidos">
-				   </span>
-				</div>    
-			</div>
-		    <!-- Mail y Telefono -->
-			<div class="form-row">
-				<div class="form-group col-md-4" style="margin: 10px;padding-left: 0px;">
-					<span class="wpcf7-form-control-wrap email">
-						<input type="email" name="email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email form-control" aria-required="true" aria-invalid="false" placeholder="Email">
-					</span>
-				</div>
-				<div class="form-group col-md-4" style="margin: 10px;padding-left: 0px;">
-				    <span class="wpcf7-form-control-wrap fono">
-						<input type="tel" name="fono" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel form-control" aria-required="true" aria-invalid="false" placeholder="Teléfono">
-					</span>
-				</div>  
-			</div>
-		
-			<p class="mt-4">Datos del vehículo</p>
-			<!-- Marca, modelo y chasis -->
-			<div class="form-row">
-				<div class="form-group col-md-4" style="margin: auto;">
-					<span class="wpcf7-form-control-wrap marca">
-						<input type="text" name="marca" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control" aria-required="true" aria-invalid="false" placeholder="Marca">
-					</span>
-				</div>
-				<div class="form-group col-md-4" style="margin: auto;">
-					<span class="wpcf7-form-control-wrap modelo">
-						<input type="text" name="modelo" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control" aria-required="true" aria-invalid="false" placeholder="Modelo">
-					</span>
-				</div>
-				<div class="form-group col-md-4" style="margin: auto;">
-					<span class="wpcf7-form-control-wrap chasis">
-						<input type="text" name="chasis" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control" id="chasis" aria-required="true" aria-invalid="false" placeholder="N° chasis">
-					</span>
-				</div> 
-			</div>
-			
-		<p class="mt-4">Localidad:</p>	
-		<div class="row justify-content-center" style="margin: auto;">
-			<select class="col-6 wpcf7-form-control form-control"  name=pais onchange="cambia_provincia()"> 
-				<option value="0" selected>Seleccione Región 
-				<option value="1">Metropolitana
-				<option value="2">La Araucania
-				<option value="3">Ñuble
-				<option value="4">Los lagos
-			</select>
-				<select class="col-6 wpcf7-form-control form-control" name=provincia>
-					<option value="Seleccione Comuna">Seleccione Comuna 
-				</select> 
-	    </div>
-		   <p class="mt-4">Repuesto solicitado</p>
-			<div class="form-row">
-				<div class="form-group col-md-12" style="margin: auto;">
-					<span class="wpcf7-form-control-wrap comentarios">
-						<textarea name="mensaje" cols="40" rows="3" maxlength="500" minlength="10" class="wpcf7-form-control wpcf7-textarea form-control" aria-invalid="false" placeholder="Comentarios"></textarea>
-					</span>
-					<small>*Máximo 500 caracteres</small>
-				</div>
-		 
-			 <div class="form-group col-md-12">
-					<label>Adjuntar foto del Repuesto 
-						<span class="text-danger">(opcional)</span> 
-					</label>
-					<div class="custom-file">
-						<span class="wpcf7-form-control-wrap foto" style="margin: auto;">
-							<input type="file" name="foto" size="40" class="wpcf7-form-control wpcf7-file custom-file-input" id="customFile" accept=".jpg,.jpeg" aria-invalid="false">
-						</span>
-						<label class="custom-file-label text-left" for="customFile">Foto del Repuesto</label>
+	<form name="f1" method="POST"> 
+	{% csrf_token %}
+		<div class="super_container">
+			<!-- Titulo de página -->
+			<div class="home">
+				<div class="home_background_container prlx_parent" style="height: 300px;">
+					<div class="home_background prlx" 
+						style="background-image:url(https://media-exp1.licdn.com/dms/image/C511BAQFUv1ORw68pFg/company-background_10000/0/1568018786413?e=2159024400&v=beta&t=AVEB9CrYCtK4cDdlFNJbG7Ok8zuP1Hfru3ejCLimL70);">
 					</div>
-				 </div>
-			   <small>*Peso máximo de 2Mb</small>
+				</div>
+				
+				<div class="home_title">
+					<h2> Consultar Repuesto </h2>
+				</div>
 			</div>
-			
-			<div class="d-flex justify-content-end">
-				<button type="submit" class="btn btn-danger pull-right">ENVIAR</button>
+			<div class="row justify-content-center">
+				<div class="col-10" style="top:-50;">
+					<p style="color: #808080;">Llena el formulario con los datos solicitados y nos comunicaremos con usted.</p>
+					<p style="color: #808080;">O llama al 22 730 7280 (Central) o al 22 730 7629 – 22 730 7617 y nuestra mesa de atención te asesorara en tu compra.</p>
+				</div>
 			</div>
-</form>
-<script>
-	var provincias_1=new Array("Seleccione Comuna","Estacion Central","Maipu","Cerrillos");
-	var provincias_2=new Array("Seleccione Comuna","Lumaco","Collipulli","Chol Chol");
-	var provincias_3=new Array("Seleccione Comuna","Yungai","Chillan","Pinto");
-	var provincias_4=new Array("Seleccione Comuna","Osorno","Ancud","Frutillar");
-  
-	var todasProvincias = [
-	  [],
-	  provincias_1,
-	  provincias_2,
-	  provincias_3,
-	  provincias_4,
-	];
-  
-	function cambia_provincia(){ 
-		 //tomo el valor del select del pais elegido 
-		 var pais 
-		 pais = document.f1.pais[document.f1.pais.selectedIndex].value 
-		 //miro a ver si el pais está definido 
-		 if (pais != 0) { 
-			//si estaba definido, entonces coloco las opciones de la provincia correspondiente. 
-			//selecciono el array de provincia adecuado 
-			mis_provincias=todasProvincias[pais]
-			//calculo el numero de provincias 
-			num_provincias = mis_provincias.length 
-			//marco el número de provincias en el select 
-			document.f1.provincia.length = num_provincias 
-			//para cada provincia del array, la introduzco en el select 
-			for(i=0;i<num_provincias;i++){ 
-			   document.f1.provincia.options[i].value=mis_provincias[i] 
-			   document.f1.provincia.options[i].text=mis_provincias[i] 
-			}	
-		 }else{ 
-			//si no había provincia seleccionada, elimino las provincias del select 
-			document.f1.provincia.length = 1 
-			//coloco un guión en la única opción que he dejado 
-			document.f1.provincia.options[0].value = "Seleccione Comuna" 
-			document.f1.provincia.options[0].text = "Seleccione Comuna" 
-		 } 
-		 //marco como seleccionada la opción primera de provincia 
-		 document.f1.provincia.options[0].selected = true 
-  }
-  
-	</script>
-		</div>   
-		</div>
-	</div>
+		<!--Formulario-->
+		<input type="hidden" name="Asunto" value="Consulta Repuestos">
+			<div class="row justify-content-center">
+				<div class="col-10"style="top:-110;">
+				<div class="mt-4">
+					<br>
+					<br>
+					<p>Datos del cliente</p>
+					<!-- Nombre y apellido -->
+					<div class="form-row">
+						<div class="form-group col-md-4" style="margin: 10px;padding-left: 0px;">
+							
+						   <span class="wpcf7-form-control-wrap nombre">
+								<input type="text" name="nombre" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control" aria-required="true" aria-invalid="false" placeholder="Nombre">
+						   </span>
+						</div>
+						<div class="form-group col-md-4" style="margin: 10px;padding-left: 0px;">
+						   <span class="wpcf7-form-control-wrap apellidos">
+								<input type="text" name="apellidos" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control" aria-required="true" aria-invalid="false" placeholder="Apellidos">
+						   </span>
+						</div>    
+					</div>
+					<!-- Mail y Telefono -->
+					<div class="form-row">
+						<div class="form-group col-md-4" style="margin: 10px;padding-left: 0px;">
+							<span class="wpcf7-form-control-wrap email">
+								<input type="email" name="email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email form-control" aria-required="true" aria-invalid="false" placeholder="Email">
+							</span>
+						</div>
+						<div class="form-group col-md-4" style="margin: 10px;padding-left: 0px;">
+							<span class="wpcf7-form-control-wrap fono">
+								<input type="tel" name="fono" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel form-control" aria-required="true" aria-invalid="false" placeholder="Teléfono">
+							</span>
+						</div>  
+					</div>
+				
+					<p class="mt-4">Datos del vehículo</p>
+					<!-- Marca, modelo y chasis -->
+					<div class="form-row">
+						<div class="form-group col-md-4" style="margin: auto;">
+							<span class="wpcf7-form-control-wrap marca">
+								<input type="text" name="marca" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control" aria-required="true" aria-invalid="false" placeholder="Marca">
+							</span>
+						</div>
+						<div class="form-group col-md-4" style="margin: auto;">
+							<span class="wpcf7-form-control-wrap modelo">
+								<input type="text" name="modelo" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control" aria-required="true" aria-invalid="false" placeholder="Modelo">
+							</span>
+						</div>
+						<div class="form-group col-md-4" style="margin: auto;">
+							<span class="wpcf7-form-control-wrap chasis">
+								<input type="text" name="chasis" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control" id="chasis" aria-required="true" aria-invalid="false" placeholder="N° chasis">
+							</span>
+						</div> 
+					</div>
+					
+				<p class="mt-4">Localidad:</p>	
+				<div class="row justify-content-center" style="margin: auto;">
+					<select class="col-6 wpcf7-form-control form-control"  name=pais onchange="cambia_provincia()"> 
+						<option value="0" selected>Seleccione Región 
+						<option value="1">Metropolitana
+						<option value="2">La Araucania
+						<option value="3">Ñuble
+						<option value="4">Los lagos
+					</select>
+						<select class="col-6 wpcf7-form-control form-control" name=provincia>
+							<option value="Seleccione Comuna">Seleccione Comuna 
+						</select> 
+				</div>
+				   <p class="mt-4">Repuesto solicitado</p>
+					<div class="form-row">
+						<div class="form-group col-md-12" style="margin: auto;">
+							<span class="wpcf7-form-control-wrap comentarios">
+								<textarea name="mensaje" cols="40" rows="3" maxlength="500" minlength="10" class="wpcf7-form-control wpcf7-textarea form-control" aria-invalid="false" placeholder="Comentarios"></textarea>
+							</span>
+							<small>*Máximo 500 caracteres</small>
+						</div>
+				 
+					 <div class="form-group col-md-12">
+							<label>Adjuntar foto del Repuesto 
+								<span class="text-danger">(opcional)</span> 
+							</label>
+							<div class="custom-file">
+								<span class="wpcf7-form-control-wrap foto" style="margin: auto;">
+									<input type="file" name="foto" size="40" class="wpcf7-form-control wpcf7-file custom-file-input" id="customFile" accept=".jpg,.jpeg" aria-invalid="false">
+								</span>
+								<label class="custom-file-label text-left" for="customFile">Foto del Repuesto</label>
+							</div>
+						 </div>
+					   <small>*Peso máximo de 2Mb</small>
+					</div>
+					
+					<div class="d-flex justify-content-end">
+						<button type="submit" class="btn btn-danger pull-right">ENVIAR</button>
+					</div>
+	</form>
+			<script>
+				var provincias_1=new Array("Seleccione Comuna","Estacion Central","Maipu","Cerrillos");
+				var provincias_2=new Array("Seleccione Comuna","Lumaco","Collipulli","Chol Chol");
+				var provincias_3=new Array("Seleccione Comuna","Yungai","Chillan","Pinto");
+				var provincias_4=new Array("Seleccione Comuna","Osorno","Ancud","Frutillar");
+			  
+				var todasProvincias = [
+				  [],
+				  provincias_1,
+				  provincias_2,
+				  provincias_3,
+				  provincias_4,
+				];
+			  
+				function cambia_provincia(){ 
+					 //tomo el valor del select del pais elegido 
+					 var pais 
+					 pais = document.f1.pais[document.f1.pais.selectedIndex].value 
+					 //miro a ver si el pais está definido 
+					 if (pais != 0) { 
+						//si estaba definido, entonces coloco las opciones de la provincia correspondiente. 
+						//selecciono el array de provincia adecuado 
+						mis_provincias=todasProvincias[pais]
+						//calculo el numero de provincias 
+						num_provincias = mis_provincias.length 
+						//marco el número de provincias en el select 
+						document.f1.provincia.length = num_provincias 
+						//para cada provincia del array, la introduzco en el select 
+						for(i=0;i<num_provincias;i++){ 
+						   document.f1.provincia.options[i].value=mis_provincias[i] 
+						   document.f1.provincia.options[i].text=mis_provincias[i] 
+						}	
+					 }else{ 
+						//si no había provincia seleccionada, elimino las provincias del select 
+						document.f1.provincia.length = 1 
+						//coloco un guión en la única opción que he dejado 
+						document.f1.provincia.options[0].value = "Seleccione Comuna" 
+						document.f1.provincia.options[0].text = "Seleccione Comuna" 
+					 } 
+					 //marco como seleccionada la opción primera de provincia 
+					 document.f1.provincia.options[0].selected = true 
+			  }
+			  
+			</script>
+				</div>   
+				</div>
+			</div>
 <script src="https://kit.fontawesome.com/2c36e9b7b1.js"></script>
 <script src="{% static '/js/main.js' %}"></script>
 <script src="{% static '/js/jquery-3.2.1.min.js' %}"></script>	

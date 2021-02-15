@@ -38,7 +38,6 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
-    <!-- /.carousel -->
 </section>			
 <!-- Función Buscar -->
 			<br>
@@ -60,6 +59,8 @@
 						</div>
 					</div>
 				</form>
+	
+	<!-- Eleccion de marcas -->
 	<div class="row justify-content-center">
 		<h1 style=" font-style: oblique;text-decoration: underline overline;">Seleccione Marca</h1>
 	</div>
@@ -158,32 +159,6 @@
 						alert(textStatus + ': ' + errorThrown);
 					}).always(function(data) {
 						select_repuestos.html(options);
-					});
-						var select_marcas = $('select[name="marcas"]');
-						var ver = '<option value="">---------</option>';
-						var select_modelos = $('select[name="modelos"]');
-						var opcion = '<option value="">---------</option>';
-						$.ajax({
-							url: window.location.pathname,
-							type: 'POST',
-							data: {
-								'action': 'search_modelo_id',
-								'cod': id
-							},
-							dataType: 'json',
-						}).done(function (data) {
-							if (!data.hasOwnProperty('error')) {
-								$.each(data, function (key,value) {
-									opcion += '<option value ="'+value.id+'">'+value.name+'</option>';
-								});
-								return false;
-							}
-							}).fail(function(jqXHR, textStatus, errorThrown) {
-								alert(textStatus + ': ' + errorThrown);
-							}).always(function(data) {
-								select_marcas.html(ver);
-								select_modelos.html(opcion);
-							});
 			});
 		});
 	</script>
