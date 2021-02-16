@@ -1,7 +1,10 @@
 # ProyectoCIDEF
-Ejecución del sistema:
+Inicialmente clonar el proyecto, el cual esta programado con HTML, python 3.9, CSS, JS, jQuery, Django
+Para clonar ejecutar en la CMD lo siguiente:
 
-	➜ Primero instalar lo siguiente:
+	✓ git clone https://github.com/Junisses/ProyectoCIDEF.git
+	
+	➜ Luego instalar lo siguiente:
 	
 		✓ pip install pillow
 		✓ pip install django-crispy-forms
@@ -9,7 +12,7 @@ Ejecución del sistema:
 		✓ pip install social-auth-app-django-crispy-forms
 		✓ pip install django-progressive-web-app
 	
-	➜ Luego complementos para la ejecución del programa:
+	➜ Complementos para la ejecución del programa:
 	
 		✓ pip install django-core
 		✓ pip install django-admin-interface
