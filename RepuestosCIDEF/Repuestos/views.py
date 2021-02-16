@@ -94,3 +94,6 @@ def Midi_Doble(request):
 
 def tm_doble(request):
     return render(request,'tm-doble.html',{})
+    
+def tm_simple(request):
+    return render(request,'TM-Simple.html',{})
