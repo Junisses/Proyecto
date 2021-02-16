@@ -63,3 +63,6 @@ def contactoRepuestos(request):
         return render(request,"contactoRepuestos.html")
 
     return render (request,'contactoRepuestos.html')
+
+def fengshen(request):
+    return render(request,'fengshenS30.html', {})

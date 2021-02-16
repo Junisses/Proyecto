@@ -32,4 +32,7 @@ urlpatterns = [
     
     #Busqueda
     path('busqueda',views.buscar,name='buscar'),
+    
+    #Páginas de DFM
+    path('repuestosDongFeng/FengshenS30',views.fengshen,name='S30'),
 ]
