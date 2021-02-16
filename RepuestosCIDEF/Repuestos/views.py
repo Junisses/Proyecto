@@ -26,6 +26,7 @@ def buscar(request):
         
         if 'txtBuscar' in request.POST:
             item = Repuesto.objects.filter(nombreRepuesto__contains = buscar)
+            
            
     return render(request,'buscar.html', {'item':item}) 
     
