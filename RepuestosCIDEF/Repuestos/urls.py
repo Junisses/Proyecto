@@ -48,5 +48,4 @@ urlpatterns = [
     
     #Busqueda
     path('busqueda',views.buscar,name='buscar'),
-    
 ]

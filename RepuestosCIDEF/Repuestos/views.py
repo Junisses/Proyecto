@@ -25,8 +25,7 @@ def buscar(request):
         buscar = request.POST['txtBuscar']
         
         if 'txtBuscar' in request.POST:
-            item = Repuesto.objects.filter(nombreRepuesto__contains = buscar)
-            
+            item = Repuesto.objects.filter(nombreRepuesto__contains = buscar)      
            
     return render(request,'buscar.html', {'item':item}) 
     
@@ -49,8 +48,8 @@ def repuestosFoton(request):
     return render(request,'repuestosFoton.html', {})
     
 def contactoRepuestos(request):
-    if request.method== 'POST':
 
+    if request.method== 'POST':
         subject=request.POST["Asunto"]
 
         message=request.POST["mensaje"]+'\n'+ "────────────────────────────────────"+'\n'+"Datos del cliente"+'\n'+ "Nombre : " + request.POST["nombre"]+ request.POST["apellidos"] +'\n'+ "Email : " + request.POST["email"]+'\n'+ "Telefono :" + request.POST["fono"]+'\n'+ "Region : " + request.POST["pais"] +'\n'+ "Comuna : " + request.POST["provincia"]+'\n'+ "────────────────────────────────────"+'\n'+ "Datos del Vehiculo"+'\n'+"Marca : " + request.POST["marca"] +'\n'+ "Modelo : " + request.POST["modelo"]+'\n'+ "N° Chasis :" + request.POST["chasis"]
