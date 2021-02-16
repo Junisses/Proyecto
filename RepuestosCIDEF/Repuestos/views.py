@@ -66,3 +66,6 @@ def contactoRepuestos(request):
 
 def fengshen(request):
     return render(request,'fengshenS30.html', {})
+
+def DongfengAX4(request):
+    return render(request,'AX4.html', {})
