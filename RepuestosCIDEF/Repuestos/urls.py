@@ -28,6 +28,8 @@ urlpatterns = [
     path('repuestosDongFeng/AX4',views.DongfengAX4,name='AX4'),
     path('repuestosDongFeng/AX7-PRO',views.DongfengAX7_PRO,name='AX7-PRO'),
     path('repuestosDongFeng/NEW-AX7',views.NEW_AX7,name='NEW-AX7'),
+    path('repuestosDongFeng/A60',views.A60,name='A60'),
+
     
     
     #Apartado de Foton

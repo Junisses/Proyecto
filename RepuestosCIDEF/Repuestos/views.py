@@ -77,5 +77,9 @@ def DongfengAX7_PRO(request):
     
 def NEW_AX7(request):
     return render(request,'AX7-New.html', {})
+
+def A60(request):
+    return render(request,'A60.html', {})
+
     
 #Páginas de Foton
