@@ -96,3 +96,6 @@ def tm_doble(request):
     
 def tm_simple(request):
     return render(request,'TM-Simple.html',{})
+
+def ft_500(request):
+    return render(request,'Ft-500.html',{})
