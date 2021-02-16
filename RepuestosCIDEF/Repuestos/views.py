@@ -72,3 +72,6 @@ def DongfengAX4(request):
 
 def DongfengAX7_PRO(request):
     return render(request,'AX7-PRO.html', {})
+    
+def NEW_AX7(request):
+    return render(request,'AX7-New.html', {})
