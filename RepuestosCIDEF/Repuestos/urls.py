@@ -9,8 +9,6 @@ urlpatterns = [
     #Inicio de la página
     path('',views.prueba, name='prueba'),
     
-    #Plantilla de pruebas
-    path('tienda',views.tienda, name='tienda'),
     
     #Nivel Básico
     path('contactoRepuestos',views.contactoRepuestos, name='contactoRepuestos'),

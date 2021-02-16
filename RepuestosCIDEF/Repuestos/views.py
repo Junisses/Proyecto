@@ -29,9 +29,6 @@ def buscar(request):
            
     return render(request,'buscar.html', {'item':item}) 
     
-def tienda(request):
-    return render(request,'tienda.html', {})
-    
 def repuestos(request):
     return render(request,'repuestos.html', {})
     
