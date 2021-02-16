@@ -64,6 +64,8 @@ def contactoRepuestos(request):
 
     return render (request,'contactoRepuestos.html')
 
+#Páginas de DFM
+
 def fengshen(request):
     return render(request,'fengshenS30.html', {})
 
@@ -75,3 +77,5 @@ def DongfengAX7_PRO(request):
     
 def NEW_AX7(request):
     return render(request,'AX7-New.html', {})
+    
+#Páginas de Foton
