@@ -91,3 +91,6 @@ def Midi_Van(request):
     
 def Midi_Doble(request):
     return render(request,'Midi-Doble.html', {})
+
+def tm_doble(request):
+    return render(request,'tm-doble.html',{})
