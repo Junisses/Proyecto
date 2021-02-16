@@ -29,8 +29,6 @@ urlpatterns = [
     path('repuestosDongFeng/AX7-PRO',views.DongfengAX7_PRO,name='AX7-PRO'),
     path('repuestosDongFeng/NEW-AX7',views.NEW_AX7,name='NEW-AX7'),
     path('repuestosDongFeng/A60',views.A60,name='A60'),
-
-    
     
     #Apartado de Foton
     path('repuestosFoton',views.repuestosFoton,name='repuestosFoton'),
