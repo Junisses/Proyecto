@@ -48,7 +48,9 @@
 					<h3 style="color:brown">{{ mostrar.nombreRepuesto }}</h3>
 					<p id="espacio"> Modelo: {{ mostrar.marca }} {{ mostrar.modelo }}</p>
 					<p style="color: gray; font-size: 12px;"> Stock disponible: {{ mostrar.stock }}</p>
-					<h4>${{ mostrar.precioVenta }}</h4>
+					<h4 style="color: green;" >
+						<strong> ${{ mostrar.precioVenta }}</strong>	
+					</h4>
 					<button id="producto" class="btn btn-warning">Agregar al Carrito</button>
 				</div>
 			</div>
