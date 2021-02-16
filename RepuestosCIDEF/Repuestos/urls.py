@@ -35,6 +35,7 @@ urlpatterns = [
     #Páginas de Foton
     path('repuestosFoton/Midi-Simple',views.Midi_Simple,name='Midi_Truck_simple'),
     path('repuestosFoton/Midi-Van',views.Midi_Van,name='Midi-Van'),
+    path('repuestosFoton/Midi-Doble',views.Midi_Doble,name='Midi-Doble'),
     
     #Pruebas
     path('probar',views.probar,name='probar'),

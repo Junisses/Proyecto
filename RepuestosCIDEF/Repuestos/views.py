@@ -88,3 +88,6 @@ def Midi_Simple(request):
 
 def Midi_Van(request):
     return render(request,'midi-van.html', {})
+    
+def Midi_Doble(request):
+    return render(request,'Midi-Doble.html', {})
