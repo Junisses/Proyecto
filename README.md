@@ -1,5 +1,6 @@
 # ProyectoCIDEF
 Inicialmente clonar el proyecto, el cual esta programado con HTML, python 3.9, CSS, JS, jQuery, Django
+
 Para clonar ejecutar en la CMD lo siguiente:
 
 	✓ git clone https://github.com/Junisses/ProyectoCIDEF.git
