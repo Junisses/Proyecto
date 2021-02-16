@@ -69,3 +69,6 @@ def fengshen(request):
 
 def DongfengAX4(request):
     return render(request,'AX4.html', {})
+
+def DongfengAX7_PRO(request):
+    return render(request,'AX7-PRO.html', {})
