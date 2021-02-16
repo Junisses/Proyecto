@@ -35,6 +35,5 @@ urlpatterns = [
     
     #Páginas de DFM
     path('repuestosDongFeng/FengshenS30',views.fengshen,name='S30'),
-
-    path('DongfengAX4',views.DongfengAX4,name='AX4'),
+    path('repuestosDongFeng/AX4',views.DongfengAX4,name='AX4'),
 ]
