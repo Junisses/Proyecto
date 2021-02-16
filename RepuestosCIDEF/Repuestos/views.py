@@ -81,6 +81,7 @@ def NEW_AX7(request):
 
 def A60(request):
     return render(request,'A60.html', {})
+    
 #Páginas de Foton
 def Midi_Simple(request):
     return render(request,'midi-simple.html', {})

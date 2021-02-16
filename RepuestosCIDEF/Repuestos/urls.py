@@ -32,7 +32,7 @@ urlpatterns = [
     
     #Apartado de Foton
     path('repuestosFoton',views.repuestosFoton,name='repuestosFoton'),
-    #Pagínas de Foton
+    #Páginas de Foton
     path('repuestosFoton/Midi-Simple',views.Midi_Simple,name='Midi_Truck_simple'),
     
     #Pruebas
