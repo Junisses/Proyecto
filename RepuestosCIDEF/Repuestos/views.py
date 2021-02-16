@@ -85,3 +85,6 @@ def A60(request):
 #Páginas de Foton
 def Midi_Simple(request):
     return render(request,'midi-simple.html', {})
+
+def Midi_Van(request):
+    return render(request,'midi-van.html', {})
