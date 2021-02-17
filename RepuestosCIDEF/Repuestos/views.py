@@ -93,9 +93,7 @@ def A60(request):
         id            = int("0" + request.POST["txtId"])
         nombre        = request.POST["txtNombre"]
         descripcion   = request.POST["txtDescripcion"]
-        
-                
-             
+
         if 'btnListar' in request.POST:
             lista = Repuesto.objects.filter(categoria_id=1).filter(modelo__nombre='A60')
         
