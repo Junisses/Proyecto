@@ -84,7 +84,9 @@ def NEW_AX7(request):
     return render(request,'AX7-New.html', contexto)
 
 def A60(request):
-    return render(request,'A60.html', {})
+    lista = Repuesto.objects.filter(modelo__nombre = "A60")
+    contexto = {'lista' : lista}
+    return render(request,'A60.html', contexto)
     
 #Páginas de Foton
 def Midi_Simple(request):
