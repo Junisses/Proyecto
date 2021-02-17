@@ -64,8 +64,19 @@ def contactoRepuestos(request):
 #Páginas de DFM
 
 def fengshen(request):
-    lista = Repuesto.objects.filter(modelo__nombre = "Fengshen S30")
-    contexto = {'lista' : lista}   
+    ver = Repuesto.objects.filter(modelo__nombre='Fengshen S30')
+
+    lista = {}
+
+    if request.method == "POST":
+        id            = int("0" + request.POST["txtId"])
+        nombre        = request.POST["txtNombre"]
+        descripcion   = request.POST["txtDescripcion"]
+
+        if 'btnListar' in request.POST:
+            lista = Repuesto.objects.filter(categoria_id=1).filter(modelo__nombre='Fengshen S30')
+                
+    contexto = {'lista' : lista, 'ver' : ver}   
     return render(request,'fengshenS30.html', contexto)
 
 def DongfengAX4(request):
