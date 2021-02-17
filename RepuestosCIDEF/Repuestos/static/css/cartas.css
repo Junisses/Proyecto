@@ -15,3 +15,28 @@
 	margin-left: 1rem;
 	text-align: center;
 }
+
+#fondofiltro {
+	background-image: url("https://image.freepik.com/foto-gratis/humo-rojo-sobre-fondo-negro_38705-58.jpg"); 
+	background-size: 100%;
+	width: 1500px;
+	height: 100px;
+}
+
+#filtro {
+	padding-top: 30px;
+	margin-left: -250;
+	
+}
+/* https://besthqwallpapers.com/Uploads/9-8-2019/100770/thumb2-4k-flag-of-china-abstract-smoke-asia-national-symbols.jpg */
+.diseño {
+	text-align: center; 
+	color: white;
+    padding-top: 25px; 
+	padding-bottom: 20px; 
+	font-style: oblique; 
+	background-size: 100%; 
+	background-image: url("https://image.freepik.com/foto-gratis/humo-rojo-sobre-fondo-negro_38705-58.jpg"); 
+	width: 1500px; 
+	height: 100px;
+}
