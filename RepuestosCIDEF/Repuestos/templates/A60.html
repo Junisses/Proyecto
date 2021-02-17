@@ -8,43 +8,20 @@
 {{ mensaje }}
 <form action="/repuestosDongFeng/A60" method="post">
 	{% csrf_token %}
-	<div class="row justify-content-center">
-		<div class="col-12 col-sm-2">
-			Id
-		</div>
 		<div class="col-8 col-sm-4">	
-			<input type="text" name="txtId" class="from-control" value="{{ item.id }}">
+			<input type="hidden" name="txtId" class="from-control" value="{{ item.id }}">
 		</div>
-		<div class="col-1.5">	
-			<button type="sumbit" name="btnBuscar" class="btn btn-danger btn-block" >Buscar</button>
-		</div>
-	</div>
-	<div class="row justify-content-center">
-		<div class="col-12 col-sm-2">
-			Nombre
+
+		<div class="col-12 col-sm-6">	
+			<input type="hidden" name="txtNombre" class="from-control" value="{{ item.nombre }}">
 		</div>
 		<div class="col-12 col-sm-6">	
-			<input type="text" name="txtNombre" class="from-control" value="{{ item.nombre }}">
-		</div>
-	</div>
-	<div class="row justify-content-center">
-		<div class="col-12 col-sm-2">
-			Descripcion
-		</div>
-		<div class="col-12 col-sm-6">	
-			<input type="text" name="txtDescripcion" class="from-control" value="{{ item.descripcion }}">
+			<input type="hidden" name="txtDescripcion" class="from-control" value="{{ item.descripcion }}">
 		</div>
 	</div>			
 	<div class="row justify-content-center">
-		<div class="col-12 col-sm-2">
-			Opciones
-		</div>
 		<div class="col-12 col-sm-6">	
-			<button type="sumbit" name="btnGrabar" class="btn btn-success" >Guardar</button>
 			<button type="sumbit" name="btnListar" class="btn btn-primary" >Listar</button>
-{% if item.id > 0 %}			
-			<button type="sumbit" name="btnEliminar" class="btn btn-danger float-right" >Eliminar</button>
-{% endif %}
 		</div>
 	</div>
 </form>
