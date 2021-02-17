@@ -106,3 +106,12 @@ def tm_simple(request):
 
 def ft_500(request):
     return render(request,'Ft-500.html',{})
+    
+def TM_CREW(request):
+    return render(request,'TM-CREW.html',{})
+    
+def TM_BOX(request):
+    return render(request,'TM-BOX.html',{})
+    
+def K1(request):
+    return render(request,'K1.html',{})

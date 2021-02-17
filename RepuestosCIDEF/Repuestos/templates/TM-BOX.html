@@ -1,0 +1,76 @@
+{% extends "index.html"%}
+{% load static %}
+{% block contenido %}
+TM-BOX
+<!-- Filtro Complejo
+<form method="post" action="/probar" enctype="multipart/form-data" >
+	<br>
+	{% csrf_token %}
+	<div class="row justify-content-center ">
+		<div class="col-3">
+				<div class="form-group"> 
+					<input type="hidden" name="txtCategoria"  value="{{ item.categorias }}">
+						<label>Categoria</label>
+						{{ form.categorias }}
+				</div>
+		</div>
+		<div class="col-3">
+				<div class="form-group">
+					<input type="hidden" name="txtRepuesto"  value="{{ item.repuesto }}">
+						<label>Repuesto: </label>
+						{{ form.repuestos }}
+				</div>
+		</div>
+		<div class="col-3">
+				<div class="form-group">
+					<input type="hidden" name="txtMarca"  value="{{ item.marca }}">
+						<label>Marca: </label>
+						{{ form.marcas }}
+				</div>
+		</div>
+		<div class="col-3">
+				<div class="form-group">
+					<input type="hidden" name="txtModelo"  value="{{ item.modelo }}">
+						<label>Modelo: </label>
+						{{ form.modelos }}
+				</div>
+		</div>
+		<button>
+		
+	</div>
+</form>
+	
+<script>
+	$(function () {
+			$('select[name="categorias"]').on('change', function () {
+				var id = $(this).val();
+				var select_repuestos = $('select[name="repuestos"]');
+				var options = '<option value="">---------</option>';
+				if(id == '') {
+					select_repuestos.html(options);
+					return false;
+					}
+				$.ajax({
+					url: window.location.pathname,
+					type: 'POST',
+					data: {
+						'action': 'search_repuesto_id',
+						'id': id
+					},
+					dataType: 'json',
+				}).done(function (data) {
+					if (!data.hasOwnProperty('error')) {
+						$.each(data, function (key,value) {
+							options += '<option value ="'+value.id+'">'+value.name+'</option>';
+						});
+						return false;
+					}
+					}).fail(function(jqXHR, textStatus, errorThrown) {
+						alert(textStatus + ': ' + errorThrown);
+					}).always(function(data) {
+						select_repuestos.html(options);
+			});
+		});
+	</script>
+	-->
+{% endblock %}
