@@ -74,7 +74,9 @@ def DongfengAX4(request):
     return render(request,'AX4.html', contexto)
 
 def DongfengAX7_PRO(request):
-    return render(request,'AX7-PRO.html', {})
+    lista = Repuesto.objects.filter(modelo__nombre = "AX7-PRO")
+    contexto = {'lista' : lista}
+    return render(request,'AX7-PRO.html', contexto)
     
 def NEW_AX7(request):
     return render(request,'AX7-New.html', {})
