@@ -64,10 +64,14 @@ def contactoRepuestos(request):
 #Páginas de DFM
 
 def fengshen(request):
-    return render(request,'fengshenS30.html', {})
+    lista = Repuesto.objects.filter(modelo__nombre = "Fengshen S30")
+    contexto = {'lista' : lista}   
+    return render(request,'fengshenS30.html', contexto)
 
 def DongfengAX4(request):
-    return render(request,'AX4.html', {})
+    lista = Repuesto.objects.filter(modelo__nombre = "AX4")
+    contexto = {'lista' : lista}
+    return render(request,'AX4.html', contexto)
 
 def DongfengAX7_PRO(request):
     return render(request,'AX7-PRO.html', {})
