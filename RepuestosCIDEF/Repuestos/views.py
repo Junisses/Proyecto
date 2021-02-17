@@ -84,8 +84,29 @@ def NEW_AX7(request):
     return render(request,'AX7-New.html', contexto)
 
 def A60(request):
-    lista = Repuesto.objects.filter(modelo__nombre = "A60")
-    contexto = {'lista' : lista}
+    ver = Repuesto.objects.filter(modelo__nombre='A60')
+    mensaje = "";
+    lista = {}
+    item = {}
+ 
+    if request.method == "POST":
+        id            = int("0" + request.POST["txtId"])
+        nombre        = request.POST["txtNombre"]
+        descripcion   = request.POST["txtDescripcion"]
+        
+                
+             
+        if 'btnListar' in request.POST:
+            lista = Repuesto.objects.filter(categoria_id=1).filter(modelo__nombre='A60')
+        
+        elif 'btnBuscar' in request.POST:
+            try:
+                item = Repuesto.objects.get(pk = id)
+            except:
+                mensaje = "Registro no encontrado"
+                item = {}
+                
+    contexto = {'mensaje' : mensaje, 'lista' : lista, 'ver' : ver}
     return render(request,'A60.html', contexto)
     
 #Páginas de Foton
