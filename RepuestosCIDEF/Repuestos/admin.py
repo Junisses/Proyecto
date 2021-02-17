@@ -1,8 +1,6 @@
 from django.contrib import admin
-from .models import MarcaAuto
-from .models import Categoria
-from .models import Repuesto
-from .models import Modelo
+from .models import *
+
 
 # Register your models here.
 
@@ -21,4 +19,8 @@ admin.site.register(Repuesto, repuestoAdmin)
 class modeloAdmin(admin.ModelAdmin):
     list_display   = ['nombre'] 
 admin.site.register(Modelo, modeloAdmin)
+
+class tipoAdmin(admin.ModelAdmin):
+    list_display   = ['nombre'] 
+admin.site.register(Tipo, tipoAdmin)
 

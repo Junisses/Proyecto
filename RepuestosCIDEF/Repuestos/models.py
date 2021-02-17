@@ -6,6 +6,12 @@ class Categoria(models.Model):
     def __str__(self):
         return self.nombre
 
+class Tipo(models.Model):
+    categoria     = models.ForeignKey(Categoria, blank=True, null=True, on_delete=models.SET_NULL)
+    nombre        = models.TextField(max_length=50)
+
+    def __str__(self):
+        return self.nombre
 
 class MarcaAuto(models.Model):
     nombre        = models.TextField(max_length=50)
@@ -24,6 +30,7 @@ class Repuesto(models.Model):
     categoria        = models.ForeignKey(Categoria, blank=True, null=True, on_delete=models.SET_NULL)
     marca            = models.ForeignKey(MarcaAuto, blank=True, null=True, on_delete=models.SET_NULL)
     modelo           = models.ForeignKey(Modelo, blank=True, null=True, on_delete=models.SET_NULL)
+    tipo             = models.ForeignKey(Tipo, blank=True, null=True, on_delete=models.SET_NULL)
     nombreRepuesto   = models.TextField(max_length=60)
     codigo           = models.DecimalField(max_digits=13, decimal_places=0)
     descripcion      = models.TextField(max_length = 200)
