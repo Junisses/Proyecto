@@ -89,8 +89,17 @@ def DongfengAX7_PRO(request):
     return render(request,'AX7-PRO.html', contexto)
     
 def NEW_AX7(request):
-    lista = Repuesto.objects.filter(modelo__nombre = "NEW-AX7")
-    contexto = {'lista' : lista}
+    ver = Repuesto.objects.filter(modelo__nombre = "NEW-AX7")
+    lista = {}
+
+    if request.method == "POST":
+        id            = int("0" + request.POST["categoria"])
+        tipo          = request.POST["repuesto"]
+
+        if 'btnListar' in request.POST:
+            lista = Repuesto.objects.filter(categoria_id = id).filter(tipo__nombre = tipo).filter(modelo__nombre='NEW-AX7')
+                
+    contexto = {'lista' : lista, 'ver' : ver} 
     return render(request,'AX7-New.html', contexto)
 
 def A60(request):
