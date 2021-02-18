@@ -83,32 +83,39 @@
 	<link rel="stylesheet" href="{% static '/css/cartas.css' %}">
 </head>
 {% for fila in lista %}
-<div class ="row">
-			<div class="carta">
-				<div class="offset-4" style="background-color: white; width: 300px; padding-bottom: 30px; padding-top: 30px;">	
-					<img id="foto" src="" alt="No se encontro la imagen" >
-					<h3 style="color: rgba(248, 1, 1, 0.802); font-family: Segoe UI ;">{{ fila.nombreRepuesto }}</h3>
-					<p id="espacio"> Modelo: {{ fila.marca }} {{ fila.modelo }}</p>
-					<p style="color: gray; font-size: 12px;"> Stock disponible: {{ fila.stock }}</p>
-					<h4 style="color: green;" >
-						<strong> ${{ fila.precioVenta }}</strong>	
-					</h4>
-					<button id="producto" class="btn btn-info">Agregar al Carrito</button>
+	{% if forloop.first %}
+	<div class ="row" style="margin-top: -50;">
+	{% endif %}
+			<div class ="row justify-content-center">
+				<div class="carta">
+					<div class="offset-4" style="background-color: white; width: 300px; padding-bottom: 30px; padding-top: 30px;">	
+						<img id="foto" src="" alt="No se encontro la imagen" >
+						<h3 style="color: rgba(248, 1, 1, 0.802); font-family: Segoe UI ;">{{ fila.nombreRepuesto }}</h3>
+						<p id="espacio"> Modelo: {{ fila.marca }} {{ fila.modelo }}</p>
+						<p style="color: gray; font-size: 12px;"> Stock disponible: {{ fila.stock }}</p>
+						<h4 style="color: green;" >
+							<strong> ${{ fila.precioVenta }}</strong>	
+						</h4>
+						<button id="producto" class="btn btn-info">Agregar al Carrito</button>
+					</div>
 				</div>
-			</div>
-		</div>	
-{% endfor %}
-			</div>
-			<div class="row justify-content-center">
-				<h1 class="diseño">Todos los Repuestos</h1>
 			</div>	
+	{% if forloop.counter|divisibleby:34 %}
+	</div>
+	<div class="row">
+	{% endif %}
+	{% if forloop.last %}
+	</div>
+	{% endif %}
+{% endfor %}
+			
 {% endblock %}
 
 <!-- Bloque dinamico que muestra todos los repuestos -->
 {% block extra %}
-<head>
-	<link rel="stylesheet" href="{% static '/css/cartas.css' %}">
-</head>
+<div class="row justify-content-center">
+	<h1 class="diseño">Todos los Repuestos</h1>
+</div>	
 {% for fila in ver %}
 	{% if forloop.first %}
 	<div class="row">
