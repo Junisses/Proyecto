@@ -9,12 +9,7 @@ def Repuestos(request):
     return render(request,'inicio.html', {})
         
 def probar(request):
-    item = {}
-        
-    if request.method == "POST":
-        buscar = request.POST['categoria']    
-        if 'categoria' in request.POST:
-            item = Repuesto.objects.filter(categoria_id = buscar)
+    item = Repuesto.objects.all()
 
     return render(request,'Probar.html', {'item': item})
 

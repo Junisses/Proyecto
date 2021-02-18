@@ -9,7 +9,6 @@ urlpatterns = [
     #Inicio de la página
     path('',views.prueba, name='prueba'),
     
-    
     #Nivel Básico
     path('contactoRepuestos',views.contactoRepuestos, name='contactoRepuestos'),
     
