@@ -146,7 +146,19 @@ def tm_doble(request):
     return render(request,'tm-doble.html',{})
     
 def tm_simple(request):
-    return render(request,'TM-Simple.html',{})
+    ver = Repuesto.objects.filter(modelo__nombre='TM-Simple')
+
+    lista = {}
+
+    if request.method == "POST":
+        id            = int("0" + request.POST["categoria"])
+        tipo          = request.POST["repuesto"]
+
+        if 'btnListar' in request.POST:
+            lista = Repuesto.objects.filter(categoria_id = id).filter(tipo__nombre = tipo).filter(modelo__nombre='TM-Simple')
+                
+    contexto = {'lista' : lista, 'ver' : ver}   
+    return render(request,'TM-Simple.html', contexto)
 
 def ft_500(request):
     return render(request,'Ft-500.html',{})
