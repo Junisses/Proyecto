@@ -108,14 +108,13 @@ def A60(request):
     lista = {}
 
     if request.method == "POST":
-        id            = int("0" + request.POST["txtId"])
-        nombre        = request.POST["txtNombre"]
-        descripcion   = request.POST["txtDescripcion"]
+        id            = int("0" + request.POST["categoria"])
+        tipo          = request.POST["repuesto"]
 
         if 'btnListar' in request.POST:
-            lista = Repuesto.objects.filter(categoria_id=1).filter(modelo__nombre='A60')
+            lista = Repuesto.objects.filter(categoria_id = id).filter(tipo__nombre = tipo).filter(modelo__nombre='A60')
                 
-    contexto = {'lista' : lista, 'ver' : ver}
+    contexto = {'lista' : lista, 'ver' : ver}   
     return render(request,'A60.html', contexto)
     
 #Páginas de Foton
