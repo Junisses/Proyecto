@@ -5,11 +5,13 @@ from .models import *
 # Register your models here.
 
 class marcaAutoAdmin(admin.ModelAdmin):
-    list_display   = ['nombre'] 
+    list_display   = ['nombre',
+                      'id'] 
 admin.site.register(MarcaAuto, marcaAutoAdmin)
 
 class categoriaAdmin(admin.ModelAdmin):
-    list_display   = ['nombre'] 
+    list_display   = ['nombre',
+                      'id'] 
 admin.site.register(Categoria, categoriaAdmin)
 
 class repuestoAdmin(admin.ModelAdmin):
