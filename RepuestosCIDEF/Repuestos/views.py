@@ -73,7 +73,7 @@ def fengshen(request):
     contexto = {'lista' : lista, 'ver' : ver}   
     return render(request,'fengshenS30.html', contexto)
 
-def DongfengAX4(request):
+def AX4(request):
     ver = Repuesto.objects.filter(modelo__nombre='AX4')
 
     lista = {}
@@ -88,9 +88,19 @@ def DongfengAX4(request):
     contexto = {'lista' : lista, 'ver' : ver} 
     return render(request,'AX4.html', contexto)
 
-def DongfengAX7_PRO(request):
-    lista = Repuesto.objects.filter(modelo__nombre = "AX7-PRO")
-    contexto = {'lista' : lista}
+def AX7_PRO(request):
+    ver = Repuesto.objects.filter(modelo__nombre='AX7-PRO')
+
+    lista = {}
+
+    if request.method == "POST":
+        id            = int("0" + request.POST["categoria"])
+        tipo          = request.POST["repuesto"]
+
+        if 'btnListar' in request.POST:
+            lista = Repuesto.objects.filter(categoria_id = id).filter(tipo__nombre = tipo).filter(modelo__nombre='AX7-PRO')
+                
+    contexto = {'lista' : lista, 'ver' : ver}
     return render(request,'AX7-PRO.html', contexto)
     
 def NEW_AX7(request):
