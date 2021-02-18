@@ -36,6 +36,7 @@ class Repuesto(models.Model):
     descripcion      = models.TextField(max_length = 200)
     stock            = models.IntegerField()
     precioVenta      = models.IntegerField()
+    
 
     def __str__(self):
         return self.nombreRepuesto
