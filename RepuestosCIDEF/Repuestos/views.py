@@ -134,7 +134,19 @@ def A60(request):
     
 #Páginas de Foton
 def Midi_Simple(request):
-    return render(request,'midi-simple.html', {})
+    ver = Repuesto.objects.filter(modelo__nombre='Midi Truck Simple')
+
+    lista = {}
+
+    if request.method == "POST":
+        id            = int("0" + request.POST["categoria"])
+        tipo          = request.POST["repuesto"]
+
+        if 'btnListar' in request.POST:
+            lista = Repuesto.objects.filter(categoria_id = id).filter(tipo__nombre = tipo).filter(modelo__nombre='Midi Truck Simple')
+                
+    contexto = {'lista' : lista, 'ver' : ver}   
+    return render(request,'midi-simple.html', contexto)
 
 def Midi_Van(request):
     return render(request,'midi-van.html', {})
