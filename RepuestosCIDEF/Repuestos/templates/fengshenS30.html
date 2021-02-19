@@ -15,9 +15,15 @@
 				<select class="col-3 wpcf7-form-control form-control" value="{{ item.id }}" name="categoria" onchange="cambia_repuesto()"> 
 					<option value="0" selected>Seleccione Categoria
 					<option value="1">Accesorios
-					<option value="2">Chasis
+					<option value="2">Baterias
 					<option value="3">Carroceria
-					<option value="4">Distribucion
+					<option value="4">Electrico
+					<option value="5">Filtros
+					<option value="6">Motor
+					<option value="7">Refrigeracion
+					<option value="8">Transmision - Direccion
+					<option value="9">AirBag
+					<option value="10">Interior - Exterior
 				</select>
 				<select style="margin-left: 20px;" value="{{ item.tipo }}" class="col-3 wpcf7-form-control form-control" name="repuesto">
 					<option value="Repuestos">Seleccione Repuestos
@@ -31,10 +37,17 @@
 </form>
 
 <script>
-	var repuestos_1 =new Array("Seleccione Repuestos","Antenas","Plumillas","Siliconas");
-	var repuestos_2 =new Array("Seleccione Repuestos","Cataliticos","Rodamientos","Pernos");
-	var repuestos_3 =new Array("Seleccione Repuestos","Capot","Espejo","Manillas");
-	var repuestos_4 =new Array("Seleccione Repuestos","Cadenas","Poleas","Piñones");
+	var repuestos_1 =new Array("Seleccione Repuestos","Antenas","DVD player","Kit Accesorio","Radio");
+	var repuestos_2 =new Array("Seleccione Repuestos","Bateria");
+	var repuestos_3 =new Array("Seleccione Repuestos","Chasis","Puerta Trasera","Techo","Techo Corredizo");
+	var repuestos_4 =new Array("Seleccione Repuestos","Medidor Combinado");
+	var repuestos_5 =new Array("Seleccione Repuestos","Filtro de aceite","Filtro de aire");
+	var repuestos_6 =new Array("Seleccione Repuestos","Bombas de aceite","Bomba de agua","Motor","Tuvo de escape","Radiador");
+	var repuestos_7 =new Array("Seleccione Repuestos","Sensor de oxigeno","Termostato");
+	var repuestos_8 =new Array("Seleccione Repuestos","Bombas de direccion","Deposito de aceite","Pedal de freno","Sistema ABS");
+	var repuestos_9 =new Array("Seleccione Repuestos","AirBag copiloto","Airbag piloto","Condensador","Flauta de ventilacion");
+	var repuestos_10 =new Array("Seleccione Repuestos","Asiento piloto","Asiento trasero","Logo de VVT frontal","Rejilla de ventilacion");
+	
 			  
 				var todosRepuestos = [
 				  [],
@@ -42,6 +55,12 @@
 				  repuestos_2,
 				  repuestos_3,
 				  repuestos_4,
+				  repuestos_5,
+				  repuestos_6,
+				  repuestos_7,
+				  repuestos_8,
+				  repuestos_9,
+				  repuestos_10,
 				];
 			  
 				function cambia_repuesto(){ 
