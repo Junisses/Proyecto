@@ -1,76 +1,145 @@
 {% extends "index.html"%}
 {% load static %}
-{% block contenido %}
-FT-500
-<!-- Filtro Complejo
-<form method="post" action="/probar" enctype="multipart/form-data" >
-	<br>
+{% block contenido%}
+<head>
+	<link rel="stylesheet" href="{% static '/css/cartas.css' %}">
+</head>
+
+{{ mensaje }}
+<form action="/repuestosFoton/FT-500" name="f1" method="post">
 	{% csrf_token %}
-	<div class="row justify-content-center ">
-		<div class="col-3">
-				<div class="form-group"> 
-					<input type="hidden" name="txtCategoria"  value="{{ item.categorias }}">
-						<label>Categoria</label>
-						{{ form.categorias }}
+<!-- Boton filtrar -->
+	<div name="f1" class="row justify-content-center">
+		<div id="fondofiltro">
+			<div id="filtro" class="row justify-content-center" >
+				<select class="col-3 wpcf7-form-control form-control" value="{{ item.id }}" name="categoria" onchange="cambia_repuesto()"> 
+					<option value="0" selected>Seleccione Categoria
+					<option value="1">Accesorios
+					<option value="2">Chasis
+					<option value="3">Carroceria
+					<option value="4">Distribucion
+				</select>
+				<select style="margin-left: 20px;" value="{{ item.tipo }}" class="col-3 wpcf7-form-control form-control" name="repuesto">
+					<option value="Repuestos">Seleccione Repuestos
+				</select> 
+				<div>
+					<button style="margin-left: 20px;" type="sumbit" name="btnListar" class="btn btn-outline-light" >Filtrar</button>
 				</div>
+			</div>
 		</div>
-		<div class="col-3">
-				<div class="form-group">
-					<input type="hidden" name="txtRepuesto"  value="{{ item.repuesto }}">
-						<label>Repuesto: </label>
-						{{ form.repuestos }}
-				</div>
-		</div>
-		<div class="col-3">
-				<div class="form-group">
-					<input type="hidden" name="txtMarca"  value="{{ item.marca }}">
-						<label>Marca: </label>
-						{{ form.marcas }}
-				</div>
-		</div>
-		<div class="col-3">
-				<div class="form-group">
-					<input type="hidden" name="txtModelo"  value="{{ item.modelo }}">
-						<label>Modelo: </label>
-						{{ form.modelos }}
-				</div>
-		</div>
-		<button>
-		
 	</div>
 </form>
-	
+
 <script>
-	$(function () {
-			$('select[name="categorias"]').on('change', function () {
-				var id = $(this).val();
-				var select_repuestos = $('select[name="repuestos"]');
-				var options = '<option value="">---------</option>';
-				if(id == '') {
-					select_repuestos.html(options);
-					return false;
-					}
-				$.ajax({
-					url: window.location.pathname,
-					type: 'POST',
-					data: {
-						'action': 'search_repuesto_id',
-						'id': id
-					},
-					dataType: 'json',
-				}).done(function (data) {
-					if (!data.hasOwnProperty('error')) {
-						$.each(data, function (key,value) {
-							options += '<option value ="'+value.id+'">'+value.name+'</option>';
-						});
-						return false;
-					}
-					}).fail(function(jqXHR, textStatus, errorThrown) {
-						alert(textStatus + ': ' + errorThrown);
-					}).always(function(data) {
-						select_repuestos.html(options);
-			});
-		});
-	</script>
-	-->
+	var repuestos_1 =new Array("Seleccione Repuestos","Antenas","Plumillas","Siliconas");
+	var repuestos_2 =new Array("Seleccione Repuestos","Cataliticos","Rodamientos","Pernos");
+	var repuestos_3 =new Array("Seleccione Repuestos","Capot","Espejo","Manillas");
+	var repuestos_4 =new Array("Seleccione Repuestos","Cadenas","Poleas","¨Piñones");
+			  
+				var todosRepuestos = [
+				  [],
+				  repuestos_1,
+				  repuestos_2,
+				  repuestos_3,
+				  repuestos_4,
+				];
+			  
+				function cambia_repuesto(){ 
+					 //tomo el valor del select de la categoria elegida
+					 var categoria 
+					 categoria = document.f1.categoria[document.f1.categoria.selectedIndex].value 
+					 //miro a ver si la categoria está definido 
+					 if (categoria != 0) { 
+						//si estaba definido, entonces coloco las opciones de los repuestos correspondiente. 
+						//selecciono el array de repuesto adecuado 
+						mis_repuestos=todosRepuestos[categoria]
+						//calculo el numero de repuestos 
+						num_repuestos = mis_repuestos.length 
+						//marco el número de repuestos en el select 
+						document.f1.repuesto.length = num_repuestos
+						//para cada repuesto del array, la introduzco en el select 
+						for(i=0;i<num_repuestos;i++){ 
+						   document.f1.repuesto.options[i].value=mis_repuestos[i] 
+						   document.f1.repuesto.options[i].text=mis_repuestos[i] 
+						}	
+					 }else{ 
+						//si no había repuesto seleccionado, elimino los repuestos del select 
+						document.f1.repuesto.length = 1 
+						
+						document.f1.repuesto.options[0].value = "Seleccione Repuestos" 
+						document.f1.repuesto.options[0].text = "Seleccione Repuestos" 
+					 } 
+					 //marco como seleccionada la opción primera de repuestos 
+					 document.f1.repuesto.options[0].selected = true 
+			  }
+			  
+			</script>
+
+{% endblock %}
+<!-- Bloque dinamico que muestra repuestos filtrados -->
+{% block listado %}
+
+<head>
+	<link rel="stylesheet" href="{% static '/css/cartas.css' %}">
+</head>
+{% for fila in lista %}
+	{% if forloop.first %}
+	<div class ="row" style="margin-top: -50;">
+	{% endif %}
+			<div class ="row justify-content-center">
+				<div class="carta">
+					<div class="offset-4" style="background-color: white; width: 300px; padding-bottom: 30px; padding-top: 30px;">	
+						<img id="foto" src="" alt="No se encontro la imagen" >
+						<h3 style="color: rgba(248, 1, 1, 0.802); font-family: Segoe UI ;">{{ fila.nombreRepuesto }}</h3>
+						<p id="espacio"> Modelo: {{ fila.marca }} {{ fila.modelo }}</p>
+						<p style="color: gray; font-size: 12px;"> Stock disponible: {{ fila.stock }}</p>
+						<h4 style="color: green;" >
+							<strong> ${{ fila.precioVenta }}</strong>	
+						</h4>
+						<button id="producto" class="btn btn-info">Agregar al Carrito</button>
+					</div>
+				</div>
+			</div>	
+	{% if forloop.counter|divisibleby:34 %}
+	</div>
+	<div class="row">
+	{% endif %}
+	{% if forloop.last %}
+	</div>
+	{% endif %}
+{% endfor %}
+			
+{% endblock %}
+
+<!-- Bloque dinamico que muestra todos los repuestos -->
+{% block extra %}
+<div class="row justify-content-center">
+	<h1 class="diseño">Todos los Repuestos</h1>
+</div>	
+{% for fila in ver %}
+	{% if forloop.first %}
+	<div class="row">
+	{% endif %}
+		<div class ="row justify-content-center">
+			<div class="carta">
+				<div class="offset-4" style="background-color: white; width: 300px; padding-bottom: 30px; padding-top: 30px;">	
+					<img id="foto" src="" alt="No se encontro la imagen" >
+					<h3 style="color: rgba(248, 1, 1, 0.802); font-family: Segoe UI ;">{{ fila.nombreRepuesto }}</h3>
+					<p id="espacio"> Modelo: {{ fila.marca }} {{ fila.modelo }}</p>
+					<p style="color: gray; font-size: 12px;"> Stock disponible: {{ fila.stock }}</p>
+					<h4 style="color: green;" >
+						<strong> ${{ fila.precioVenta }}</strong>	
+					</h4>
+					<button id="producto" class="btn btn-warning">Agregar al Carrito</button>
+				</div>
+			</div>
+		</div>	
+	{% if forloop.counter|divisibleby:34 %}
+	</div>
+	<div class="row">
+	{% endif %}
+	{% if forloop.last %}
+	</div>
+	{% endif %}											
+{% endfor %}
 {% endblock %}
