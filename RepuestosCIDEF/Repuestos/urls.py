@@ -36,8 +36,8 @@ urlpatterns = [
     path('repuestosFoton/TM-Doble', views.tm_doble,name='TM-DOBLE'),
     path('repuestosFoton/TM-Simple', views.tm_simple,name='TM-Simple'),
     path('repuestosFoton/FT-500', views.ft_500,name='FT-500'),
-    path('repuestosFoton/TM-CREW', views.TM_CREW,name='tm-crew'),
-    path('repuestosFoton/TM-BOX', views.TM_BOX,name='tm-box'),
+    path('repuestosFoton/FT-CREW', views.FT_CREW,name='ft-crew'),
+    path('repuestosFoton/FT-BOX', views.FT_BOX,name='ft-box'),
     path('repuestosFoton/K1', views.K1,name='k1'),
 
     #Pruebas

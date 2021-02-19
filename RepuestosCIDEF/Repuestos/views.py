@@ -134,7 +134,7 @@ def A60(request):
     
 #Páginas de Foton
 def Midi_Simple(request):
-    ver = Repuesto.objects.filter(modelo__nombre='Midi Truck Simple')
+    ver = Repuesto.objects.filter(modelo__nombre='MIDI Truck Simple')
 
     lista = {}
 
@@ -143,19 +143,55 @@ def Midi_Simple(request):
         tipo          = request.POST["repuesto"]
 
         if 'btnListar' in request.POST:
-            lista = Repuesto.objects.filter(categoria_id = id).filter(tipo__nombre = tipo).filter(modelo__nombre='Midi Truck Simple')
+            lista = Repuesto.objects.filter(categoria_id = id).filter(tipo__nombre = tipo).filter(modelo__nombre='MIDI Truck Simple')
                 
     contexto = {'lista' : lista, 'ver' : ver}   
     return render(request,'midi-simple.html', contexto)
 
 def Midi_Van(request):
-    return render(request,'midi-van.html', {})
+    ver = Repuesto.objects.filter(modelo__nombre='MIDI Van Furgon')
+
+    lista = {}
+
+    if request.method == "POST":
+        id            = int("0" + request.POST["categoria"])
+        tipo          = request.POST["repuesto"]
+
+        if 'btnListar' in request.POST:
+            lista = Repuesto.objects.filter(categoria_id = id).filter(tipo__nombre = tipo).filter(modelo__nombre='MIDI Van Furgon')
+                
+    contexto = {'lista' : lista, 'ver' : ver}   
+    return render(request,'midi-van.html', contexto)
     
 def Midi_Doble(request):
-    return render(request,'Midi-Doble.html', {})
+    ver = Repuesto.objects.filter(modelo__nombre='MIDI Truck Doble')
+
+    lista = {}
+
+    if request.method == "POST":
+        id            = int("0" + request.POST["categoria"])
+        tipo          = request.POST["repuesto"]
+
+        if 'btnListar' in request.POST:
+            lista = Repuesto.objects.filter(categoria_id = id).filter(tipo__nombre = tipo).filter(modelo__nombre='MIDI Truck Doble')
+                
+    contexto = {'lista' : lista, 'ver' : ver}
+    return render(request,'Midi-Doble.html', contexto)
 
 def tm_doble(request):
-    return render(request,'tm-doble.html',{})
+    ver = Repuesto.objects.filter(modelo__nombre='TM-Doble')
+
+    lista = {}
+
+    if request.method == "POST":
+        id            = int("0" + request.POST["categoria"])
+        tipo          = request.POST["repuesto"]
+
+        if 'btnListar' in request.POST:
+            lista = Repuesto.objects.filter(categoria_id = id).filter(tipo__nombre = tipo).filter(modelo__nombre='TM-Doble')
+                
+    contexto = {'lista' : lista, 'ver' : ver}
+    return render(request,'tm-doble.html',contexto)
     
 def tm_simple(request):
     ver = Repuesto.objects.filter(modelo__nombre='TM-Simple')
@@ -173,13 +209,61 @@ def tm_simple(request):
     return render(request,'TM-Simple.html', contexto)
 
 def ft_500(request):
-    return render(request,'Ft-500.html',{})
+    ver = Repuesto.objects.filter(modelo__nombre='FT-500')
+
+    lista = {}
+
+    if request.method == "POST":
+        id            = int("0" + request.POST["categoria"])
+        tipo          = request.POST["repuesto"]
+
+        if 'btnListar' in request.POST:
+            lista = Repuesto.objects.filter(categoria_id = id).filter(tipo__nombre = tipo).filter(modelo__nombre='FT-500')
+                
+    contexto = {'lista' : lista, 'ver' : ver}
+    return render(request,'Ft-500.html', contexto)
     
-def TM_CREW(request):
-    return render(request,'TM-CREW.html',{})
+def FT_CREW(request):
+    ver = Repuesto.objects.filter(modelo__nombre='FT-CREW')
+
+    lista = {}
+
+    if request.method == "POST":
+        id            = int("0" + request.POST["categoria"])
+        tipo          = request.POST["repuesto"]
+
+        if 'btnListar' in request.POST:
+            lista = Repuesto.objects.filter(categoria_id = id).filter(tipo__nombre = tipo).filter(modelo__nombre='FT-CREW')
+                
+    contexto = {'lista' : lista, 'ver' : ver}
+    return render(request,'FT-CREW.html', contexto)
     
-def TM_BOX(request):
-    return render(request,'TM-BOX.html',{})
+def FT_BOX(request):
+    ver = Repuesto.objects.filter(modelo__nombre='FT-BOX')
+
+    lista = {}
+
+    if request.method == "POST":
+        id            = int("0" + request.POST["categoria"])
+        tipo          = request.POST["repuesto"]
+
+        if 'btnListar' in request.POST:
+            lista = Repuesto.objects.filter(categoria_id = id).filter(tipo__nombre = tipo).filter(modelo__nombre='FT-BOX')
+                
+    contexto = {'lista' : lista, 'ver' : ver}
+    return render(request,'FT-BOX.html',contexto)
     
 def K1(request):
-    return render(request,'K1.html',{})
+    ver = Repuesto.objects.filter(modelo__nombre='K1')
+
+    lista = {}
+
+    if request.method == "POST":
+        id            = int("0" + request.POST["categoria"])
+        tipo          = request.POST["repuesto"]
+
+        if 'btnListar' in request.POST:
+            lista = Repuesto.objects.filter(categoria_id = id).filter(tipo__nombre = tipo).filter(modelo__nombre='K1')
+                
+    contexto = {'lista' : lista, 'ver' : ver}
+    return render(request,'K1.html', contexto)
