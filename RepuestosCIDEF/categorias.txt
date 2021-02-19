@@ -1,166 +1,63 @@
-Accesorios:
-- Antenas
-- Embellecedores
-- Plumillas
-- Siliconas
+1.- Accesorios: Listo
 
-Baterias:
+- Antenas
+- Kit Accesorio
+- DVD player
+- Radio
+
+2.- Baterias:listo
+
 - Baterias
 
-Carroceria:
-- Amortiguador portalon
-- Biseles
-- Capot
-- Espejos
-- Faroles
-- Frontales
-- Guardafangos
-- Manillas
-- Mascaras
-- Micas
-- Molduras
-- Neblineros
-- Opticos
-- Parachoques
-- Tapabarros
-- Tapa de estanque
+3.- Carroceria:Listo
+ 
+- Chasis del S30
+- Puerta Trasera
+- Techo
+- Techo Corredizo
 
-Chasis: 
-- Cables de control
-- Cataliticos
-- Chasis
-- Flexibles de escape
-- Mazas de rueda
-- Pernos y tuercas de rueda
-- Rodamientos
-- Rodamientos de Cardan
+4.- Electrico:3
 
-Distribucion: 
-- Cadenas
-- Guias de cadena
-- Piñones
-- Poleas
-- Rodamientos de tensor
+- Medidor Combinado
 
-Electrico:
-- Alternadores
-- Bendix
-- Bulbos
-- Chapas de contacto
-- Flujometros
-- Interruptores
-- Motores de partida
-- Reguladores
-- Relay
-- Solenoides
-- Telecomandos
+5.- Filtros:2
 
-Embragues:
-- Bombas de embrague
-- Cilindros de embrague
-- Discos de embrague
-- Kit de embragues
-- Prensas de embrague
-- Rodamientos de embragues
-- Volantes de motor
-
-Encendido:
-- Bobinas
-- Cables de bujia
-- Condensadores
-- Distribuidores
-- Modulos de encendido
-- Platinos
-- Rotores de distribuidor
-- Tapas de distribuidor
-
-Filtros:
 - Filtros de aceite
 - Filtros de aire
-- Filtros de bencina
-- Filtros de cabina
-- Filtros de caja de cambios
-- Filtros de petroleo
 
-Frenos:
-- Bombas de freno
-- Caliper
-- Cilindros de freno
-- Discos de freno
-- Pastillas de freno
-- Patines de freno
-- Tambores de freno
+6.- Motor:listo
 
-Gasolina:
-- Carburacion
-
-Inyeccion :
-- Bombas de bencina
-- Bombas inyectoras
-- Inyectores
-
-Lubricantes:
-- Aceites
-- Aditivos
-- Grasas
-
-Motor:
-- Anillos
-- Balancines de valvula
-- Bielas de motor
-- Blocks de motos
 - Bombas de aceite
-- Camisas
-- Carter
-- Conjuntos de motor 
-- Correas de distribuicion
-- Correas en V
-- Correas PK
-- Ejes de leva
-- Guias de valvula
-- Metales
-- Pernos de motor
-- Pistones
-- Tapas de aceite
-- Tapas de valvula
-- Taquies
-- Turbos
-- Valvulas de motor
+- Bomba de Agua
+- Motor del S30
+- Tuvo de Escape
+- Radiador
 
-Refrigeracion: 
-- Aspas de ventilador
-- Bombas de agua
-- Centrifugos
-- Electroventiladores
-- Enfriadores de aceite
-- Mangueras de radiador
-- Tapas de termostato
+7.- Refrigeracion: listo
+
+- Sensor de Oxigeno
 - Termostato
 
-Retenes:
-- Retenes
+8.- Transmison - Direccion:listo 
 
-Suspension - Direccion:
-- Amortiguadores
-- Articulacion axial
-- Bandejas de suspension
-- Barras suspencion direccion
-- Biletas barra estabilizadora
 - Bombas de direccion
-- Brazos
-- Bujes
-- Cajas de direccion
-- Cazoletas
-- Espirales
-- Muñones
-- Pernos barra estabilizadora
-- Rotulas
-- Soportes
-- Terminales de direccion
+- Deposito de Aceite
+- pedal de freno
+- sistema ABS
 
-Transmision:
-- Anillos sincronizadores
-- Cajas de cambio
-- Corona y Piñon
-- Crucetas
-- Diferenciales
+9.- AirBag: listo
+
+- AirBag Copiloto
+- AirBag Piloto
+- Condensador
+- Flauta de Ventilacion
+
+10.- Interior - Exterior:
+
+- Asiento Piloto
+- Asiento Trasero
+- Logo de VVT Frontal
+- Rejilla de Ventilacion
+-
+
+
