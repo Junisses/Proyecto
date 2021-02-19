@@ -1,65 +1,65 @@
 1.- Accesorios: Listo
 
-- Antenas
-- Kit Accesorio
-- DVD player
-- Radio
+- Antenas (7756001) (1)
+- Kit Accesorio (910-10)(3)
+- DVD player (770-11)(5)
+- Radio (768-10T) (1)
 
 2.- Baterias:listo
 
-- Baterias
+- Baterias (744-10 ; 744-12 ; 744-13) (3)
 
 3.- Carroceria:Listo
  
-- Chasis del S30
-- Puerta Trasera
-- Techo
-- Techo Corredizo
+- Chasis del S30 (510-12 ; 510-15)(4)
+- Puerta Trasera (580-11) (2)
+- Techo (564-10) (4)
+- Techo Corredizo (564-11) (2)
 
 4.- Electrico: listo
-- Momitor de Presion
-- Medidor Combinado
-- Sensor de Reversa
-- Focos
+- Monitor de Presion (758-10) (2)
+- Medidor Combinado (734-11) (3)
+- Sensor de Reversa (776-11) (2)
+- Focos (752-11) (2)
 
 5.- Filtros: listo
 
-- Filtros de aceite
-- Filtros de aire
+- Filtros de aceite (216-10) (2)
+- Filtros de aire (246-11) (2)
 
 6.- Motor:listo
 
-- Bombas de aceite
-- Bomba de Agua
-- Motor del S30
-- Tuvo de Escape
-- Radiador
+- Bombas de aceite (156-10) (3)
+- Bomba de Agua (170-10) (2)
+- Motor del S30 (110-10) (2)
+- Tuvo de Escape (260-10) (2)
+- Radiador (280-10) (2)
 
 7.- Refrigeracion: listo
 
-- Sensor de Oxigeno
-- Termostato
+- Sensor de Oxigeno (270-10) (2)
+- Termostato (172-10) (2)
 
 8.- Transmison - Direccion:listo 
 
-- Bombas de direccion
-- Deposito de Aceite
-- pedal de freno
-- sistema ABS
+- Bombas de direccion (446-11) (2)
+- Deposito de Aceite (448-10) (1)
+- pedal de freno (486-10) (6)
+- sistema ABS (466-10) (3)
 
 9.- AirBag: listo
 
-- AirBag Copiloto
-- AirBag Piloto
-- Condensador
-- Flauta de Ventilacion
+- AirBag Copiloto (840-11) (2)
+- AirBag Piloto (842-11) (3)
+- Condensador (810-11) (2)
+- Flauta de Ventilacion (836-10) (2)
 
 10.- Interior - Exterior: listo
 
-- Asiento Piloto
-- Asiento Trasero
-- Logo de VVT Frontal
-- Rejilla de Ventilacion
+- Asiento Piloto (670-12) (6)
+- Asiento Trasero (680-12) (8)
+- Logo de VVT Frontal (66410000) (1)
+- Rejilla de Ventilacion (612-11) (3)
 
 
 
