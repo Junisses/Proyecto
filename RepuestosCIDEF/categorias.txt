@@ -16,11 +16,13 @@
 - Techo
 - Techo Corredizo
 
-4.- Electrico:3
-
+4.- Electrico: listo
+- Momitor de Presion
 - Medidor Combinado
+- Sensor de Reversa
+- Focos
 
-5.- Filtros:2
+5.- Filtros: listo
 
 - Filtros de aceite
 - Filtros de aire
@@ -52,7 +54,7 @@
 - Condensador
 - Flauta de Ventilacion
 
-10.- Interior - Exterior:
+10.- Interior - Exterior: listo
 
 - Asiento Piloto
 - Asiento Trasero
