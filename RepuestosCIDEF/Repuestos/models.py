@@ -32,6 +32,7 @@ class Repuesto(models.Model):
     modelo           = models.ForeignKey(Modelo, blank=True, null=True, on_delete=models.SET_NULL)
     tipo             = models.ForeignKey(Tipo, blank=True, null=True, on_delete=models.SET_NULL)
     nombreRepuesto   = models.TextField(max_length=60)
+    imagen           = models.ImageField('Foto', upload_to='repuesto/', null=True, blank=True)
     codigo           = models.DecimalField(max_digits=13, decimal_places=0)
     descripcion      = models.TextField(max_length = 200)
     stock            = models.IntegerField()
