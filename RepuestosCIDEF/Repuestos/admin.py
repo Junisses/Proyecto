@@ -20,7 +20,7 @@ class repuestoAdmin(admin.ModelAdmin):
                       'tipo',
                       'marca',
                       'modelo',
-                      'codigo'] 
+                      'codigo','imagen'] 
 admin.site.register(Repuesto, repuestoAdmin)
 
 class modeloAdmin(admin.ModelAdmin):
