@@ -89,7 +89,7 @@
 			<div class ="row justify-content-center">
 				<div class="carta">
 					<div class="offset-4" style="background-color: white; width: 300px; padding-bottom: 30px; padding-top: 30px;">	
-						<img id="foto" src="" alt="No se encontro la imagen" >
+						<img id="foto" src="{{ fila.imagen.url }}" alt="No se encontro la imagen" >
 						<h3 style="color: rgba(248, 1, 1, 0.802); font-family: Segoe UI ;">{{ fila.nombreRepuesto }}</h3>
 						<p id="espacio"> Modelo: {{ fila.marca }} {{ fila.modelo }}</p>
 						<p style="color: gray; font-size: 12px;"> Stock disponible: {{ fila.stock }}</p>
@@ -123,7 +123,7 @@
 		<div class ="row justify-content-center">
 			<div class="carta">
 				<div class="offset-4" style="background-color: white; width: 300px; padding-bottom: 30px; padding-top: 30px;">	
-					<img id="foto" src="" alt="No se encontro la imagen" >
+					<img id="foto" src="{{ fila.imagen.url }}" alt="No se encontro la imagen" >
 					<h3 style="color: rgba(248, 1, 1, 0.802); font-family: Segoe UI ;">{{ fila.nombreRepuesto }}</h3>
 					<p id="espacio"> Modelo: {{ fila.marca }} {{ fila.modelo }}</p>
 					<p style="color: gray; font-size: 12px;"> Stock disponible: {{ fila.stock }}</p>
