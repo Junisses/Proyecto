@@ -15,14 +15,18 @@ def probar(request):
 
 def buscar(request):
     item = {}
+    desc = {}
     
     if request.method == "POST":
         buscar = request.POST['txtBuscar']
         
         if 'txtBuscar' in request.POST:
-            item = Repuesto.objects.filter(nombreRepuesto__contains = buscar)      
+            item = Repuesto.objects.filter(nombreRepuesto__contains = buscar) 
+            
+        elif 'txtBuscar' in request.POST:
+            desc = Repuesto.objects.filter(descripcion__contains = buscar)
            
-    return render(request,'buscar.html', {'item':item}) 
+    return render(request,'buscar.html', {'item':item, 'desc':desc}) 
     
 def repuestos(request):
     return render(request,'repuestos.html', {})
