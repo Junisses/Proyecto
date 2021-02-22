@@ -1,8 +1,7 @@
 1.- Accesorios: Listo
 
 - Antena (775-10) (3)
-- DVD player (770-11) (3) 
-- Radio Casete (768-13) (5)
+- Mp5 , Radio y otros (770-10)
 
 2.- Baterias:listo
 
@@ -12,14 +11,14 @@
  
 - Chasis (510-10) (2)
 - puerta trasera (580-10) (3)
-- Capo (528-10) (2)
+- puerta Frontal (570-10) (2)
 - Guarda barros trasero (545-10) (2)
 
 4.- Electrico: listo
 
-- Caja de control central (767-10)(1)
+- sistema de auto aparkado (781-10)(1)
 - Medidor Combinado (734-10)(4)
-- Focos (750-10)(4)
+- Luces Traseras (750-10)(4)
 - Sensor de Reversa (776-10) (4)
  
 5.- Filtros: listo
@@ -37,15 +36,13 @@
 
 7.- Refrigeracion: listo
 
-- Senser de Oxigeno (270-10)(3)
 - Ventilador (284-10) (5)
-- Enfriador del turbo (274-70)(4)
+- Termostato (172-70)(4)
 
 
 8.- Transmison - Direccion:listo 
 
-- Embrague (310-30)(4)
-- Odometro sensor de velocidad (384-10)(1)
+- Transmision Automatica Diferencial (382-10)(2)
 - Transmision Automatica (340-12)(2)
 - Manubrio (432-12)(4)
 
@@ -53,14 +50,14 @@
 
 - AirBag Piloto (840-11)(4)
 - AirBag Copiloto (842-11)(2)
-- asiento piloto con air bag (846-10)(3)
+- Condensador (810-10) (2)
 - Acondicionador de aire (830-14)(2) 
 
 10.- Interior - Exterior: listo
 
 - Logo Trasero (666-10)(5)
 - Consola (640-10)(5)
-- Rejilla Frontal (640-10)(5)
+- Rejilla Frontal (612-10)(5)
 - Ventilacion del Maletero 
 
 
