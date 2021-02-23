@@ -21,12 +21,11 @@
 - Monitor de Presion (745-10) (2)
 - Medidor Combinado (734-10)  (3)
 - Focos (750-10) (6)
-- Sensor de Reversa (776-10)(3)
 
 5.- Filtros: listo
 
 - Filtro de Aceite (161-10) (1)
-- Filtro de Agua (246-10) (3)
+- Filtro de Aire (246-10) (3)
 
 6.- Motor:listo
 
