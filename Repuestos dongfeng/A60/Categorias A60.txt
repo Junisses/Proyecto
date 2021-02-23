@@ -61,6 +61,6 @@
 - Logo Trasero (666-10)(5)
 - Consola (640-10)(5)
 - Rejilla Frontal (640-10)(5)
-- Ventilacion del Maletero 
+- Cajuela (234-10)(2)
 
 
