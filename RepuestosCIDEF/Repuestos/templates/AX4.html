@@ -93,6 +93,7 @@ var repuestos_10 =new Array("Seleccione Repuestos","Rejilla de ventilacion","Con
 		  }
 		  
 		</script>
+
 {% endblock %}
 <!-- Bloque dinamico que muestra repuestos filtrados -->
 {% block listado %}
@@ -102,7 +103,7 @@ var repuestos_10 =new Array("Seleccione Repuestos","Rejilla de ventilacion","Con
 </head>
 {% for fila in lista %}
 	{% if forloop.first %}
-	<div class ="row" style="margin-top: -50;">
+	<div class ="row" style="margin-top: -50; margin-left: 50;">
 	{% endif %}
 			<div class ="row justify-content-center">
 				<div class="carta">
@@ -111,6 +112,7 @@ var repuestos_10 =new Array("Seleccione Repuestos","Rejilla de ventilacion","Con
 						<h3 style="color: rgba(248, 1, 1, 0.802); font-family: Segoe UI ;">{{ fila.nombreRepuesto }}</h3>
 						<p id="espacio"> Modelo: {{ fila.marca }} {{ fila.modelo }}</p>
 						<p style="color: gray; font-size: 12px;"> Stock disponible: {{ fila.stock }}</p>
+						<p>{{ fila.descripcion }}</p>
 						<h4 style="color: green;" >
 							<strong> ${{ fila.precioVenta }}</strong>	
 						</h4>
@@ -136,7 +138,7 @@ var repuestos_10 =new Array("Seleccione Repuestos","Rejilla de ventilacion","Con
 </div>	
 {% for fila in ver %}
 	{% if forloop.first %}
-	<div class="row">
+	<div class="row" style="margin-left: 50;">
 	{% endif %}
 		<div class ="row justify-content-center">
 			<div class="carta">
@@ -145,6 +147,7 @@ var repuestos_10 =new Array("Seleccione Repuestos","Rejilla de ventilacion","Con
 					<h3 style="color: rgba(248, 1, 1, 0.802); font-family: Segoe UI ;">{{ fila.nombreRepuesto }}</h3>
 					<p id="espacio"> Modelo: {{ fila.marca }} {{ fila.modelo }}</p>
 					<p style="color: gray; font-size: 12px;"> Stock disponible: {{ fila.stock }}</p>
+					<p>{{ fila.descripcion }}</p>
 					<h4 style="color: green;" >
 						<strong> ${{ fila.precioVenta }}</strong>	
 					</h4>
@@ -152,9 +155,9 @@ var repuestos_10 =new Array("Seleccione Repuestos","Rejilla de ventilacion","Con
 				</div>
 			</div>
 		</div>	
-	{% if forloop.counter|divisibleby:34 %}
+	{% if forloop.counter|divisibleby:12 %}
 	</div>
-	<div class="row">
+	<div class="row" style="margin-left: 50;">
 	{% endif %}
 	{% if forloop.last %}
 	</div>
