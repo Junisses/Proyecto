@@ -224,7 +224,7 @@ def ft_500(request):
     return render(request,'Ft-500.html', contexto)
     
 def FT_CREW(request):
-    ver = Repuesto.objects.filter(modelo__nombre='FT-Crew')
+    ver = Repuesto.objects.filter(modelo__nombre='FT-CREW')
 
     lista = {}
 
@@ -233,7 +233,7 @@ def FT_CREW(request):
         tipo          = request.POST["repuesto"]
 
         if 'btnListar' in request.POST:
-            lista = Repuesto.objects.filter(categoria_id = id).filter(tipo__nombre = tipo).filter(modelo__nombre='FT-Crew')
+            lista = Repuesto.objects.filter(categoria_id = id).filter(tipo__nombre = tipo).filter(modelo__nombre='FT-CREW')
                 
     contexto = {'lista' : lista, 'ver' : ver}
     return render(request,'FT-CREW.html', contexto)
