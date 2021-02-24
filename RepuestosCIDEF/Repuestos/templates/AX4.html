@@ -10,7 +10,10 @@
 	{% csrf_token %}
 <!-- Boton filtrar -->
 <div name="f1" class="row justify-content-center">
-	<div id="fondofiltro">
+	<div id="fondofiltro" style="height:150px;">
+		<div class="row justify-content-center" style="color:white;">
+			<h2 class="diseño" style="padding-bottom: 0; height: 35px "> AX4 ── Filtro de repuestos </h2>
+		</div>
 		<div id="filtro" class="row justify-content-center" >
 			<select class="col-3 wpcf7-form-control form-control" value="{{ item.id }}" name="categoria" onchange="cambia_repuesto()"> 
 				<option value="0" selected>Seleccione Categoria
