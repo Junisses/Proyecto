@@ -9,75 +9,96 @@
 <form action="/repuestosDongFeng/AX7-PRO" name="f1" method="post">
 	{% csrf_token %}
 <!-- Boton filtrar -->
-	<div name="f1" class="row justify-content-center">
-		<div id="fondofiltro">
-			<div id="filtro" class="row justify-content-center" >
-				<select class="col-3 wpcf7-form-control form-control" value="{{ item.id }}" name="categoria" onchange="cambia_repuesto()"> 
-					<option value="0" selected>Seleccione Categoria
-					<option value="1">Accesorios
-					<option value="2">Chasis
-					<option value="3">Carroceria
-					<option value="4">Distribucion
-				</select>
-				<select style="margin-left: 20px;" value="{{ item.tipo }}" class="col-3 wpcf7-form-control form-control" name="repuesto">
-					<option value="Repuestos">Seleccione Repuestos
-				</select> 
-				<div>
-					<button style="margin-left: 20px;" type="sumbit" name="btnListar" class="btn btn-outline-light" >Filtrar</button>
-				</div>
-				<div>
-					<button style="margin-left: 20px;" type="sumbit" name="btnTodos" class="btn btn-outline-light" >Ver todos los repuestos</button>
-				</div>
+<div name="f1" class="row justify-content-center">
+	<div id="fondofiltro" style="height:150px;">
+		<div class="row justify-content-center" style="color:white;">
+			<h2 class="diseño" style="padding-bottom: 0; height: 35px "> AX7 - PRO ── Filtro de repuestos </h2>
+		</div>
+		<div id="filtro" class="row justify-content-center" >
+			<select class="col-3 wpcf7-form-control form-control" value="{{ item.id }}" name="categoria" onchange="cambia_repuesto()"> 
+				<option value="0" selected>Seleccione Categoria
+				<option value="1">Accesorios
+				<option value="2">Baterias
+				<option value="3">Carroceria
+				<option value="4">Electrico
+				<option value="5">Filtros
+				<option value="6">Motor
+				<option value="7">Refrigeracion
+				<option value="8">Transmision - Direccion
+				<option value="9">AirBag
+				<option value="10">Interior - Exterior
+			</select>
+			<select style="margin-left: 20px;" value="{{ item.tipo }}" class="col-3 wpcf7-form-control form-control" name="repuesto">
+				<option value="Repuestos">Seleccione Repuestos
+			</select> 
+			<div>
+				<button style="margin-left: 20px;" type="sumbit" name="btnListar" class="btn btn-outline-light" >Filtrar</button>
+			</div>
+			<div>
+				<button style="margin-left: 20px;" type="sumbit" name="btnTodos" class="btn btn-outline-light" >Ver todos los repuestos</button>
 			</div>
 		</div>
 	</div>
+</div>
 </form>
 
 <script>
-	var repuestos_1 =new Array("Seleccione Repuestos","Antenas","Plumillas","Siliconas");
-	var repuestos_2 =new Array("Seleccione Repuestos","Cataliticos","Rodamientos","Pernos");
-	var repuestos_3 =new Array("Seleccione Repuestos","Capot","Espejo","Manillas");
-	var repuestos_4 =new Array("Seleccione Repuestos","Cadenas","Poleas","Piñones");
-			  
-				var todosRepuestos = [
-				  [],
-				  repuestos_1,
-				  repuestos_2,
-				  repuestos_3,
-				  repuestos_4,
-				];
-			  
-				function cambia_repuesto(){ 
-					 //tomo el valor del select de la categoria elegida
-					 var categoria 
-					 categoria = document.f1.categoria[document.f1.categoria.selectedIndex].value 
-					 //miro a ver si la categoria está definido 
-					 if (categoria != 0) { 
-						//si estaba definido, entonces coloco las opciones de los repuestos correspondiente. 
-						//selecciono el array de repuesto adecuado 
-						mis_repuestos=todosRepuestos[categoria]
-						//calculo el numero de repuestos 
-						num_repuestos = mis_repuestos.length 
-						//marco el número de repuestos en el select 
-						document.f1.repuesto.length = num_repuestos
-						//para cada repuesto del array, la introduzco en el select 
-						for(i=0;i<num_repuestos;i++){ 
-						   document.f1.repuesto.options[i].value=mis_repuestos[i] 
-						   document.f1.repuesto.options[i].text=mis_repuestos[i] 
-						}	
-					 }else{ 
-						//si no había repuesto seleccionado, elimino los repuestos del select 
-						document.f1.repuesto.length = 1 
-						
-						document.f1.repuesto.options[0].value = "Seleccione Repuestos" 
-						document.f1.repuesto.options[0].text = "Seleccione Repuestos" 
-					 } 
-					 //marco como seleccionada la opción primera de repuestos 
-					 document.f1.repuesto.options[0].selected = true 
-			  }
-			  
-			</script>
+var repuestos_1 =new Array("Seleccione Repuestos","Antenas","DVD player","Kit Accesorio");
+var repuestos_2 =new Array("Seleccione Repuestos","Bateria");
+var repuestos_3 =new Array("Seleccione Repuestos","Chasis","Techo","Puerta trasera","Guardabarros");
+var repuestos_4 =new Array("Seleccione Repuestos","	Luces delanteras","Switch","Medidor combinado","Sensor de Retroceso");
+var repuestos_5 =new Array("Seleccione Repuestos","Filtro de aire","Filtro de aceite");
+var repuestos_6 =new Array("Seleccione Repuestos","Motor","Radiador","Bombas de aceite","Bomba de agua");
+var repuestos_7 =new Array("Seleccione Repuestos","Sistema de enfriamiento","Termostato");
+var repuestos_8 =new Array("Seleccione Repuestos","Mecanismo de direccion","Transmision acelerador","Dispositivo de transmision de direccion","Dispositivo de control de embrague");
+var repuestos_9 =new Array("Seleccione Repuestos","AirBag piloto","AirBag copiloto","Condensador");
+var repuestos_10 =new Array("Seleccione Repuestos","Rejilla de ventilacion","Cajuela","Rejilla Frontal","Logo Trasero");
 
+		  
+			var todosRepuestos = [
+			  [],
+			  repuestos_1,
+			  repuestos_2,
+			  repuestos_3,
+			  repuestos_4,
+			  repuestos_5,
+			  repuestos_6,
+			  repuestos_7,
+			  repuestos_8,
+			  repuestos_9,
+			  repuestos_10,
+			];
+		  
+			function cambia_repuesto(){ 
+				 //tomo el valor del select de la categoria elegida
+				 var categoria 
+				 categoria = document.f1.categoria[document.f1.categoria.selectedIndex].value 
+				 //miro a ver si la categoria está definido 
+				 if (categoria != 0) { 
+					//si estaba definido, entonces coloco las opciones de los repuestos correspondiente. 
+					//selecciono el array de repuesto adecuado 
+					mis_repuestos=todosRepuestos[categoria]
+					//calculo el numero de repuestos 
+					num_repuestos = mis_repuestos.length 
+					//marco el número de repuestos en el select 
+					document.f1.repuesto.length = num_repuestos
+					//para cada repuesto del array, la introduzco en el select 
+					for(i=0;i<num_repuestos;i++){ 
+					   document.f1.repuesto.options[i].value=mis_repuestos[i] 
+					   document.f1.repuesto.options[i].text=mis_repuestos[i] 
+					}	
+				 }else{ 
+					//si no había repuesto seleccionado, elimino los repuestos del select 
+					document.f1.repuesto.length = 1 
+					
+					document.f1.repuesto.options[0].value = "Seleccione Repuestos" 
+					document.f1.repuesto.options[0].text = "Seleccione Repuestos" 
+				 } 
+				 //marco como seleccionada la opción primera de repuestos 
+				 document.f1.repuesto.options[0].selected = true 
+		  }
+		  
+		</script>
 {% endblock %}
 <!-- Bloque dinamico que muestra repuestos filtrados -->
 {% block listado %}
