@@ -10,14 +10,23 @@
 	{% csrf_token %}
 <!-- Boton filtrar -->
 	<div name="f1" class="row justify-content-center">
-		<div id="fondofiltro">
+		<div id="fondofiltro" style="height:150px;">
+			<div class="row justify-content-center" style="color:white;">
+				<h2 class="diseño" style="padding-bottom: 0; height: 35px "> FT-BOX ── Filtro de repuestos </h2>
+			</div>
 			<div id="filtro" class="row justify-content-center" >
 				<select class="col-3 wpcf7-form-control form-control" value="{{ item.id }}" name="categoria" onchange="cambia_repuesto()"> 
 					<option value="0" selected>Seleccione Categoria
 					<option value="1">Accesorios
-					<option value="2">Chasis
+					<option value="2">Baterias
 					<option value="3">Carroceria
-					<option value="4">Distribucion
+					<option value="4">Electrico
+					<option value="5">Filtros
+					<option value="6">Motor
+					<option value="7">Refrigeracion
+					<option value="8">Transmision - Direccion
+					<option value="9">AirBag
+					<option value="10">Interior - Exterior
 				</select>
 				<select style="margin-left: 20px;" value="{{ item.tipo }}" class="col-3 wpcf7-form-control form-control" name="repuesto">
 					<option value="Repuestos">Seleccione Repuestos
@@ -25,11 +34,13 @@
 				<div>
 					<button style="margin-left: 20px;" type="sumbit" name="btnListar" class="btn btn-outline-light" >Filtrar</button>
 				</div>
+				<div>
+					<button style="margin-left: 20px;" type="sumbit" name="btnTodos" class="btn btn-outline-light" >Ver todos los repuestos</button>
+				</div>
 			</div>
 		</div>
 	</div>
 </form>
-
 <script>
 	var repuestos_1 =new Array("Seleccione Repuestos","Antenas","Plumillas","Siliconas");
 	var repuestos_2 =new Array("Seleccione Repuestos","Cataliticos","Rodamientos","Pernos");
@@ -84,7 +95,7 @@
 </head>
 {% for fila in lista %}
 	{% if forloop.first %}
-	<div class ="row" style="margin-top: -50;">
+	<div class ="row" style="margin-top: -50; margin-left: 50;">
 	{% endif %}
 			<div class ="row justify-content-center">
 				<div class="carta">
@@ -93,6 +104,7 @@
 						<h3 style="color: rgba(248, 1, 1, 0.802); font-family: Segoe UI ;">{{ fila.nombreRepuesto }}</h3>
 						<p id="espacio"> Modelo: {{ fila.marca }} {{ fila.modelo }}</p>
 						<p style="color: gray; font-size: 12px;"> Stock disponible: {{ fila.stock }}</p>
+						<p>{{ fila.descripcion }}</p>
 						<h4 style="color: green;" >
 							<strong> ${{ fila.precioVenta }}</strong>	
 						</h4>
@@ -112,13 +124,13 @@
 {% endblock %}
 
 <!-- Bloque dinamico que muestra todos los repuestos -->
-{% block extra %}
-<div class="row justify-content-center">
-	<h1 class="diseño">Todos los Repuestos</h1>
-</div>	
+{% block extra %}	
 {% for fila in ver %}
 	{% if forloop.first %}
-	<div class="row">
+	<div class="row justify-content-center">
+		<h1 class="diseño">Todos los Repuestos</h1>
+	</div>
+	<div class="row" style="margin-left: 50;">
 	{% endif %}
 		<div class ="row justify-content-center">
 			<div class="carta">
@@ -127,6 +139,7 @@
 					<h3 style="color: rgba(248, 1, 1, 0.802); font-family: Segoe UI ;">{{ fila.nombreRepuesto }}</h3>
 					<p id="espacio"> Modelo: {{ fila.marca }} {{ fila.modelo }}</p>
 					<p style="color: gray; font-size: 12px;"> Stock disponible: {{ fila.stock }}</p>
+					<p>{{ fila.descripcion }}</p>
 					<h4 style="color: green;" >
 						<strong> ${{ fila.precioVenta }}</strong>	
 					</h4>
@@ -134,9 +147,9 @@
 				</div>
 			</div>
 		</div>	
-	{% if forloop.counter|divisibleby:34 %}
+	{% if forloop.counter|divisibleby:12 %}
 	</div>
-	<div class="row">
+	<div class="row" style="margin-left: 50;">
 	{% endif %}
 	{% if forloop.last %}
 	</div>

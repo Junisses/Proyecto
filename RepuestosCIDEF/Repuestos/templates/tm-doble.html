@@ -10,7 +10,10 @@
 	{% csrf_token %}
 <!-- Boton filtrar -->
 	<div name="f1" class="row justify-content-center">
-		<div id="fondofiltro">
+		<div id="fondofiltro" style="height:150px;">
+			<div class="row justify-content-center" style="color:white;">
+				<h2 class="diseño" style="padding-bottom: 0; height: 35px "> TM-Doble ── Filtro de repuestos </h2>
+			</div>
 			<div id="filtro" class="row justify-content-center" >
 				<select class="col-3 wpcf7-form-control form-control" value="{{ item.id }}" name="categoria" onchange="cambia_repuesto()"> 
 					<option value="0" selected>Seleccione Categoria
@@ -31,11 +34,13 @@
 				<div>
 					<button style="margin-left: 20px;" type="sumbit" name="btnListar" class="btn btn-outline-light" >Filtrar</button>
 				</div>
+				<div>
+					<button style="margin-left: 20px;" type="sumbit" name="btnTodos" class="btn btn-outline-light" >Ver todos los repuestos</button>
+				</div>
 			</div>
 		</div>
 	</div>
 </form>
-
 <script>
 	var repuestos_1 =new Array("Seleccione Repuestos","Accesorios electricos","Herramientas","Piezas decorativas externas","Piezas decorativas piso");
 	var repuestos_2 =new Array("Seleccione Repuestos","Bateria");
@@ -132,12 +137,12 @@
 {% endblock %}
 
 <!-- Bloque dinamico que muestra todos los repuestos -->
-{% block extra %}
-<div class="row justify-content-center">
-	<h1 class="diseño">Todos los Repuestos</h1>
-</div>	
+{% block extra %}	
 {% for fila in ver %}
 	{% if forloop.first %}
+	<div class="row justify-content-center">
+		<h1 class="diseño">Todos los Repuestos</h1>
+	</div>
 	<div class="row" style="margin-left: 50;">
 	{% endif %}
 		<div class ="row justify-content-center">
@@ -147,10 +152,10 @@
 					<h3 style="color: rgba(248, 1, 1, 0.802); font-family: Segoe UI ;">{{ fila.nombreRepuesto }}</h3>
 					<p id="espacio"> Modelo: {{ fila.marca }} {{ fila.modelo }}</p>
 					<p style="color: gray; font-size: 12px;"> Stock disponible: {{ fila.stock }}</p>
+					<p>{{ fila.descripcion }}</p>
 					<h4 style="color: green;" >
 						<strong> ${{ fila.precioVenta }}</strong>	
 					</h4>
-					<p> {{ fila.descripcion }} </p>
 					<button id="producto" class="btn btn-warning">Agregar al Carrito</button>
 				</div>
 			</div>
