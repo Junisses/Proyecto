@@ -42,10 +42,17 @@
 	</div>
 </form>
 <script>
-	var repuestos_1 =new Array("Seleccione Repuestos","Antenas","Plumillas","Siliconas");
-	var repuestos_2 =new Array("Seleccione Repuestos","Cataliticos","Rodamientos","Pernos");
-	var repuestos_3 =new Array("Seleccione Repuestos","Capot","Espejo","Manillas");
-	var repuestos_4 =new Array("Seleccione Repuestos","Cadenas","Poleas","Piñones");
+	var repuestos_1 =new Array("Seleccione Repuestos","Herramientas","Piezas decorativas externas","Puerta tanque de combustible");
+	var repuestos_2 =new Array("Seleccione Repuestos","Bateria");
+	var repuestos_3 =new Array("Seleccione Repuestos","Asientos","Cuerpo","Peldaño");
+	var repuestos_4 =new Array("Seleccione Repuestos","Controlador de rele","Dispositivo de audio","Luces delanteras");
+	var repuestos_5 =new Array("Seleccione Repuestos");
+	var repuestos_6 =new Array("Seleccione Repuestos","Motor");
+	var repuestos_7 =new Array("Seleccione Repuestos","Sistema de enfriamiento");
+	var repuestos_8 =new Array("Seleccione Repuestos","Dispositivo de transmision de direccion","Mecanismo operacion del embrague","Mecanismo de direccion","Transmision");
+	var repuestos_9 =new Array("Seleccione Repuestos");
+	var repuestos_10 =new Array("Seleccione Repuestos","Mecanismo instalacion neumatico","Rueda y neumatico");
+	
 			  
 				var todosRepuestos = [
 				  [],
@@ -53,6 +60,12 @@
 				  repuestos_2,
 				  repuestos_3,
 				  repuestos_4,
+				  repuestos_5,
+				  repuestos_6,
+				  repuestos_7,
+				  repuestos_8,
+				  repuestos_9,
+				  repuestos_10,
 				];
 			  
 				function cambia_repuesto(){ 
@@ -85,7 +98,6 @@
 			  }
 			  
 			</script>
-
 {% endblock %}
 <!-- Bloque dinamico que muestra repuestos filtrados -->
 {% block listado %}
