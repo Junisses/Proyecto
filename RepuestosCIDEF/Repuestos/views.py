@@ -74,7 +74,7 @@ def fengshen(request):
     return render(request,'fengshenS30.html', contexto)
 
 def AX4(request):
-    ver = Repuesto.objects.filter(modelo__nombre='AX4')
+    ver = {}
 
     lista = {}
 
@@ -84,12 +84,14 @@ def AX4(request):
 
         if 'btnListar' in request.POST:
             lista = Repuesto.objects.filter(categoria_id = id).filter(tipo__nombre = tipo).filter(modelo__nombre='AX4')
+        elif 'btnTodos' in request.POST:
+            ver = Repuesto.objects.filter(modelo__nombre='AX4')
                 
     contexto = {'lista' : lista, 'ver' : ver} 
     return render(request,'AX4.html', contexto)
 
 def AX7_PRO(request):
-    ver = Repuesto.objects.filter(modelo__nombre='AX7-PRO')
+    ver = {}
 
     lista = {}
 
@@ -99,12 +101,14 @@ def AX7_PRO(request):
 
         if 'btnListar' in request.POST:
             lista = Repuesto.objects.filter(categoria_id = id).filter(tipo__nombre = tipo).filter(modelo__nombre='AX7-PRO')
+        elif 'btnTodos' in request.POST:
+           ver =  Repuesto.objects.filter(modelo__nombre='AX7-PRO')
                 
     contexto = {'lista' : lista, 'ver' : ver}
     return render(request,'AX7-PRO.html', contexto)
     
 def NEW_AX7(request):
-    ver = Repuesto.objects.filter(modelo__nombre = "NEW-AX7")
+    ver = {}
     lista = {}
 
     if request.method == "POST":
@@ -113,12 +117,14 @@ def NEW_AX7(request):
 
         if 'btnListar' in request.POST:
             lista = Repuesto.objects.filter(categoria_id = id).filter(tipo__nombre = tipo).filter(modelo__nombre='NEW-AX7')
+        elif 'btnTodos' in request.POST:
+            ver =   Repuesto.objects.filter(modelo__nombre = "NEW-AX7")
                 
     contexto = {'lista' : lista, 'ver' : ver} 
     return render(request,'AX7-New.html', contexto)
 
 def A60(request):
-    ver = Repuesto.objects.filter(modelo__nombre='A60')
+    ver = {}
 
     lista = {}
 
@@ -128,6 +134,8 @@ def A60(request):
 
         if 'btnListar' in request.POST:
             lista = Repuesto.objects.filter(categoria_id = id).filter(tipo__nombre = tipo).filter(modelo__nombre='A60')
+        elif 'btnTodos' in request.POST:
+             ver = Repuesto.objects.filter(modelo__nombre='A60')
                 
     contexto = {'lista' : lista, 'ver' : ver}   
     return render(request,'A60.html', contexto)

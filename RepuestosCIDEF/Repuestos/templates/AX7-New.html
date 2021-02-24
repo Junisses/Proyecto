@@ -31,6 +31,9 @@
 			<div>
 				<button style="margin-left: 20px;" type="sumbit" name="btnListar" class="btn btn-outline-light" >Filtrar</button>
 			</div>
+			<div>
+				<button style="margin-left: 20px;" type="sumbit" name="btnTodos" class="btn btn-outline-light" >Ver todos los repuestos</button>
+			</div>
 		</div>
 	</div>
 </div>
@@ -133,11 +136,11 @@ var repuestos_10 =new Array("Seleccione Repuestos","Cajuela","Consola","Rejilla 
 
 <!-- Bloque dinamico que muestra todos los repuestos -->
 {% block extra %}
-<div class="row justify-content-center">
-	<h1 class="diseño">Todos los Repuestos</h1>
-</div>	
 {% for fila in ver %}
 	{% if forloop.first %}
+	<div class="row justify-content-center">
+		<h1 class="diseño">Todos los Repuestos</h1>
+	</div>	
 	<div class="row" style="margin-left: 50;">
 	{% endif %}
 		<div class ="row justify-content-center">
