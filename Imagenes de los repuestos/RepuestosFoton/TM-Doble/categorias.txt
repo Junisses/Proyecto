@@ -1,0 +1,42 @@
+Accesorios
+- Herramientas (adjunto)
+- Pieza decorativa piso (cuerpo y piezas decorativas)
+- Accesorios electricos (sistema electrico)
+
+Baterias
+- bateria (electrico)
+
+Carroceria
+- Espejo lateral
+- Suspension delantera (Chasis)
+- Suspension trasera (chasis)
+- Piezas de ventana (cuerpo y piezas decorativas) parabrisas
+- Guardabarros ('')
+
+Elecrico
+- Dispositivo de audio
+- Dispositivo de señal
+- Dispositivo de calefaccion
+
+Filtros
+
+
+Motor
+- Ensamblaje del motor (cuatro asambleas principales)
+
+Refrigeracion
+- Sistema de enfriamiento (chasis)
+
+Transmision - Direccion
+- Dispositivo de transmision y direccion (direccion)
+- Mecanismo direccion (direccion)
+- Transmision acelerador (transmision)
+
+AirBag
+
+
+Interior - Exterior
+- Mecanismo para la instalación de neumáticos de repuesto(adjunto)
+- Cinturon de seguridad
+- Asiento del conductor
+- Asinto parte trasera

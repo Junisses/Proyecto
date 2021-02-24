@@ -1,0 +1,43 @@
+Accesorios
+- Herramientas (adjunto)
+- Pieza decorativa piso(cuerpo y piezas decorativas)
+- Decoracion interna de cubierta superior ('')
+
+Baterias
+- bateria (electrico)
+
+Carroceria
+- Guardabarros(cuerpo y piezas decorativas)
+- Peldaño (cuerpo y piezas decorativas)
+- Espejo lateral('')
+
+
+Elecrico
+- Luces
+- Sensor
+- Interruptor
+
+Filtros
+
+
+Motor
+- Ensamblaje del motor (cuatro asambleas principales en punto 1)
+- Motor
+
+Refrigeracion
+- Sistema de enfriamiento (chasis)
+- Dispositivo de refrigeracion(Electrico)
+
+Transmision - Direccion
+- Dispositivo de transmision y direccion (direccion)
+- Mecanismo direccion (direccion)
+- Dispositivo de embrague (transmision)
+
+AirBag
+
+
+Interior - Exterior
+- Rueda y neumatico (chasis)
+- Mecanismo de instalacion de neumaticos (adjunto)
+- Cinturon de seguridad (cuerpo y piezas decorativas)
+

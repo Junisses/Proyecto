@@ -1,0 +1,38 @@
+Accesorios
+- Accesorios pared lateral (cuerpo y piezas decorativas)
+- Accesorio delantero
+- Accesorio Cubierta superior 
+- Accesorio puerta
+
+Baterias
+- bateria (electrico)
+
+Carroceria
+- cuerpo (cuerpo y piezas decorativas)
+- Bloqueo de puerta
+- Limpiador y depurador
+
+Elecrico
+- Luces traseras
+- Luces delanteras
+- Interruptor del chasis
+
+Filtros
+
+
+Motor
+- Ensamblaje del motor (cuatro asambleas principales)
+
+Refrigeracion
+
+
+Transmision - Direccion
+- Dispositivo de control de embrague
+- Pedal y colgante
+
+AirBag
+
+
+Interior - Exterior
+- Embalaje exterior del cuerpo (cuerpo y piezas decorativas)
+- Asientos delanteros

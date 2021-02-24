@@ -1,0 +1,50 @@
+*Carroceria(cuerpo y piezas decorativas):
+- Puerta lateral delantera
+- Revestimiento de pared lateral
+(Chasis):
+- Suspension delantera
+- Suspension trasera
+- Conjunto de motor mount
+
+
+Interior exterior:
+- Cinturon de seguridad
+- Mecanismo para la instalación de neumáticos de repuesto(adjunto)
+(Compartimiento de carga y tapas)
+- Barandilla y accesorios para caja de carga
+- Embalaje de caja exterior
+
+*Adjunto (Accesorios):
+- Piezas decorativas de piso (se ve en cuepo y piezas decorativas)
+- Pieza decorativa externa de pared (cuerpo y piezas decorativas)
+- Decoracion interna de cubierta superior (cuerpo ypiezas decorativas)
+- Herramientas para el vehiculo(adjunto)
+- accesorios para caja de carga (compartimiento de caja y tapas)
+- Espejo lateral(cuerpo y piezas decorativas)
+
+*Tansmision y direccion: 
+- Dispositivo de transmisión de dirección
+- Mecanismo de direccion
+- Transmision de acelerador
+- Dispositivo de control de embrague
+(Frenos)
+-Tuberia de freno
+
+
+***(Admision y escape)***********************************************************************
+- Dispositivo de admision
+- Dispositivo de escape
+*****************************************************
+*Electrico
+- Dispositivo de calefacción
+- Luces delanteras
+- Dispositivo de audio
+- Interruptor
+
+*Bateria (en electrico se encuentra)
+- Bateria
+
+(Cuatro asambleas principales)
+Motor
+- Ensamblaje del motor
+

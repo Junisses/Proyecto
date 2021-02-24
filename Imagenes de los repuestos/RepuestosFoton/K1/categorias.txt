@@ -1,0 +1,40 @@
+Accesorios
+- Herramientas (adjunto)
+- Pieza decorativa externa(cuerpo y piezas decorativas)
+- Puerta de tanque de combustible ('')
+
+Baterias
+- bateria (electrico)
+
+Carroceria
+- Asiento
+- Peldaño (cuerpo y piezas decorativas)
+- Cuerpo (c'')
+
+Elecrico
+- Luces delanteras
+- Dispositivo de audio
+- Controlador de rele
+
+Filtros
+
+
+Motor
+- Motor
+
+Refrigeracion
+- Sistema de enfriamiento (chasis)
+
+Transmision - Direccion
+- Dispositivo de transmision y direccion (direccion)
+- Mecanismo direccion (direccion)
+- Mecanismo operacion de embrague(transmision)
+- Transmision (primero de las cuatro asambleas)
+
+AirBag
+
+
+Interior - Exterior
+- Rueda y neumatico (chasis)
+- Mecanismo de instalacion de neumaticos (adjunto)
+
