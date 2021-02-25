@@ -1,7 +1,7 @@
 # ProyectoCIDEF
 ###### 
 
-![Alt text](/static/img/fotos/DFM.png)
+![Alt text](/ProyectoCIDEF/RepuestosCIDEF/Repuestos/static/img/fotos/DFM.png)
 
 Inicialmente clonar el proyecto, el cual esta programado con HTML, python 3.9, CSS, JS, jQuery, Django
 
