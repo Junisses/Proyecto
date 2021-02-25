@@ -40,9 +40,6 @@ urlpatterns = [
     path('repuestosFoton/FT-BOX', views.FT_BOX,name='ft-box'),
     path('repuestosFoton/K1', views.K1,name='k1'),
 
-    #Pruebas
-    path('probar', views.probar,name='probar'),
-    
     #Busqueda
     path('busqueda', views.buscar,name='buscar'),
 ] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
