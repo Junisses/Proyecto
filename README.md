@@ -1,7 +1,7 @@
 # ProyectoCIDEF
 ###### 
 
-![Alt text](/logo/python.png)
+![Alt text](/logo/python.PNG)
 
 Inicialmente clonar el proyecto, el cual esta programado con HTML, python 3.9, CSS, JS, jQuery, Django
 
