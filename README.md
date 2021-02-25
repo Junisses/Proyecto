@@ -1,7 +1,7 @@
 # ProyectoCIDEF
 ###### 
 
-![Alt text](/RepuestosCIDEF/Repuestos/static/img/imagenes/python.png)
+![Alt text](/RepuestosCIDEF/Repuestos/static/img/logos/python.png)
 
 Inicialmente clonar el proyecto, el cual esta programado con HTML, python 3.9, CSS, JS, jQuery, Django
 
