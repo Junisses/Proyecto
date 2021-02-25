@@ -7,7 +7,7 @@
 ## Pasos para ejecutar el programa
 **Tener previamente instalado git**
 
-➜ En la CMD, clonar el proyecto (es recomentable realizar el comando diractamente en el disco C/):
+➜ En la CMD, clonar el proyecto (es recomentable realizar el comando directamente en el disco C/):
 
 	✓ git clone https://github.com/Junisses/ProyectoCIDEF.git
 
