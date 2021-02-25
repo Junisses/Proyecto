@@ -26,17 +26,17 @@
 		✓ pip install django.core
 		✓ pip install django-widget-tweaks
 	
-	➜ Cuando este todo instalado, dirigirse mediante la CMD a la carpeta donde se clono el proyecto, luego ingresar a la carpeta de "ProyectoCIDEF" y procedente ingresar a "RepuestosCIDEF".
-	  En esta carpeta se encuentra un archivo que permite la ejecucion del programa, si se quiere comprobar escribir "dir" y buscar archivo manage.py.
+➜ Cuando este todo instalado, dirigirse mediante la CMD a la carpeta donde se clono el proyecto, luego ingresar a la carpeta de "ProyectoCIDEF" y procedente ingresar a "RepuestosCIDEF".
+  En esta carpeta se encuentra un archivo que permite la ejecucion del programa, si se quiere comprobar escribir "dir" y buscar archivo manage.py.
 	  
-	  Dentro de la carpeta "RepuestosCIDEF", ejecutar lo siguiente:
+  Dentro de la carpeta "RepuestosCIDEF", ejecutar lo siguiente:
 	  
 		✓ python manage.py runserver
 		
-	➜ Finalmente, copiar la dirección http que entrega la CMD, y pegarla en un navegador.
-		A continuación una imagen de demostración:
+➜ Finalmente, copiar la dirección http que entrega la CMD, y pegarla en un navegador.
+  A continuación una imagen de demostración:
 		
-	![Alt text](/logo/indicaciones.PNG)
+![Alt text](/logo/indicaciones.PNG)
 
 
 Nota:
