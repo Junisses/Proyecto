@@ -2,6 +2,7 @@
 ###### 
 
 ![Alt text](/logo/python.PNG)
+![Alt text](/logo/django.PNG)
 
 Inicialmente clonar el proyecto, el cual esta programado con HTML, python 3.9, CSS, JS, jQuery, Django
 
