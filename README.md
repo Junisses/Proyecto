@@ -39,5 +39,3 @@
 ![Alt text](/logo/indicaciones.PNG)
 
 
-Nota:
-> Para entrar al administrador ingresar http://127.0.0.1:8000/admin, en la cual para poder ingresar se debe crear un usuario mediante la CMD con el siguiente comando "python manage.py createsuperuser", ingresar los datos que se solicitan, luego ir al admin e ingresar la cuenta.
